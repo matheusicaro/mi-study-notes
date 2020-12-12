@@ -1,7 +1,7 @@
 
 # AWS HELPER
 
- - [Connect local services](#connectlocalservices)
+ - [Connect local services](#connect-local-services)
 
 ## Connect local services
   
