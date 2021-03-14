@@ -20,7 +20,7 @@
  	`AWS_ACCESS_KEY_ID=`
 	`AWS_SECRET_ACCESS_KEY=`
 
-## Configuring static website with a redirect to Wix domain
+## Configuring static website with a redirect to Wix, GoDaddy, Wordpress domain
 
  1. Create domain authority certificates
 
@@ -38,3 +38,10 @@
 
  ![step_7](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-7.png)
 
+ 4. GoDaddy
+
+ ![step_8](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-8.png)
+
+ 4. WordPress
+
+ ![step_9](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-9.png)
