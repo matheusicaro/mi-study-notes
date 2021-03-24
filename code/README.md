@@ -6,6 +6,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
 2. [Java](#Java)
     - [Array Instances](#array-instances)
     - [Map](#map)
+    - [String](#string)
     - [Date](#date)
     - [Types](#types)
 
@@ -31,9 +32,13 @@ My reminders and notes about useful codes in the daily life of a Dev.
 
 > Java 9 - `Map<String, String> map = Map.of("key1","value1", "key2", "value2");`
 
+### String
+
+- String utils class [here](https://github.com/matheusicaro/helpers/blob/master/code/java/StringUtils.java)
+
 ### Date
 
-- Classe Date Utils [here](https://github.com/matheusicaro/helpers/blob/master/code/java/DateUtils.java)
+- Date utils class [here](https://github.com/matheusicaro/helpers/blob/master/code/java/DateUtils.java)
 
 ### Types
 
