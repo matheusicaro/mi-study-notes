@@ -19,6 +19,8 @@ My reminders and notes about useful codes in the daily life of a Dev.
 
 ---
 
+## [Java](#Java)
+
 ### Lambda Functions
 
 ```
@@ -32,8 +34,6 @@ Predicate       (x)     ->  boolean
 UnaryOperator   (x1)    ->  x2
 BinaryOperator  (x1,x2) ->  x3
 ```
-
-## [Java](#Java)
 
 ### Array Instances
 
