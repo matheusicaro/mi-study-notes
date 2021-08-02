@@ -10,7 +10,7 @@ const games = [
 ];
 
 /**
- * O resultado oficial da loteria
+ * The official lottery result
  */
 const OFFICIAL_RESULT = [2, 3, 4, 8, 9, 10, 12, 14, 15, 16, 18, 21, 22, 23, 24];
 
@@ -19,14 +19,12 @@ games.map((game, indexOfGame) => {
   const notMatch = [];
 
   game.map((value) => {
-    const indexOfMatch = OFFICIAL_RESULT.indexOf(value);
+      const indexOfMatch = OFFICIAL_RESULT.indexOf(value);
 
-    if (indexOfMatch >= 0) {
-      match.push({ value, official: OFFICIAL_RESULT[indexOfMatch] });
-    } else {
-      notMatch.push({ value });
+      if (indexOfMatch >= 0) match.push({ value, official: OFFICIAL_RESULT[indexOfMatch] });
+      else notMatch.push({ value });
     }
-  });
+  );
 
   const message = {
     game: indexOfGame + 1,
