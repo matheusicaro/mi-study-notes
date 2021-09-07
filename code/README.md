@@ -4,11 +4,13 @@ My reminders and notes about useful codes in the daily life of a Dev.
 
 1. [React](#React)
 2. [Java](#Java)
-    - [Lambda Functions](#lambda-functions)
-    - [Array Instances](#array-instances)
-    - [Map](#map)
-    - [String](#string)
-    - [Date](#date)
+   - [Lambda Functions](#lambda-functions)
+   - [Array Instances](#array-instances)
+   - [Map](#map)
+   - [String](#string)
+   - [Date](#date)
+3. [JavaScript](#JavaScript)
+   - [Mock Functions](#mock-functions)
 
 ---
 
@@ -53,3 +55,34 @@ BinaryOperator  (x1,x2) ->  x3
 ### Date
 
 - Date utils class [here](https://github.com/matheusicaro/helpers/blob/master/code/java/DateUtils.java)
+
+---
+
+## [JavaScript](#JavaScript)
+
+### Mock Functions
+
+```
+import Service from '../../services';
+
+jest.mock('some-npm-module');	// mock expected services dir file
+import ExternalService from 'some-npm-module';	// import expected services dir file
+
+describe("...", () => {
+	test("...", async () => {
+
+		// when the method from the service is called, return what I want to.
+		// object, function, exception, etc...
+		ExternalService.method = jest.fn().mockImplementation(() => {
+			return myObject;
+		});
+
+		const returned = Service.run();
+
+		expect(Service.method).toHaveBeenCalledTimes(1);
+		expect(Service.method).toHaveBeenCalledWith("params_1", "params_2");
+		expect(returned).toBe(expected);
+	});
+});
+
+```
