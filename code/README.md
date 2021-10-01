@@ -9,8 +9,9 @@ My reminders and notes about useful codes in the daily life of a Dev.
    - [Map](#map)
    - [String](#string)
    - [Date](#date)
+   - [Mocked Static Method](#mocked-static-method)
 3. [JavaScript](#JavaScript)
-   - [Mock Functions](#mock-functions)
+   - [Mocked Functions](#mocked-functions)
 
 ---
 
@@ -56,11 +57,62 @@ BinaryOperator  (x1,x2) ->  x3
 
 - Date utils class [here](https://github.com/matheusicaro/helpers/blob/master/code/java/DateUtils.java)
 
+### Mocked Static Method
+
+- Install [Mockito Core dependency](https://mvnrepository.com/artifact/org.mockito/mockito-core) from 3.8 version.
+
+```
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>3.12.4</version>
+    </dependency>
+```
+
+```
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import org.mockito.ArgumentCaptor;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+@ExtendWith(MockitoExtension.class)
+class StaticClassTest {
+
+    static MockedStatic<StaticClasse> classMockedStatic;
+
+    @BeforeEach
+    void setupTest() {
+        classMockedStatic = Mockito.mockStatic(StaticClasse.class);
+    }
+
+    @AfterEach
+    void after() {
+        classMockedStatic.close();
+    }
+
+    @Test
+    void test_description() {
+
+        ArgumentCaptor<String> captorInput = ArgumentCaptor.forClass(String.class);
+ 
+        classMockedStatic.verify(() -> StaticClasse.method(captorInput.capture());
+
+        Assertions.assertEquals("expected", captorInput.getValue());
+    }
+}
+```
+
 ---
 
 ## [JavaScript](#JavaScript)
 
-### Mock Functions
+### Mocked Functions
 
 ```
 import Service from '../../services';
