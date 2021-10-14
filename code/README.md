@@ -99,6 +99,9 @@ class StaticClassTest {
     @Test
     void test_description() {
 
+        classMockedStatic.when(() -> StaticClasse.method(Mockito.any())).thenReturn("empty");		// mock method with return
+        classMockedStatic.when(StaticClasse::method).thenThrow(new Exception());			// mock void method
+
         ArgumentCaptor<String> captorInput = ArgumentCaptor.forClass(String.class);
  
         classMockedStatic.verify(() -> StaticClasse.method(captorInput.capture());
