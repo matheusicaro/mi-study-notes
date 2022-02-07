@@ -3,6 +3,31 @@
 
  - [Connect local services](#connect-local-services)
 
+
+## Install AWS CLI (aws-vault)
+
+1. install aws cli, [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+2. install aws-vault, [here](https://github.com/99designs/aws-vault)
+3. add a profile:
+	```
+	aws-vault add PROFILE_NAME
+	
+	Enter Access Key ID: <put your access_key_id>
+	Enter Secret Access Key: <put your secret_access_key>
+	
+	Added credentials to profile "PROFILE_NAME" in vault
+	```
+3. check your profile:
+	```
+	Profile                    Credentials                Sessions
+	=======                    ===========                ========
+	default                    -                          -
+	PROFILE_NAME               PROFILE_NAME               -
+
+	```
+
+4. done!
+
 ## Connect local services
   
  1. `aws-vault exec <profile>`
