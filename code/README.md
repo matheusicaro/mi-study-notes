@@ -2,15 +2,16 @@
 
 My reminders and notes about useful codes in the daily life of a Dev.
 
-1. [React](#React)
-2. [Java](#Java)
+- [React](#React)
+- [Java](#Java)
    - [Lambda Functions](#lambda-functions)
    - [Array Instances](#array-instances)
    - [Map](#map)
    - [String](#string)
    - [Date](#date)
    - [Mocked Static Method](#mocked-static-method)
-3. [JavaScript](#JavaScript)
+   - [**MAVEN CLI Commands**](#maven-cli-commands)
+- [JavaScript](#JavaScript)
    - [Mocked Functions](#mocked-functions)
 
 ---
@@ -40,8 +41,11 @@ BinaryOperator  (x1,x2) ->  x3
 
 ### Array Instances
 
-`var array = Arrays.array(1, 2, 3, 4, 5, 6, 7, 8 ,9)`<br>
-`var array = new ArrayList<>(Collections.singletonList("string")`
+```java
+var array = Arrays.array(1, 2, 3, 4, 5, 6, 7, 8 ,9)
+
+var array = new ArrayList<>(Collections.singletonList("string")
+```
 
 ### Map
 
@@ -61,7 +65,7 @@ BinaryOperator  (x1,x2) ->  x3
 
 - Install [Mockito Core dependency](https://mvnrepository.com/artifact/org.mockito/mockito-core) from 3.8 version.
 
-```
+```xml
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
@@ -69,7 +73,7 @@ BinaryOperator  (x1,x2) ->  x3
     </dependency>
 ```
 
-```
+```java
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -100,7 +104,7 @@ class StaticClassTest {
     void test_description() {
 
         classMockedStatic.when(() -> StaticClasse.method(Mockito.any())).thenReturn("empty");		// mock method with return
-        classMockedStatic.when(StaticClasse::method).thenThrow(new Exception());			// mock void method
+        classMockedStatic.when(StaticClasse::method).thenThrow(new Exception());			        // mock void method
 
         ArgumentCaptor<String> captorInput = ArgumentCaptor.forClass(String.class);
  
@@ -111,13 +115,20 @@ class StaticClassTest {
 }
 ```
 
+### MAVEN CLI Commands
+
+```powershell
+# clean and install with trace log
+mvn clean install > log-file.log
+```
+
 ---
 
 ## [JavaScript](#JavaScript)
 
 ### Mocked Functions
 
-```
+```js
 import Service from '../../services';
 
 jest.mock('some-npm-module');	// mock expected services dir file
