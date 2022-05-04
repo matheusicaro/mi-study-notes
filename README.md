@@ -1,6 +1,7 @@
 # UTILS
    - [Edit System File by CLI](#edit-system-file-by-cli)
    - [Markdown tips](#markdown-tips)
+   - [IntelliJ Settings](https://github.com/matheusicaro/private-helpers/blob/master/my-intellij-settings.zip)
 
 # AWS
 - [Install **AWS CLI** (aws-vault)](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#install-aws-cli-aws-vault)
