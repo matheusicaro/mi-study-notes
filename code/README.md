@@ -9,6 +9,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
    - [Map](#map)
    - [String](#string)
    - [Date](#date)
+   - [Encryption](#encryption)
    - [Mocked Static Method](#mocked-static-method)
    - [**MAVEN CLI Commands**](#maven-cli-commands)
 - [JavaScript](#JavaScript)
@@ -49,9 +50,16 @@ var array = new ArrayList<>(Collections.singletonList("string")
 
 ### Map
 
-> Java 8 - `Map<String, String> doubleBraceMap = new HashMap<String, String>() {{ put("key1", "value1")...}};`<br>
+```java
+// Java 8
+Map<String, String> doubleBraceMap = new HashMap<String, String>() {{ 
+	put("key1", "value1")
+	...
+}};
 
-> Java 9 - `Map<String, String> map = Map.of("key1","value1", "key2", "value2");`
+// Java 9
+Map<String, String> map = Map.of("key1","value1", "key2", "value2");
+```
 
 ### String
 
@@ -59,7 +67,33 @@ var array = new ArrayList<>(Collections.singletonList("string")
 
 ### Date
 
-- Date utils class [here](https://github.com/matheusicaro/helpers/blob/master/code/java/DateUtils.java)
+- Files [here](https://github.com/matheusicaro/helpers/blob/master/code/java/date)
+
+| METODO                                  | INPUT                            | OUTPUT         | OBSERVAÇÃO |
+| --------------------------------------- | -------------------------------- | -------------- | ---------- |
+| DateUtil.**isDateBeforeCurrentDateNow** | "22/04/1500"                     | true           |            |
+| DateUtil.**isDateBeforeCurrentDateNow** | new OffsetDateTime("22/04/1500") | true           |            |
+| DateUtil.**isDateAfterCurrentDateNow**  | new OffsetDateTime("22/04/1500") | false          |            |
+| DateUtil.**buildDateTimeFrom**          | ( new Date(), DateFormat )       | OffsetDateTime |            |
+| DateUtil.**buildDateTimeFrom**          | ( timestamp )                    | OffsetDateTime |            |
+| DateUtil.**buildDateTimeFrom**          | ( new Date() )                   | OffsetDateTime |            |
+| DateUtil.**convertToDateTime**          | "10/02/2000"                     | OffsetDateTime |            |
+
+
+### Encryption
+
+- Files [here](https://github.com/matheusicaro/helpers/blob/master/code/java/encryption)
+
+
+| METODO                          | INPUT                        | OUTPUT                                                                                            |
+|---------------------------------|------------------------------| ------------------------------------------------------------------------------------------------- |
+| Encryption.INSTANCE.encrypt()   | "valueHere"                  | "enc_W1RoGd7Fqv0AlbKc4orUUA=="                                                                    |
+| Encryption.INSTANCE.decrypt()   | "enc_W1RoGd7Fqv0AlbKc4orUUA" | "valueHere"                                                                                       |
+| Encryption.INSTANCE.decrypt()   | "valueHere"                  | @throws EncryptionException("Encryption error (Operation: 'value is unknown or is not encrypted") |
+| Encryption.INSTANCE.isEncrypt() | "valueHere"                  | false                                                                                             |
+| Encryption.INSTANCE.isEncrypt() | "W1RoGd7Fqv0AlbKc4orUUA"     | false                                                                                             |
+| Encryption.INSTANCE.isEncrypt() | "enc_W1RoGd7Fqv0AlbKc4orUUA" | true                                                                                              |
+
 
 ### Mocked Static Method
 
