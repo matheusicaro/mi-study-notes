@@ -146,7 +146,7 @@ region=sa-east-1
 [...]
 
 [profile uat]
-source_profile=inter
+source_profile=<source>
 role_arn=arn:aws:iam::<ACCOUNT_NUMBER>:role/<ROLE>
 role_session_name=<SESSION_NAME>                        // the e-mail is usually used
 region=us-east-1
