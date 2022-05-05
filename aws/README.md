@@ -13,6 +13,7 @@
     - [CLI: Get Pod Logs](#cli-get-pod-logs)
 - [CloudWatch insights logs](#cloudwatch-analytic-insights-logs)
 - [Get **AWS CA** Private Certificate](#get-aws-ca-private-certificate)
+- [DynamoDB Java Integration](#dynamodb-java-integration)
 - [How To Add **public CA** To Elastic Bean Aws](#how-to-add-public-ca-to-elastic-bean-aws)
 - [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
 
@@ -231,6 +232,77 @@ aws acm get-certificate --certificate-arn arn:aws:acm:us-east-1:XXXXXXX:certific
    			     nakcjMS9cmvqtmg5iUaQqqcT5NJ0hGA==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEdTCCA12gAwDAwMDBaFw0zNDA2
    			     MjgxNzM5MZ3/VyVOEVqQdZe4O/Ui5GjLIAZHYcSNPYeehu\nVsyuLAOQ1xk4meTKCRlb/weWsKh/NEnfVqn3sF/tM+2MR7cwA130A4w=\n-----END CERTIFICATE-----"
    }
+```
+
+---
+
+## DynamoDB Java Integration
+
+**Dynamo FACTORY**
+
+```java
+package project.name.datasource;
+
+import .Bean;
+import .Factory;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+
+@Factory
+public class DynamoConfig {
+
+    @Bean
+    public AmazonDynamoDB getClient() {
+        return AmazonDynamoDBClientBuilder.standard().build();
+    }
+}
+```
+
+**INTERFACE:**
+
+```java
+package project.name.datasource;
+
+public interface DataSource {
+
+    void save(Object object);
+}
+```
+
+**IMPLEMENTATION:**
+
+```java
+package project.name.datasource;
+
+import arch.context.annotation.Service;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig.SaveBehavior;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig.TableNameOverride;
+
+@Service
+public class DataSourceImpl implements DataSource {
+
+    private final DynamoDBMapper dynamoDBMapper;
+
+    public DataSourceImpl(AppConfig config, AmazonDynamoDB client) {
+        TableNameOverride table = TableNameOverride.withTableNameReplacement(config.getDynamoDBTableName());
+
+        DynamoDBMapperConfig mapperConfig = new DynamoDBMapperConfig.Builder() // @formatter:off
+            .withTableNameOverride(table)
+            // Update only elements where are not null
+            .withSaveBehavior(SaveBehavior.UPDATE_SKIP_NULL_ATTRIBUTES)
+            .build(); // @formatter:on
+
+        dynamoDBMapper = new DynamoDBMapper(client, mapperConfig);
+    }
+
+    @Override
+    public void save(Object object) {
+        dynamoDBMapper.save(object);
+    }
+}
 ```
 
 ---
