@@ -16,6 +16,7 @@
     - [CLI: Get Pod Logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cli-get-pod-logs)
 - [CloudWatch insights logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cloudwatch-analytic-insights-logs)
 - [Get **AWS CA** Private Certificate](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#get-aws-ca-private-certificate)
+- [DynamoDB Java Integration](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#dynamodb-java-integration)
 - [How To Add **public CA** To Elastic Bean Aws](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#how-to-add-public-ca-to-elastic-bean-aws)
 - [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
 
