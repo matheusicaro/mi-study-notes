@@ -1,6 +1,6 @@
 # AWS HELPER
 
-
+# AWS
 - [Install **AWS CLI** (aws-vault)](#install-aws-cli-aws-vault)
 - [**AWS CLI Commands**](#aws-cli-commands)
    - [Valid Local Access](#valid-local-access)
@@ -8,14 +8,14 @@
       - [SSO version](#sso-version)
       - [AWS old version](#aws-old-version)
       - [Config FILES](#config-files)
+- [CloudWatch insights logs](#cloudwatch-analytic-insights-logs)
+- [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
+- [DynamoDB Java Integration](#dynamodb-java-integration)
+- [Get **AWS CA** Private Certificate](#get-aws-ca-private-certificate)
+- [How To Add **public CA** To Elastic Bean Aws](#how-to-add-public-ca-to-elastic-bean-aws)
 - [**Kurbenets**](#kurbenets)
     - [Kubernetes Dashboard: Get Access Token](#kubernetes-dashboard-get-access-token)
     - [CLI: Get Pod Logs](#cli-get-pod-logs)
-- [CloudWatch insights logs](#cloudwatch-analytic-insights-logs)
-- [Get **AWS CA** Private Certificate](#get-aws-ca-private-certificate)
-- [DynamoDB Java Integration](#dynamodb-java-integration)
-- [How To Add **public CA** To Elastic Bean Aws](#how-to-add-public-ca-to-elastic-bean-aws)
-- [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
 
 ---
 
