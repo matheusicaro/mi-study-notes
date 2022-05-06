@@ -1,7 +1,9 @@
 # UTILS
    - [Edit System File by CLI](#edit-system-file-by-cli)
    - [Markdown tips](#markdown-tips)
-   - [IntelliJ Settings](https://github.com/matheusicaro/private-helpers/blob/master/my-intellij-settings.zip)
+   - **IDE configs**
+       - [IntelliJ Settings](https://github.com/matheusicaro/private-helpers/blob/master/IDE-confgis/my-intellij-settings.zip)
+       - [VS Code](https://github.com/matheusicaro/private-helpers/blob/master/IDE-confgis/vs-code.zip)
 
 # AWS
 - [Install **AWS CLI** (aws-vault)](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#install-aws-cli-aws-vault)
@@ -11,25 +13,25 @@
       - [SSO version](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#sso-version)
       - [AWS old version](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#aws-old-version)
       - [Config FILES](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#config-files)
+- [CloudWatch insights logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cloudwatch-analytic-insights-logs)
+- [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
+- [DynamoDB Java Integration](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#dynamodb-java-integration)
+- [Get **AWS CA** Private Certificate](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#get-aws-ca-private-certificate)
+- [How To Add **public CA** To Elastic Bean Aws](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#how-to-add-public-ca-to-elastic-bean-aws)
 - [**Kurbenets**](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#kurbenets)
     - [Kubernetes Dashboard: Get Access Token](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#kubernetes-dashboard-get-access-token)
     - [CLI: Get Pod Logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cli-get-pod-logs)
-- [CloudWatch insights logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cloudwatch-analytic-insights-logs)
-- [Get **AWS CA** Private Certificate](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#get-aws-ca-private-certificate)
-- [DynamoDB Java Integration](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#dynamodb-java-integration)
-- [How To Add **public CA** To Elastic Bean Aws](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#how-to-add-public-ca-to-elastic-bean-aws)
-- [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
 
 # CODE
 - [React](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#react)
 - [Java](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#java)
-   - [**MAVEN CLI Commands**](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#maven-cli-commands)
    - [Array Instances](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#array-instances)
    - [Converter](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#converter)
    - [Date](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#date)
    - [Encryption](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#encryption)
    - [Lambda Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#lambda-functions)
    - [Map](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#map)
+   - [**MAVEN CLI Commands**](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#maven-cli-commands)
    - [Mocked Static Method](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-static-method)
    - [Regex](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#regex)
    - [String](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#string) 
