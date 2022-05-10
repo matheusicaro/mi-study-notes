@@ -8,6 +8,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
    - [Converter](#converter)
    - [Date](#date)
    - [Encryption](#encryption)
+   - [Kafka Implementation](#kafka-implementation)
    - [Lambda Functions](#lambda-functions)
    - [Map](#map)
    - [**MAVEN CLI Commands**](#maven-cli-commands)
@@ -133,6 +134,12 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 | Encryption.INSTANCE.isEncrypt() | "valueHere"                  | false                                                                                             |
 | Encryption.INSTANCE.isEncrypt() | "W1RoGd7Fqv0AlbKc4orUUA"     | false                                                                                             |
 | Encryption.INSTANCE.isEncrypt() | "enc_W1RoGd7Fqv0AlbKc4orUUA" | true                                                                                              |
+
+
+### Kafka Implementation
+
+- Files [here](https://github.com/matheusicaro/helpers/blob/master/code/java/kafka)
+
 
 
 ### Converter
