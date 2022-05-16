@@ -23,7 +23,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
 ## [React](#React)
 
 - Eslint start config
-    - [eslintrc.js](https://github.com/matheusicaro/private-helpers/tree/master/code/react/eslintrc.js)
+    - [eslintrc.js](https://github.com/matheusicaro/private-helpers/master/code/react/eslintrc.js)
 - [Stack React Apps](#stack-react-apps)
     - [Inter](#inter)
 
@@ -68,7 +68,7 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 
 ### String
 
-- String utils class [here](https://github.com/matheusicaro/private-helpers/tree/master/code/java/string)
+- String utils class [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/string)
 
 [_# sumario_](#sumario)
 
@@ -76,14 +76,14 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 |--------------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | StringUtil.getOnlyNumbers                              | "string 1123 with 3123 numbers "                      | "11233123"                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | StringUtil.removeBeautifulFormatting                   | "string with \n break lines \p and \n\n\n spaces."    | "string with break lines and spaces."        | Method to return string without formatting for line breaks and unnecessary spaces, such as JSON beautiful                                                                                                                                                                                                                                                                                                                                                   |
-| StringUtil.formatValueToBrazilianRealCurrencyNoCents   | "19999" <br/>"1.55" <br/>"1.55555"                    | "R$ 19.999,00" <br/>"R$ 1,00" <br/>"R$ 1,00" | Method to return value formatted to Brazilian Real Currency considering no CENTS between values. (unit-tests)[https://github.com/matheusicaro/private-helpers/tree/master/code/java/string/StringUtilTest.java#L25]                                                                                                                                                                                           |
-| StringUtil.formatValueToBrazilianRealCurrencyWithCents | "19999" <br/>"1.55" <br/>"1.55555"                    | "R$ 19.999,00" <br/>"R$ 1,55" <br/>"R$ 1,56" | Method to return value formatted to Brazilian Real Currency considering CENTS between values throuth the last 2 decimal places when the input is a integer number, for the inputs which have decimal cases will be convert to only 2 decimal places. <br> More examples can be found here: (unit-tests)[https://github.com/matheusicaro/private-helpers/tree/master/code/java/string/StringUtilTest.java#L52] |
+| StringUtil.formatValueToBrazilianRealCurrencyNoCents   | "19999" <br/>"1.55" <br/>"1.55555"                    | "R$ 19.999,00" <br/>"R$ 1,00" <br/>"R$ 1,00" | Method to return value formatted to Brazilian Real Currency considering no CENTS between values. (unit-tests)[https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/string/StringUtilTest.java#L25]                                                                                                                                                                                           |
+| StringUtil.formatValueToBrazilianRealCurrencyWithCents | "19999" <br/>"1.55" <br/>"1.55555"                    | "R$ 19.999,00" <br/>"R$ 1,55" <br/>"R$ 1,56" | Method to return value formatted to Brazilian Real Currency considering CENTS between values throuth the last 2 decimal places when the input is a integer number, for the inputs which have decimal cases will be convert to only 2 decimal places. <br> More examples can be found here: (unit-tests)[https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/string/StringUtilTest.java#L52] |
 | StringUtil.extractJsonKeyAndValuesFromPrimitiveTypes   | Object as String: "{\"key_1\":\"value\",\"key_2\":2}" | [ "\"key_1\":\"value\"" , "\"key_2\":2" ]    | Method to return only key and values from primitive values of OBJECT                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 ### Regex
 
-- String utils class [here](https://github.com/matheusicaro/private-helpers/tree/master/code/java/regex)
+- String utils class [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/regex)
 
 | REGEX                         | STRING                                                                                          | MATCH                                                | OBSERVAÇÃO                                                    |
 | ----------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
@@ -110,7 +110,7 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 
 ### Date
 
-- Files [here](https://github.com/matheusicaro/private-helpers/tree/master/code/java/date)
+- Files [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/date)
 
 | METHOD                                  | INPUT                            | OUTPUT         | OBSERVATION |
 | --------------------------------------- | -------------------------------- | -------------- | ---------- |
@@ -125,7 +125,7 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 
 ### Encryption
 
-- Files [here](https://github.com/matheusicaro/private-helpers/tree/master/code/java/encryption)
+- Files [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/encryption)
 
 
 | METHOD                          | INPUT                        | OUTPUT                                                                                            |
@@ -140,13 +140,13 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 
 ### Kafka Implementation
 
-- Files [here](https://github.com/matheusicaro/private-helpers/tree/master/code/java/kafka)
+- Files [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/kafka)
 
 
 
 ### Converter
 
-- Files [here](https://github.com/matheusicaro/private-helpers/tree/master/code/java/converter)
+- Files [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/converter)
 
 
 | METHOD                                 | INPUT                                                  | OUTPUT                              | OBSERVATION |
@@ -257,10 +257,10 @@ describe("...", () => {
 ### Inter
 
 => 1
-![here](https://github.com/matheusicaro/private-helpers/tree/master/code/data/i-app-stack-1.png)
+![i-app-stack-1](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/data/i-app-stack-1.png)
 
 => 2
-![here](https://github.com/matheusicaro/private-helpers/tree/master/code/data/i-app-stack-2.png)
+![i-app-stack-2](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/data/i-app-stack-2.png)
 
 - A funcao lambda pode atuar em 4 pontos diferentes
     1 - no VIEWER-REQUEST quando a solicitação esta chegando antes de ser bater no cloud-front
@@ -268,15 +268,13 @@ describe("...", () => {
     3 - no ORIGIN-RESPONSE após ser retornado os dado do bucket S3
     4 - no VIEWER-RESPONSE após passar pelo cloud-front e antes de ser retornado para o user
 
- ![here](https://github.com/matheusicaro/private-helpers/tree/master/code/data/i-app-stack-3.png)
+ ![i-app-stack-3](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/data/i-app-stack-3.png)
 
 - Processo de deploy por feature para cada branch, onde que o nome da branch gera o hash do qual fica como nome da pasta no S3 e tambem no prefixo de endereço do host:
 
- ![here](https://github.com/matheusicaro/private-helpers/tree/master/code/data/i-app-stack-4.png)
+ ![i-app-stack-4](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/data/i-app-stack-4.png)
 
 
 - A manipulaçao para buscar diferentes versoes de site em pastas no bucker é feito por uma LAMBDA:
 
- ![here](https://github.com/matheusicaro/private-helpers/tree/master/code/data/i-app-stack-5.png)
-
-
+ ![i-app-stack-5](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/data/i-app-stack-5.png)
