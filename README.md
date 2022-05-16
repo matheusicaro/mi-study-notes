@@ -23,22 +23,22 @@
     - [CLI: Get Pod Logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cli-get-pod-logs)
 
 # CODE
-- [React](https://github.com/matheusicaro/private-helpers/master/code/README.md#react)
+- [React](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#react)
     - Eslint start config
-    - [Stack React Apps](https://github.com/matheusicaro/private-helpers/master/code/README.md#stack-react-apps)
-- [Java](https://github.com/matheusicaro/private-helpers/master/code/README.md#java)
-   - [Array Instances](https://github.com/matheusicaro/private-helpers/master/code/README.md#array-instances)
-   - [Converter](https://github.com/matheusicaro/private-helpers/master/code/README.md#converter)
-   - [Date](https://github.com/matheusicaro/private-helpers/master/code/README.md#date)
-   - [Encryption](https://github.com/matheusicaro/private-helpers/master/code/README.md#encryption)
-   - [Lambda Functions](https://github.com/matheusicaro/private-helpers/master/code/README.md#lambda-functions)
-   - [Map](https://github.com/matheusicaro/private-helpers/master/code/README.md#map)
-   - [**MAVEN CLI Commands**](https://github.com/matheusicaro/private-helpers/master/code/README.md#maven-cli-commands)
-   - [Mocked Static Method](https://github.com/matheusicaro/private-helpers/master/code/README.md#mocked-static-method)
-   - [Regex](https://github.com/matheusicaro/private-helpers/master/code/README.md#regex)
-   - [String](https://github.com/matheusicaro/private-helpers/master/code/README.md#string) 
-- [JavaScript](https://github.com/matheusicaro/private-helpers/master/code/README.md#JavaScript)
-   - [Mocked Functions](https://github.com/matheusicaro/private-helpers/master/code/README.md#mocked-functions)
+    - [Stack React Apps](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#stack-react-apps)
+- [Java](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#java)
+   - [Array Instances](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#array-instances)
+   - [Converter](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#converter)
+   - [Date](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#date)
+   - [Encryption](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#encryption)
+   - [Lambda Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#lambda-functions)
+   - [Map](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#map)
+   - [**MAVEN CLI Commands**](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#maven-cli-commands)
+   - [Mocked Static Method](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-static-method)
+   - [Regex](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#regex)
+   - [String](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#string) 
+- [JavaScript](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#JavaScript)
+   - [Mocked Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-functions)
 
 ---
 
