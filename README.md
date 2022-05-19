@@ -29,6 +29,7 @@
 - [Java](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#java)
    - [Array Instances](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#array-instances)
    - [Converter](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#converter)
+   - [Certificate CA SSL Importing JAVA Cacerts](ttps://github.com/matheusicaro/private-helpers/blob/master/code/README.md#certificate-ca-ssl-importing-java-cacerts)
    - [Date](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#date)
    - [Encryption](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#encryption)
    - [Lambda Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#lambda-functions)
