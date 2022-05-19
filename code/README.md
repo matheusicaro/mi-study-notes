@@ -6,6 +6,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
 - [Java](#Java)
    - [Array Instances](#array-instances)
    - [Converter](#converter)
+   - [Certificate CA SSL Importing JAVA Cacerts](#certificate-ca-ssl-importing-java-cacerts)
    - [Date](#date)
    - [Encryption](#encryption)
    - [Kafka Implementation](#kafka-implementation)
@@ -154,6 +155,54 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 | ConverterUtil.toJsonStringNoBeautiful  | new Map("key", "value \t with \n \n\ \n format chars") | "{'key':'value with format chars'}" |            |
 | ConverterUtil.toJsonStringNoBeautiful  | new Map("key", "value")                                | "{'key':'value'}"                   |            |
 | ConverterUtil.from**                   | ( "{'key':'value'}", Map.class )                       | new Map("key", "value")             |            |
+
+
+### Certificate CA SSL Importing JAVA Cacerts
+
+When is necessary import Certificate SSL, should use the script below:
+
+```bash
+
+#!/bin/bash
+
+VERSION=1.0.0
+USAGE="./import-certificates.sh"
+
+#java versions jdk-11.0.7.jdk   jdk1.7.0_80.jdk  jdk1.8.0_171.jdk
+
+# ====> TO JAVA 8<
+# /Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/security
+
+# ====> TO JAVA 11+
+# /Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home/lib/security
+
+# HERE IS BEING CLONED THE CERTIFICATES AVAILABLE AT GIT REPOSITORY
+git clone --single-branch --branch master https://gitlab.sharedservices.local/XXXXXXX/certificates.git
+
+java_path="/Library/Java/JavaVirtualMachines"
+certificates_path="$(pwd)/certificates/ca"
+
+certificates=($certificates_path/*)
+java_versions=($java_path/*)
+
+for j in "${java_versions[@]}"; do
+    for c in "${certificates[@]}"; do
+        java_verion=$(basename $j)
+        certificate_alias=$(basename "${c%.*}")
+        certificate=$(basename $c)
+        echo "Installing certificate $certificate for java $java_verion"
+        if [[ $java_verion =~ jdk([0-9]+).([0-9]+).([0-9_]+) ]]; then
+            sudo keytool -import -file $c -alias $certificate_alias -keystore /Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/security/cacerts -storepass changeit -trustcacerts -noprompt
+        elif [[ $java_verion =~ jdk-([0-9]+).([0-9]+).([0-9_]+) ]]; then
+            sudo keytool -import -file $c -alias $certificate_alias -keystore /Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/security/cacerts -storepass changeit -trustcacerts -noprompt
+        else
+            echo "No supported java version found"
+        fi
+    done
+done
+
+rm -rf certificates
+```
 
 
 ### Mocked Static Method
