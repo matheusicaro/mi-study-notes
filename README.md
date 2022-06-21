@@ -1,4 +1,5 @@
 # UTILS
+   - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
    - [Edit System File by CLI](#edit-system-file-by-cli)
    - [Markdown tips](#markdown-tips)
    - **IDE configs**
@@ -40,6 +41,57 @@
    - [String](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#string) 
 - [JavaScript](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#JavaScript)
    - [Mocked Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-functions)
+
+---
+
+## PC Performace on TASKBAR
+
+![image](https://user-images.githubusercontent.com/29001162/174864608-e2b2e42c-1cb0-4d5e-82a3-982e3b855553.png)
+
+1. Dowload the **[Perfmonbar app](https://xhmikosr.github.io/perfmonbar/)**
+2. set my xml config:
+
+> C:\Users\{User}\AppData\Roaming\PerfmonBar\config.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+   #######> RELOAD the changes/configuration file with right click on taskbar -> Performance Monitor - (Reload Configuration) 
+-->
+
+<perfbar>
+
+    <counters>
+        <!-- you can run `typeperf -q>counters.txt` to list all available counters on your system -->
+        <counter name="cpu" value="\Processor Information(_Total)\% Processor Time"/>
+        <counter name="mem" value="\Memory\Committed Bytes"/>
+    </counters>
+
+    <pages>
+        <!-- use left button click on the performance bar to switch between the pages -->
+        <page offsetY="6">
+            <lines>
+
+                <line fontFamily="Segoe UI" fontSize="8" fontItalic="false" fontBold="true" fontColor="FFFFFF">
+                    <!-- you can use the "characters" attribute to ensure a minimum length of the displayed value -->
+                    <!-- <display prefix="CPU: " suffix="% " counter="cpu" characters="3"/> -->
+                    <display prefix="CPU:   " suffix="% " counter="cpu"/>
+                </line>
+
+                <line fontFamily="Segoe UI" fontSize="8" fontItalic="false" fontBold="true" fontColor="FFFFFF">
+                    <display prefix="RAM:  " suffix=" GB" counter="mem" decimals="0" divide="1073741824"/>
+                </line>
+
+            </lines>
+        </page>
+    </pages>
+
+    <settings minSizeX="10" minSizeY="10">
+    </settings>
+</perfbar>
+
+```
 
 ---
 
