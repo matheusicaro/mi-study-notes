@@ -30,11 +30,11 @@ My reminders and notes about useful codes in the daily life of a Dev.
 - find object by ID and return some attributes:
 
 ```js
-const id = "627c58065d02f9fbf217d2bf";
+const id = "d27c58065d058065f2d7d2df";
 const POSITIVE_BINARY_VALUE = 1;
 const attributesToBeReturned = {_id: POSITIVE_BINARY_VALUE, status: POSITIVE_BINARY_VALUE, createdAt: POSITIVE_BINARY_VALUE }
 
-db.getCollection("savingsapplications").find({_id: ObjectId(id)}, attributesToBeReturned)
+db.getCollection("my_collection").find({_id: ObjectId(id)}, attributesToBeReturned)
 ```
 
 ---
