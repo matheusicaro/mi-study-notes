@@ -24,6 +24,11 @@
     - [CLI: Get Pod Logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cli-get-pod-logs)
 
 # CODE
+
+- [Mongo](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mongo)
+    - [Queries](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#queries)
+- [JavaScript](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#JavaScript)
+   - [Mocked Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-functions)
 - [React](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#react)
     - Eslint start config
     - [Stack React Apps](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#stack-react-apps)
@@ -39,8 +44,6 @@
    - [Mocked Static Method](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-static-method)
    - [Regex](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#regex)
    - [String](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#string) 
-- [JavaScript](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#JavaScript)
-   - [Mocked Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-functions)
 
 ---
 
