@@ -2,22 +2,40 @@
 
 My reminders and notes about useful codes in the daily life of a Dev.
 
+- [Mongo](#mongo)
+    - [Queries](#queries)
 - [React](#React)
-- [Java](#Java)
-   - [Array Instances](#array-instances)
-   - [Converter](#converter)
-   - [Certificate CA SSL Importing JAVA Cacerts](#certificate-ca-ssl-importing-java-cacerts)
-   - [Date](#date)
-   - [Encryption](#encryption)
-   - [Kafka Implementation](#kafka-implementation)
-   - [Lambda Functions](#lambda-functions)
-   - [Map](#map)
-   - [**MAVEN CLI Commands**](#maven-cli-commands)
-   - [Mocked Static Method](#mocked-static-method)
-   - [Regex](#regex)
-   - [String](#string)
 - [JavaScript](#javascript)
-   - [Mocked Functions](#mocked-functions)
+    - [Mocked Functions](#mocked-functions)
+- [Java](#Java)
+    - [Array Instances](#array-instances)
+    - [Converter](#converter)
+    - [Certificate CA SSL Importing JAVA Cacerts](#certificate-ca-ssl-importing-java-cacerts)
+    - [Date](#date)
+    - [Encryption](#encryption)
+    - [Kafka Implementation](#kafka-implementation)
+    - [Lambda Functions](#lambda-functions)
+    - [Map](#map)
+    - [**MAVEN CLI Commands**](#maven-cli-commands)
+    - [Mocked Static Method](#mocked-static-method)
+    - [Regex](#regex)
+    - [String](#string)
+
+---
+
+## Mongo
+
+### Queries
+
+- find object by ID and return some attributes:
+
+```js
+const id = "627c58065d02f9fbf217d2bf";
+const POSITIVE_BINARY_VALUE = 1;
+const attributesToBeReturned = {_id: POSITIVE_BINARY_VALUE, status: POSITIVE_BINARY_VALUE, createdAt: POSITIVE_BINARY_VALUE }
+
+db.getCollection("savingsapplications").find({_id: ObjectId(id)}, attributesToBeReturned)
+```
 
 ---
 
@@ -27,6 +45,37 @@ My reminders and notes about useful codes in the daily life of a Dev.
     - [eslintrc.js](https://github.com/matheusicaro/private-helpers/master/code/react/eslintrc.js)
 - [Stack React Apps](#stack-react-apps)
     - [Inter](#inter)
+
+---
+
+## [JavaScript](#JavaScript)
+
+### Mocked Functions
+
+```js
+import Service from '../../services';
+
+jest.mock('some-npm-module');	// mock expected services dir file
+import ExternalService from 'some-npm-module';	// import expected services dir file
+
+describe("...", () => {
+	test("...", async () => {
+
+		// when the method from the service is called, return what I want to.
+		// object, function, exception, etc...
+		ExternalService.method = jest.fn().mockImplementation(() => {
+			return myObject;
+		});
+
+		const returned = Service.run();
+
+		expect(Service.method).toHaveBeenCalledTimes(1);
+		expect(Service.method).toHaveBeenCalledWith("params_1", "params_2");
+		expect(returned).toBe(expected);
+	});
+});
+
+```
 
 ---
 
@@ -267,35 +316,6 @@ mvn clean install > log-file.log
 ```
 
 ---
-
-## [JavaScript](#JavaScript)
-
-### Mocked Functions
-
-```js
-import Service from '../../services';
-
-jest.mock('some-npm-module');	// mock expected services dir file
-import ExternalService from 'some-npm-module';	// import expected services dir file
-
-describe("...", () => {
-	test("...", async () => {
-
-		// when the method from the service is called, return what I want to.
-		// object, function, exception, etc...
-		ExternalService.method = jest.fn().mockImplementation(() => {
-			return myObject;
-		});
-
-		const returned = Service.run();
-
-		expect(Service.method).toHaveBeenCalledTimes(1);
-		expect(Service.method).toHaveBeenCalledWith("params_1", "params_2");
-		expect(returned).toBe(expected);
-	});
-});
-
-```
 
 # REACT
 
