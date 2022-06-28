@@ -51,8 +51,14 @@
 
 ![image](https://user-images.githubusercontent.com/29001162/174864608-e2b2e42c-1cb0-4d5e-82a3-982e3b855553.png)
 
+                                                            --||--
+
+> * **Windows 11**: [Steps required before](#windows-11)
+
 1. Dowload the **[Perfmonbar app](https://xhmikosr.github.io/perfmonbar/)**
-2. set my xml config:
+2. Enable taskbar: 
+   > Click with right mouse button  >  Tollbars  >  Performace Monitor Bar
+3. set my xml config:
 
 > C:\Users\{User}\AppData\Roaming\PerfmonBar\config.xml
 
@@ -87,6 +93,14 @@
 </perfbar>
 
 ```
+
+#### Windows 11
+
+1. Install **ExplorerPatcher** according to [issue 46](https://github.com/XhmikosR/perfmonbar/issues/46)
+2. My default cofings:
+
+![image](https://user-images.githubusercontent.com/29001162/176318577-8dadfb0d-d572-4559-b24c-59fa1547e3ec.png)
+
 
 ---
 
