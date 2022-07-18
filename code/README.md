@@ -7,7 +7,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
 - [React](#React)
 - [JavaScript](#javascript)
     - [Mocked Functions](#mocked-functions)
-    - [JEST - Tips](#jest-tips)
+    - [JEST - Tips](#jest---tips)
 - [Java](#Java)
     - [Array Instances](#array-instances)
     - [Converter](#converter)
@@ -87,6 +87,19 @@ describe("...", () => {
 jest --runTestsByPath "my_path/../my_file_here_.test.ts"
 # OR
 npm test --runTestsByPath "my_path/../my_file_here_.test.ts"
+```
+
+- Assert for Date time now, new Date()
+
+```js
+const input = new Date();
+
+...
+
+expect(input).toBe(
+    expect.any(Date)
+);
+
 ```
 
 ---
