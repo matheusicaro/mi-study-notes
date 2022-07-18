@@ -102,6 +102,17 @@ expect(input).toBe(
 
 ```
 
+- Assert TO TROW EXEPTIONS
+
+```js
+    test('should throw an error', async () => {
+        
+    await expect(funct.method(input)).rejects.toThrow(
+        'It should be the same as this message here from the thrown exception'
+    );
+});
+```
+
 ---
 
 ## [Java](#Java)
