@@ -80,7 +80,18 @@ describe("...", () => {
 
 ### JEST - Tips
 
-- Test specific file:
+
+##### Run just one file using only JEST no script
+
+1. Use WSL
+2. install jest globaly
+3. run:
+```powershell
+jest --runTestsByPath "path/my-file.test.ts"
+```
+
+##### Test specific file:
+
 ```shell
 # FIRST: Needs to change de SLASH bar when it is copied by clicking on the right mouse bottom on "COPY RELATIVE PATH" from VS CODE
 
@@ -89,7 +100,7 @@ jest --runTestsByPath "my_path/../my_file_here_.test.ts"
 npm test --runTestsByPath "my_path/../my_file_here_.test.ts"
 ```
 
-- Assert for Date time now, new Date()
+##### Assert for Date time now, new Date()
 
 ```js
 const input = new Date();
@@ -102,7 +113,7 @@ expect(input).toBe(
 
 ```
 
-- Assert TO TROW EXEPTIONS
+##### Assert TO TROW EXEPTIONS
 
 ```js
     test('should throw an error', async () => {
