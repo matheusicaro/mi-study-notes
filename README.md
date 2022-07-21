@@ -28,8 +28,9 @@
 - [Mongo](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mongo)
     - [Queries](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#queries)
 - [JavaScript](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#JavaScript)
-   - [Mocked Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-functions)
-	 - [JEST - Tips](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#jest---tips)
+    - [Add script GLOBALLY](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#add-script-globally)
+    - [Mocked Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-functions)
+    - [JEST - Tips](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#jest---tips)
 - [React](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#react)
     - Eslint start config
     - [Stack React Apps](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#stack-react-apps)
