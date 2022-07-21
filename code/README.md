@@ -6,6 +6,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
     - [Queries](#queries)
 - [React](#React)
 - [JavaScript](#javascript)
+    - [Add script GLOBALLY](#add-script-globally)
     - [Mocked Functions](#mocked-functions)
     - [JEST - Tips](#jest---tips)
 - [Java](#Java)
@@ -50,6 +51,23 @@ db.getCollection("my_collection").find({_id: ObjectId(id)}, attributesToBeReturn
 ---
 
 ## [JavaScript](#JavaScript)
+
+
+### Add Script GLOBALLY
+
+When receive the error: `'yarn' is not recognized as an internal or external command, operable program or batch file.`
+<br>
+Just add the script globally in the environment:
+
+1. Install the package globally ==> `npm uninstall -g <package-name>`
+2. Add the npm global modules in the environment path.
+```shell
+# common npm global modules path
+
+C:\Users\Administrator\AppData\Roaming\npm
+```
+
+
 
 ### Mocked Functions
 
@@ -100,7 +118,7 @@ jest --runTestsByPath "my_path/../my_file_here_.test.ts"
 npm test --runTestsByPath "my_path/../my_file_here_.test.ts"
 ```
 
-##### Assert for Date time now, new Date()
+##### Assert for Date time now, new Date() 
 
 ```js
 const input = new Date();
