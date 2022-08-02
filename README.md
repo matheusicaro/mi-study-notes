@@ -53,6 +53,13 @@
 
 ![image](https://user-images.githubusercontent.com/29001162/174864608-e2b2e42c-1cb0-4d5e-82a3-982e3b855553.png)
 
+<br>
+**with new update**
+<br>
+<br>
+
+![image](https://user-images.githubusercontent.com/29001162/182479311-622e28c2-63d8-4bde-87ac-61f6039a3b3b.png)
+
                                                             --||--
 
 > * **Windows 11**: [Steps required before](#windows-11)
