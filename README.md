@@ -66,33 +66,58 @@
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<!-- you can reload the configuration file with right click -> Performance Monitor - (Reload Configuration) -->
+
+<!-- ============================================================================================================= -->
+<!--     you can reload the configuration file with right click -> Performance Monitor - (Reload Configuration)    -->
+<!-- ============================================================================================================= -->
+
 <perfbar>
     <counters>
-        <!-- you can run `typeperf -q>counters.txt` to list all available counters on your system -->
-        <counter name="cpu" value="\Processor Information(_Total)\% Processor Time"/>
-        <counter name="mem" value="\Memory\Available MBytes"/>
+
+        <!-- ======================================================================================== -->
+        <!--   you can run `typeperf -q>counters.txt` to list all available counters on your system   -->
+        <!-- ======================================================================================== -->
+        <counter name="CPU_USAGE" value="\Processor Information(_Total)\% Processor Time"/>
+        <counter name="AVAILABLE_MEMORY" value="\Memory\Available MBytes"/>
 
     </counters>
     <pages>
+
+        <!-- ======================================================================== -->
         <!-- use left button click on the performance bar to switch between the pages -->
+        <!-- ======================================================================== -->
+
         <page offsetY="6">
+
             <lines>
-                <line fontFamily="Segoe UI" fontSize="8" fontItalic="false" fontBold="true" fontColor="FFFFFF">
-                    <!-- you can use the "characters" attribute to ensure a minimum length of the displayed value -->
-                    <!-- <display prefix="CPU: " suffix="% " counter="cpu" characters="3"/> -->
-                    <display prefix="CPU:   " suffix="% " counter="cpu"/>
+
+                <line fontFamily="Segoe UI" fontSize="8" fontItalic="false" fontBold="true" fontColor="469fe3">
+
+        		        <!-- ======================================================================================== -->
+        		        <!-- you can use the "characters" attribute to ensure a minimum length of the displayed value -->
+        		        <!-- ======================================================================================== -->
+                    <display prefix=" CPU     " suffix="% " counter="CPU_USAGE"/>
+
                 </line>
 
-                <line fontFamily="Segoe UI" fontSize="8" fontItalic="false" fontBold="true" fontColor="FFFFFF">
-                    <display prefix="RAM: +" suffix=" GB" counter="mem" decimals="1" divide="1024"/>
+                <line fontFamily="Segoe UI" fontSize="7" fontItalic="false" fontBold="true" fontColor="3ded69">
+
+        		        <!-- ======================================================================================== -->
+        		        <!--       divide here means the total of the MEMORY                                          -->
+        		        <!--       so the calc is: TOTAL_AVAILABLE / TOTAL_MEMORY = AVAILABLE_PERCENT                 -->
+        		        <!-- ======================================================================================== -->
+                    <display prefix=" RAM  + " suffix="%" counter="AVAILABLE_MEMORY" decimals="0" divide="320" />
+
                 </line>
+
             </lines>
+
         </page>
     </pages>
     <settings minSizeX="10" minSizeY="10">
     </settings>
 </perfbar>
+
 
 ```
 
