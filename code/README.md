@@ -8,7 +8,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
 - [JavaScript](#javascript)
     - [Add script GLOBALLY](#add-script-globally)
     - [Mocked Functions](#mocked-functions)
-    - [JEST - Tips](#jest---tips)
+    - [JEST - Tips](#jest-tips)
 - [Java](#Java)
     - [Array Instances](#array-instances)
     - [Converter](#converter)
@@ -67,9 +67,55 @@ Just add the script globally in the environment:
 C:\Users\Administrator\AppData\Roaming\npm
 ```
 
+### TEST
 
 
-### Mocked Functions
+#### Run just one file using only JEST no script
+
+1. Use WSL
+2. install jest globaly
+3. run:
+```powershell
+jest --runTestsByPath "path/my-file.test.ts"
+```
+
+#### Test specific file:
+
+```shell
+# FIRST: Needs to change de SLASH bar when it is copied by clicking on the right mouse bottom on "COPY RELATIVE PATH" from VS CODE
+
+jest --runTestsByPath "my_path/../my_file_here_.test.ts"
+# OR
+npm test --runTestsByPath "my_path/../my_file_here_.test.ts"
+```
+
+#### Assert for Date time now, new Date() 
+
+```js
+const input = new Date();
+
+...
+
+expect(input).toBe(
+    expect.any(Date)
+);
+
+```
+
+#### Assert TO TROW EXEPTIONS
+
+```js
+    test('should throw an error', async () => {
+        
+    await expect(funct.method(input)).rejects.toThrow(
+        'It should be the same as this message here from the thrown exception'
+    );
+});
+```
+
+#### Mocked Functions
+
+##### Mocked by JEST
 
 ```js
 import Service from '../../services';
@@ -96,51 +142,79 @@ describe("...", () => {
 
 ```
 
-### JEST - Tips
-
-
-##### Run just one file using only JEST no script
-
-1. Use WSL
-2. install jest globaly
-3. run:
-```powershell
-jest --runTestsByPath "path/my-file.test.ts"
-```
-
-##### Test specific file:
-
-```shell
-# FIRST: Needs to change de SLASH bar when it is copied by clicking on the right mouse bottom on "COPY RELATIVE PATH" from VS CODE
-
-jest --runTestsByPath "my_path/../my_file_here_.test.ts"
-# OR
-npm test --runTestsByPath "my_path/../my_file_here_.test.ts"
-```
-
-##### Assert for Date time now, new Date() 
+##### Mocked by VITEST
 
 ```js
-const input = new Date();
+import {
+  describe,
+  afterAll,
+  afterEach,
+  it,
+  expect,
+  beforeAll,
+  vi,
+  beforeEach
+} from 'vitest';
 
-...
 
-expect(input).toBe(
-    expect.any(Date)
-);
+/*
+* First import the exactely script used in the another class
+*/
+import { scriptModule, StaticVariable } from '@module/path-here-for-the-script';
 
-```
 
-##### Assert TO TROW EXEPTIONS
+describe('file/class', () => {
 
-```js
-    test('should throw an error', async () => {
-        
-    await expect(funct.method(input)).rejects.toThrow(
-        'It should be the same as this message here from the thrown exception'
-    );
+    beforeEach(() => {
+        vi.restoreAllMocks();
+    });
+
+    /*
+    * Here are added the returns for the each leveal of the module importate, for example:
+    *   given >  import scriptModule from "@module-name-path-here'
+    *   then  >  return objectToReturn
+    * 
+    *   given >  import { scriptModule } from "@module-name-path-here'
+    *   then  >  return { scriptModule: { firstFunct, secondFunc, etc... } }
+    */
+    vi.mock('@module/path-here-for-the-script', () => {
+        return {
+            scriptModule: {
+                
+                firstFunction: vi.fn(async () =>
+                    Promise.resolve(undefined)
+                ),
+                
+                secondFunction: vi.fn(async () =>
+                    Promise.resolve(undefined)
+                )
+
+                ...
+            },
+
+            StaticVariable: {
+                HIGH: 'HIGH'
+            }
+        }
+    });
+
+
+    it('should call with a expected input', async () => {
+
+        // ...
+
+        expect( scriptModule.firstFunction ).toHaveBeenNthCalledWith(
+            1, 
+            {
+                name: 'name',
+                id: 'id',
+            }
+        );
+    });
 });
+
 ```
+
 
 ---
 
