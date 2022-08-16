@@ -1,4 +1,5 @@
 # UTILS
+   - [ALIAS For Terminals](#-win-terminal-configs)
    - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
    - [Edit System File by CLI](#edit-system-file-by-cli)
    - [Markdown tips](#markdown-tips)
@@ -7,21 +8,21 @@
        - [VS Code](https://github.com/matheusicaro/private-helpers/blob/master/IDE-confgis/vs-code.zip)
 
 # AWS
-- [Install **AWS CLI** (aws-vault)](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#install-aws-cli-aws-vault)
-- [**AWS CLI Commands**](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#aws-cli-commands)
-   - [Valid Local Access](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#valid-local-access)
-   - [Get aws-vault](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#get-aws-vault)
-      - [SSO version](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#sso-version)
-      - [AWS old version](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#aws-old-version)
-      - [Config FILES](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#config-files)
-- [CloudWatch insights logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cloudwatch-analytic-insights-logs)
-- [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
-- [DynamoDB Java Integration](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#dynamodb-java-integration)
-- [Get **AWS CA** Private Certificate](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#get-aws-ca-private-certificate)
-- [How To Add **public CA** To Elastic Bean Aws](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#how-to-add-public-ca-to-elastic-bean-aws)
-- [**Kurbenets**](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#kurbenets)
-    - [Kubernetes Dashboard: Get Access Token](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#kubernetes-dashboard-get-access-token)
-    - [CLI: Get Pod Logs](https://github.com/matheusicaro/private-helpers/tree/master/aws/README.md#cli-get-pod-logs)
+- [Install **AWS CLI** (aws-vault)](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#install-aws-cli-aws-vault)
+- [**AWS CLI Commands**](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#aws-cli-commands)
+   - [Valid Local Access](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#valid-local-access)
+   - [Get aws-vault](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#get-aws-vault)
+      - [SSO version](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#sso-version)
+      - [AWS old version](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#aws-old-version)
+      - [Config FILES](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#config-files)
+- [CloudWatch insights logs](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#cloudwatch-analytic-insights-logs)
+- [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
+- [DynamoDB Java Integration](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#dynamodb-java-integration)
+- [Get **AWS CA** Private Certificate](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#get-aws-ca-private-certificate)
+- [How To Add **public CA** To Elastic Bean Aws](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#how-to-add-public-ca-to-elastic-bean-aws)
+- [**Kurbenets**](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#kurbenets)
+    - [Kubernetes Dashboard: Get Access Token](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#kubernetes-dashboard-get-access-token)
+    - [CLI: Get Pod Logs](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#cli-get-pod-logs)
 
 # CODE
 
@@ -48,6 +49,33 @@
    - [String](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#string) 
 
 ---
+
+## ALIAS FOR TERMINALS
+
+Adding a alias by terminal, `neo` gonna open the path `O:\Development\Repositories\+Neo` by terminal on these examples below
+
+#### WSL (Linux for Windows)
+
+1. Open WSL terminal
+2. Insert the comando below:
+
+```shell
+# PATH HERE IS: /mnt/o/Development/Repositories/+Neo/
+
+alias neo="cd \"/mnt/o/Development/Repositories/+Neo/\""
+```
+
+#### CMDER
+
+1. Go to `Settings` option `Startup` > `Environemnt`
+
+```shell
+# PATH HERE IS: O:\Development\Repositories\+Neo
+
+alias neo=cd /d O:\Development\Repositories\+Neo
+```
+
+----
 
 ## PC Performace on TASKBAR
 
@@ -136,7 +164,7 @@
 ![image](https://user-images.githubusercontent.com/29001162/176318577-8dadfb0d-d572-4559-b24c-59fa1547e3ec.png)
 
 
----
+----
 
 ## Edit System File by CLI
 
