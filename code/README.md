@@ -39,6 +39,17 @@ const attributesToBeReturned = {_id: POSITIVE_BINARY_VALUE, status: POSITIVE_BIN
 db.getCollection("my_collection").find({_id: ObjectId(id)}, attributesToBeReturned)
 ```
 
+- find object by ATTRIBUTE not NULL/UNDEFINED ID:
+
+```js
+// single condition
+db.getCollection("my_collection").find({ my_attribute_name: {$exists: true} })
+
+// multiple conditions
+db.getCollection("my_collection").find($and: [ {first_attribute: {$exists: true}}, {second_attribute: 'some value'} ] )
+
+```
+
 ---
 
 ## [React](#React)
