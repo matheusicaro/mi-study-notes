@@ -1,5 +1,5 @@
 # UTILS
-   - [ALIAS For Terminals](#-win-terminal-configs)
+   - [ALIAS For Terminals](#alias-for-terminals)
    - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
    - [Edit System File by CLI](#edit-system-file-by-cli)
    - [Markdown tips](#markdown-tips)
@@ -64,6 +64,10 @@ Adding a alias by terminal, `neo` gonna open the path `O:\Development\Repositori
 
 alias neo="cd \"/mnt/o/Development/Repositories/+Neo/\""
 ```
+3. Save the alias at:
+
+![image](https://user-images.githubusercontent.com/29001162/191129490-d2748ca2-f630-4203-a0a8-6a01f9c658cd.png)
+
 
 #### CMDER
 
