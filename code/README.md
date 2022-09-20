@@ -8,7 +8,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
 - [JavaScript](#javascript)
     - [Add script GLOBALLY](#add-script-globally)
     - [Mocked Functions](#mocked-functions)
-    - [JEST - Tips](#jest-tips)
+    - [JEST - Tips](#jest---tips)
 - [Java](#Java)
     - [Array Instances](#array-instances)
     - [Converter](#converter)
@@ -78,7 +78,7 @@ Just add the script globally in the environment:
 C:\Users\Administrator\AppData\Roaming\npm
 ```
 
-### TEST
+### JEST - Tips
 
 
 #### Run just one file using only JEST no script
