@@ -208,7 +208,20 @@ describe('file/class', () => {
             }
         }
     });
+    //----- REAL EXAMPLE:
+    vi.mock('@neofinancial/neo-audit-logger-client', () => {
+      return {
+        adminAuditLogger: {
+          sendSingleActionAuditLogMessage: vi.fn(async () =>
+            Promise.resolve(undefined)
+          )
+        },
 
+        Severity: {
+          HIGH: 'HIGH'
+        }
+      };
+    });
 
     it('should call with a expected input', async () => {
 
