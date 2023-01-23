@@ -128,6 +128,19 @@ expect(input).toBe(
 
 ##### Mocked by JEST
 
+OP_1)
+```js
+import * as NameModule from './module';
+
+jest.mock('./module');
+
+[...]
+
+jest.spyOn(NameModule, 'fuction-name').mockReturnValueOnce(null);
+```
+
+
+OP_2)
 ```js
 import Service from '../../services';
 
