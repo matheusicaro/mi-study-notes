@@ -169,86 +169,15 @@ describe("...", () => {
 ##### Mocked by VITEST
 
 ```js
-import {
-  describe,
-  afterAll,
-  afterEach,
-  it,
-  expect,
-  beforeAll,
-  vi,
-  beforeEach
-} from 'vitest';
+import { vi } from 'vitest';
 
+import * as NameModule from './module';
 
-/*
-* First import the exactely script used in the another class
-*/
-import { scriptModule, StaticVariable } from '@module/path-here-for-the-script';
+vi.mock('./module');
 
+[...]
 
-describe('file/class', () => {
-
-    beforeEach(() => {
-        vi.restoreAllMocks();
-    });
-
-    /*
-    * Here are added the returns for the each leveal of the module importate, for example:
-    *   given >  import scriptModule from "@module-name-path-here'
-    *   then  >  return objectToReturn
-    * 
-    *   given >  import { scriptModule } from "@module-name-path-here'
-    *   then  >  return { scriptModule: { firstFunct, secondFunc, etc... } }
-    */
-    vi.mock('@module/path-here-for-the-script', () => {
-        return {
-            scriptModule: {
-                
-                firstFunction: vi.fn(async () =>
-                    Promise.resolve(undefined)
-                ),
-                
-                secondFunction: vi.fn(async () =>
-                    Promise.resolve(undefined)
-                )
-
-                ...
-            },
-
-            StaticVariable: {
-                HIGH: 'HIGH'
-            }
-        }
-    });
-    //----- REAL EXAMPLE:
-    vi.mock('@neofinancial/neo-audit-logger-client', () => {
-      return {
-        adminAuditLogger: {
-          sendSingleActionAuditLogMessage: vi.fn(async () =>
-            Promise.resolve(undefined)
-          )
-        },
-
-        Severity: {
-          HIGH: 'HIGH'
-        }
-      };
-    });
-
-    it('should call with a expected input', async () => {
-
-        // ...
-
-        expect( scriptModule.firstFunction ).toHaveBeenNthCalledWith(
-            1, 
-            {
-                name: 'name',
-                id: 'id',
-            }
-        );
-    });
-});
+vi.spyOn(NameModule, 'fuction-name').mockReturnValueOnce(null);
 
 ```
 
