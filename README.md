@@ -8,6 +8,9 @@
        - [VS Code](https://github.com/matheusicaro/private-helpers/blob/master/IDE-confgis/vs-code.zip)
 
 # AWS
+
+- [🚨 SSL AWS CLI error - fix](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#ssl-aws-clis-certificate-error)
+
 - [Install **AWS CLI** (aws-vault)](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#install-aws-cli-aws-vault)
 - [**AWS CLI Commands**](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#aws-cli-commands)
    - [Valid Local Access](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#valid-local-access)
