@@ -1,6 +1,9 @@
 # AWS HELPER
 
 # AWS
+
+- [SSL AWS CLI CERTIFICATE ERROR](#ssl-aws-cli-certificate-error)
+
 - [Install **AWS CLI** (aws-vault)](#install-aws-cli-aws-vault)
 - [**AWS CLI Commands**](#aws-cli-commands)
    - [Valid Local Access](#valid-local-access)
@@ -18,6 +21,19 @@
     - [CLI: Get Pod Logs](#cli-get-pod-logs)
 
 ---
+
+### SSL AWS CLI CERTIFICATE ERROR
+
+1. Create the AWS CA Bundle
+
+```
+ curl https://www.amazontrust.com/repository/{SFSRootCAG2,AmazonRootCA4,AmazonRootCA3,AmazonRootCA2,AmazonRootCA1}.pem >> ~/.aws/ca_bundle.pem
+```
+
+2. Configure the SDK (choice)
+   - should have AWS cli installed
+   - run: `aws configure set ca_bundle '~/.aws/ca_bundle.pem'`
+   - add the env: `AWS_CA_BUNDLE='~/.aws/ca_bundle.pem'`
 
 ## INSTALL AWS CLI (AWS-VAULT)
 
