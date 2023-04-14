@@ -2,7 +2,7 @@
  
    - LINUX ENV
        - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
-       
+       - **[TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)**
    - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
    - [Edit System File by CLI](#edit-system-file-by-cli)
    - [Markdown tips](#markdown-tips)
@@ -69,13 +69,6 @@
 #
 # ============================================
 
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -130,6 +123,66 @@ export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
 #
 #
 ```
+
+----
+
+## TERMINAL install ZSH pretty
+
+#### 1) Install Zsh
+1. ```sudo apt-get install zsh```
+2. Verify it’s installed — `zsh --version`, expects zsh `5.1.1` or more recent
+3. Make it your default shell: ```chsh -s $(which zsh)```
+4. **Restart the system**
+5. Test that it worked with `echo $SHELL`, Expects /bin/zsh
+6. Test with `$SHELL --version` expects zsh `5.1.1` or similar
+
+#### 2) Install Oh-My-Zsh
+Run this in your new terminal:
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+#### 3) Copy my custom configs
+
+available in the **menu** at [TERMINAL CUSTOM CONFIGS LINUX ](#terminal-custom-configs-linux)
+
+#### 4) Add important plugins
+
+1. install `highlighting` plugin
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+2. install `auto suggestions` plugin
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+3. add the configs at `.zshrc`
+```sh
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+```
+
+#### 5) Add themes to be pretty
+
+1. open `.zshrc` and search for `ZSH_THEME`
+
+sould have something like: 
+```sh
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+```
+2. click in the link and select the best one
+
+<br>
+<br>
 
 ----
 
