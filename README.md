@@ -1,5 +1,8 @@
 # UTILS
-   - [ALIAS For Terminals](#alias-for-terminals)
+ 
+   - LINUX ENV
+       - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
+       
    - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
    - [Edit System File by CLI](#edit-system-file-by-cli)
    - [Markdown tips](#markdown-tips)
@@ -53,33 +56,79 @@
 
 ---
 
-## ALIAS FOR TERMINALS
+## TERMINAL CUSTOM CONFIGS LINUX
 
-Adding a alias by terminal, `neo` gonna open the path `O:\Development\Repositories\+Neo` by terminal on these examples below
+```sh
+# ============================================
+#
+#
+#
+#  MY CUSTOM ENVIRONMENT
+#
+#
+#
+# ============================================
 
-#### WSL (Linux for Windows)
+# append to the history file, don't overwrite it
+shopt -s histappend
 
-1. Open WSL terminal
-2. Insert the comando below:
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
 
-```shell
-# PATH HERE IS: /mnt/o/Development/Repositories/+Neo/
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-alias neo="cd \"/mnt/o/Development/Repositories/+Neo/\""
-```
-3. Save the alias at:
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-![image](https://user-images.githubusercontent.com/29001162/191129490-d2748ca2-f630-4203-a0a8-6a01f9c658cd.png)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
+# ALIAS
+alias awsx="source _awsx"
+alias awstest="aws sqs list-queues"
 
-#### CMDER
+alias cdenv="code \"/home/matheus/.zshrc\""
+alias cdneo="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 
-1. Go to `Settings` option `Startup` > `Environemnt`
+alias credit="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias cdcos="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias savings="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias cdsos="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias user="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias cdus="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias cduos="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias invest="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias cdios="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias identity="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias cdis="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 
-```shell
-# PATH HERE IS: O:\Development\Repositories\+Neo
+alias cos="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias sos="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias us="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias uos="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias is="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 
-alias neo=cd /d O:\Development\Repositories\+Neo
+alias disablenet="sudo kill $(pgrep -f /opt/EXAMPLE-DLP-AGENT/agent)"
+alias disablenet="sudo kill $(pgrep -f /opt/EXAMPLE-DLP-AGENT/agent)"
+
+alias processlist="sudo ps -aux"
+
+# ENVS
+export GIT_SSL_NO_VERIFY=1
+export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
+#
+#
+#
+# ============================================ END#
+#
+#
+#
+#
+#
 ```
 
 ----
