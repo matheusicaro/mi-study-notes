@@ -30,5 +30,11 @@
     "key": "ctrl+c",
     "command": "workbench.action.terminal.copySelection",
     "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+  },
+
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.toggleStatusbarVisibility",
+    "when": "editorFocus"
   }
 ]
