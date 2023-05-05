@@ -8,7 +8,7 @@
    - [Markdown tips](#markdown-tips)
    - **IDE configs**
        - [IntelliJ Settings](https://github.com/matheusicaro/private-helpers/blob/master/IDE-confgis/my-intellij-settings.zip)
-       - [VS Code](https://github.com/matheusicaro/private-helpers/blob/master/IDE-confgis/vs-code.zip)
+       - [VS Code](https://github.com/matheusicaro/private-helpers/blob/master/IDE-configs/vscode/keybindings-CURRENTLY.json)
 
 # AWS
 
