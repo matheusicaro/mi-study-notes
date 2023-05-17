@@ -3,6 +3,9 @@
    - LINUX ENV
        - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
        - **[TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)**
+       
+       - **[SLACK Error on login](#slack-error-on-login)**
+        
    - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
    - [Edit System File by CLI](#edit-system-file-by-cli)
    - [Markdown tips](#markdown-tips)
@@ -55,6 +58,9 @@
    - [String](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#string) 
 
 ---
+
+# LINUX ENV
+
 
 ## TERMINAL CUSTOM CONFIGS LINUX
 
@@ -125,6 +131,17 @@ export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
 ```
 
 ----
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+----
 
 ## TERMINAL install ZSH pretty
 
@@ -184,6 +201,36 @@ ZSH_THEME="robbyrussell"
 <br>
 <br>
 
+----
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+----
+
+## SLACK Error on login
+
+Just go to this link: https://neofinancial.slack.com/ssb/signin_redirect/fallback
+
+and copy the key and past in the slack desktop app
+
+----
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
 ----
 
 ## PC Performace on TASKBAR
@@ -296,7 +343,19 @@ Digit “wq”
 Digit Enter
 
 ```
-
+----
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+----
+ 
 # Markdown tips
 
 **FONT**: [www.w3schools.io/file/markdown-code-fence-blocks](https://www.w3schools.io/file/markdown-code-fence-blocks/)
