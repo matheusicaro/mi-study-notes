@@ -74,6 +74,20 @@
 4. Install a MongoDB Client UI
 <br>    a. [Compass](https://www.mongodb.com/products/compass) or [Robo3T](https://robomongo.org/download)
 
+
+----
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+----
+
 ## TERMINAL CUSTOM CONFIGS LINUX
 
 ```sh
