@@ -67,11 +67,14 @@
 1. Install NVM and use it to setup Node
 <br>    a. `nvm install 16` set it as default
 <br>    b. `nvm install 14` and `nvm install 12`
+
 3. DOCKER
 <br>    a. [install](https://docs.docker.com/engine/install/ubuntu/)
 <br>    b. [Manage docker as a non-root user. Here are the steps](https://docs.docker.com/engine/install/linux-postinstall/)
 <br>    c. [Docker Compose](https://docs.docker.com/compose/install/)
-4. Install a MongoDB Client UI
+<br>    d. `sudo apt install docker-compose`
+
+5. Install a MongoDB Client UI
 <br>    a. [Compass](https://www.mongodb.com/products/compass) or [Robo3T](https://robomongo.org/download)
 
 
