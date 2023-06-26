@@ -3,7 +3,7 @@
    - LINUX ENV
        - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
        - **[TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)**
-       
+       - [SETUP](#setup)
        - **[SLACK Error on login](#slack-error-on-login)**
         
    - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
