@@ -65,9 +65,18 @@
 
 1. install curl: `sudo apt-get install curl`
 
-2. VS CODE
+2. Add sudo commands (shutdown and reboot)
+  <br> 2.1. run: `sudo visudo`
+  <br> 2.2. Past in the end
+  ```sh
+  # DISABLED SUDO PASSWORD WHEN REBOOT OR RESTART
+  user host = (root) NOPASSWD: /sbin/shutdown
+  user host = (root) NOPASSWD: /sbin/reboot
+  ```
 
-3. [Terminal ZSH](#terminal-install-zsh-pretty)
+2. [Terminal ZSH](#terminal-install-zsh-pretty)
+
+3. VS CODE
 
 4. Install NVM and use it to setup Node
    <br> 4.1. `nvm install 16` set it as default
@@ -167,6 +176,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # ALIAS
+alias force_restart="sudo shutdown -r now"
+alias force_shutdown="sudo shutdown -h now"
+
 alias awsx="source _awsx"
 alias awstest="aws sqs list-queues"
 
