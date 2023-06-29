@@ -121,6 +121,8 @@
    <br> 1. Go to the [SSH & GPG Keys page](https://github.com/settings/keys) on GitHub
    <br> 2. create new value and past the key generated at **GENERAYE KEY** > step 4
 
+##### > Save the login and password for the next commits, run: `git config --global credential.helper store`
+
 ---
 
 <Br>
