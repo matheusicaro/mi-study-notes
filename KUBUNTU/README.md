@@ -16,8 +16,8 @@
 
 #### shortcuts backup here
 
-- [shortcuts.customShortcuts](https://github.dev/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.customShortcuts)
-- [shortcuts.shortcuts.kksrc](https://github.dev/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.shortcuts.kksrc)
+- [shortcuts.customShortcuts](https://github.com/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.customShortcuts)
+- [shortcuts.shortcuts.kksrc](https://github.com/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.shortcuts.kksrc)
 
 ![Screenshot_20230628_194528](https://github.com/matheusicaro/private-helpers/assets/29001162/1c98e1c8-3df4-4105-927d-be22e9980127)
 ![Screenshot_20230628_194544](https://github.com/matheusicaro/private-helpers/assets/29001162/e1b75722-faec-4b1f-85cd-28a72c48a219)
