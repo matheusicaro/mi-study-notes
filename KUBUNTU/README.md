@@ -1,6 +1,7 @@
-![Screenshot_20230628_194757](https://github.com/matheusicaro/private-helpers/assets/29001162/fc1cffd7-7986-4a11-80ce-f73995ffc0fb)# KUBUNTU 23.04
+1. install a new task monitor
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/e8dbfbf1-5fd9-464a-b9e8-f0dd7ad4f83b)
 
-1. TASK BAR
+2. TASK BAR
 ![Screenshot_20230628_193250](https://github.com/matheusicaro/private-helpers/assets/29001162/895b145f-8b0e-41b9-9586-e1e6e79a2314)
 
 ![Screenshot_20230628_194036](https://github.com/matheusicaro/private-helpers/assets/29001162/f36ed6a8-89a3-420e-8433-564437ca3d9f)
@@ -10,6 +11,10 @@
 ![Screenshot_20230628_194507](https://github.com/matheusicaro/private-helpers/assets/29001162/7583b13f-63de-4e38-a620-c8f43ce4c5a2)
 
 #### shortcuts backup here
+
+- [shortcuts.customShortcuts](https://github.dev/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.customShortcuts)
+- [shortcuts.shortcuts.kksrc](https://github.dev/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.shortcuts.kksrc)
+
 ![Screenshot_20230628_194528](https://github.com/matheusicaro/private-helpers/assets/29001162/1c98e1c8-3df4-4105-927d-be22e9980127)
 ![Screenshot_20230628_194544](https://github.com/matheusicaro/private-helpers/assets/29001162/e1b75722-faec-4b1f-85cd-28a72c48a219)
 ![Screenshot_20230628_194757](https://github.com/matheusicaro/private-helpers/assets/29001162/4d92777b-0888-4c05-b3f4-72f59c4a8796)
@@ -28,5 +33,8 @@
 
 ![Screenshot_20230628_195450](https://github.com/matheusicaro/private-helpers/assets/29001162/e42b43bc-8491-4549-8b55-f528f846d9e7)
 ![Screenshot_20230628_195550](https://github.com/matheusicaro/private-helpers/assets/29001162/fbe05ea8-ebc1-452c-bae3-2fe15e6abdef)
+![Screenshot_20230628_200848](https://github.com/matheusicaro/private-helpers/assets/29001162/5560536c-29f7-4fa7-a17a-0ab6635ef170)
+![Screenshot_20230628_200915](https://github.com/matheusicaro/private-helpers/assets/29001162/d6e475bd-ae8f-4ca4-a727-b8537f3060cb)
+![Screenshot_20230628_200929](https://github.com/matheusicaro/private-helpers/assets/29001162/b5792d0c-1638-44ab-8ddb-97effa967cf0)
 
 
