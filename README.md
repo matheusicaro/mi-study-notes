@@ -1,9 +1,10 @@
-# UTILS
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/11954b79-ca8d-431e-a88f-7bf9d7eb0be9)# UTILS
 
 - LINUX ENV
   - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
   - **[TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)**
   - [SETUP](#setup)
+    - [KUBUNTU](#setup-for-kubuntu)
   - **[SLACK Error on login](#slack-error-on-login)**
 - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
 - [Edit System File by CLI](#edit-system-file-by-cli)
@@ -64,16 +65,8 @@
 
 1. install curl: `sudo apt-get install curl`
 
-```
-*** think about it:
-
-1. KDE Wallet service
-   <br> 1.1. install: `sudo apt-get install gnupg2 -y`
-   <br> 1.2. run `gpg2 --full-gen-key`
-   <br> 1.2.1. generate key default normally
-```
-
 2. VS CODE
+
 3. [Terminal ZSH](#terminal-install-zsh-pretty)
 
 4. Install NVM and use it to setup Node
@@ -94,17 +87,27 @@
 8. Signing Git Commings
 
    <br> **GENERAYE KEY**
+   
    <br> 1. Install GPG: `sudo apt-get install gpg`
+   
    <br> 2 Run: `gpg --gen-key`
+   
    <br> 2.1. This will prompt you for your name and email--fill these out. **Make sure you use the same email that is set in your github as a primary email**
+   
    <br> 2.2. IMPORTANT: IT IS GOING TO ASK YOU 4 TIMES TO SET A SECRET PASSWORD. DOING THIS WILL BE A BAD TIME. Instead, just leave the fields blank and proceed without a password. **If you do set a password, you will need to enter it every time you commit.**
-   <br> 3. Run `gpg --list-secret-keys --keyid-format LONG` and copy the 16 character key identifier listed on the sSECOND line
+   
+   <br> 3. Run `gpg --list-secret-keys --keyid-format LONG` and copy the 16 character key identifier listed on the SECOND line
+   
    <br> 4. Run `gpg --armor --export 0000000000000000000000000000000000000000 gpg-key.txt`
+   
    ![signing%20git%20commits.png](https://github.com/matheusicaro/private-helpers/blob/master/files/signing%20git%20commits.png)
 
    <br> **CONFIGURE GIT**
+   
    <br> 1. Edit your git config in `~/.gitconfig`
+   
    <br> 2. Under `[user]` add `signingkey = <16 character key identifier>`
+   
    <br> 3. Under `[commit]` add `gpgsign = true`. _Note that if you do not add this configuration to `commit` then you must make commits with the `-S flag`, like `git commit -S -m “foo bar”`_
 
    ```
@@ -118,10 +121,19 @@
    ```
 
    <br> **ADD KEY TO GITHUB**
+   
    <br> 1. Go to the [SSH & GPG Keys page](https://github.com/settings/keys) on GitHub
+   
    <br> 2. create new value and past the key generated at **GENERAYE KEY** > step 4
 
 ##### > Save the login and password for the next commits, run: `git config --global credential.helper store`
+
+## SETUP FOR KUBUNTU
+
+1. install a new task monitor
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/e8dbfbf1-5fd9-464a-b9e8-f0dd7ad4f83b)
+
+
 
 ---
 
