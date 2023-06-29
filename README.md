@@ -4,7 +4,7 @@
   - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
   - **[TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)**
   - [SETUP](#setup)
-    - [KUBUNTU](#setup-for-kubuntu)
+    - [KUBUNTU](https://github.com/matheusicaro/private-helpers/blob/master/KUBUNTU/README.md)
   - **[SLACK Error on login](#slack-error-on-login)**
 - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
 - [Edit System File by CLI](#edit-system-file-by-cli)
@@ -127,13 +127,6 @@
    <br> 2. create new value and past the key generated at **GENERAYE KEY** > step 4
 
 ##### > Save the login and password for the next commits, run: `git config --global credential.helper store`
-
-## SETUP FOR KUBUNTU
-
-1. install a new task monitor
-![image](https://github.com/matheusicaro/private-helpers/assets/29001162/e8dbfbf1-5fd9-464a-b9e8-f0dd7ad4f83b)
-
-
 
 ---
 
