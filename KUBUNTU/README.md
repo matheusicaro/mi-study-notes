@@ -1,7 +1,11 @@
+# KUBUMTU 23.04
+
 1. install a new task monitor
+   
 ![image](https://github.com/matheusicaro/private-helpers/assets/29001162/e8dbfbf1-5fd9-464a-b9e8-f0dd7ad4f83b)
 
 2. TASK BAR
+   
 ![Screenshot_20230628_193250](https://github.com/matheusicaro/private-helpers/assets/29001162/895b145f-8b0e-41b9-9586-e1e6e79a2314)
 
 ![Screenshot_20230628_194036](https://github.com/matheusicaro/private-helpers/assets/29001162/f36ed6a8-89a3-420e-8433-564437ca3d9f)
