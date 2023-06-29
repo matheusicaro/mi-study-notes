@@ -13,13 +13,13 @@
 ![Screenshot_20230628_194439](https://github.com/matheusicaro/private-helpers/assets/29001162/bf35f224-d21b-444c-8f18-2e97896e1e2f)
 ![Screenshot_20230628_194455](https://github.com/matheusicaro/private-helpers/assets/29001162/13a5c73d-e08c-4a4b-b375-92e0c393385e)
 ![Screenshot_20230628_194507](https://github.com/matheusicaro/private-helpers/assets/29001162/7583b13f-63de-4e38-a620-c8f43ce4c5a2)
+![Screenshot_20230628_194528](https://github.com/matheusicaro/private-helpers/assets/29001162/1c98e1c8-3df4-4105-927d-be22e9980127)
 
 #### shortcuts backup here
 
-- [shortcuts.customShortcuts](https://github.com/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.customShortcuts)
 - [shortcuts.shortcuts.kksrc](https://github.com/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.shortcuts.kksrc)
+- [shortcuts.customShortcuts](https://github.com/matheusicaro/private-helpers/tree/master/KUBUNTU/shortcuts.customShortcuts)
 
-![Screenshot_20230628_194528](https://github.com/matheusicaro/private-helpers/assets/29001162/1c98e1c8-3df4-4105-927d-be22e9980127)
 ![Screenshot_20230628_194544](https://github.com/matheusicaro/private-helpers/assets/29001162/e1b75722-faec-4b1f-85cd-28a72c48a219)
 ![Screenshot_20230628_194757](https://github.com/matheusicaro/private-helpers/assets/29001162/4d92777b-0888-4c05-b3f4-72f59c4a8796)
 ![Screenshot_20230628_195328](https://github.com/matheusicaro/private-helpers/assets/29001162/16a5e59c-598b-4e46-b580-4e5091cd7810)
