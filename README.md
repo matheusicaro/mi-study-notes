@@ -68,11 +68,11 @@
 2. Add sudo commands (shutdown and reboot)
   <br> 2.1. run: `sudo visudo`
   <br> 2.2. Past in the end
-  ```sh
-  # DISABLED SUDO PASSWORD WHEN REBOOT OR RESTART
-  user host = (root) NOPASSWD: /sbin/shutdown
-  user host = (root) NOPASSWD: /sbin/reboot
-  ```
+    ```sh
+    # DISABLED SUDO PASSWORD WHEN REBOOT OR RESTART
+    <USER_NAME_HERE> ALL = NOPASSWD: /sbin/shutdown
+    <USER_NAME_HERE> ALL = NOPASSWD: /sbin/reboot
+    ```
 
 2. [Terminal ZSH](#terminal-install-zsh-pretty)
 
