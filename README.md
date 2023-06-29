@@ -1,4 +1,4 @@
-![image](https://github.com/matheusicaro/private-helpers/assets/29001162/11954b79-ca8d-431e-a88f-7bf9d7eb0be9)# UTILS
+# UTILS
 
 - LINUX ENV
   - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
