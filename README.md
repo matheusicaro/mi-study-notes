@@ -1,17 +1,16 @@
 # UTILS
- 
-   - LINUX ENV
-       - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
-       - **[TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)**
-       - [SETUP](#setup)
-       - **[SLACK Error on login](#slack-error-on-login)**
-        
-   - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
-   - [Edit System File by CLI](#edit-system-file-by-cli)
-   - [Markdown tips](#markdown-tips)
-   - **IDE configs**
-       - [IntelliJ Settings](https://github.com/matheusicaro/private-helpers/blob/master/IDE-confgis/my-intellij-settings.zip)
-       - [VS Code](https://github.com/matheusicaro/private-helpers/blob/master/IDE-configs/vscode/keybindings-CURRENTLY.json)
+
+- LINUX ENV
+  - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
+  - **[TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)**
+  - [SETUP](#setup)
+  - **[SLACK Error on login](#slack-error-on-login)**
+- [PC Performace on TASKBAR](#pc-performace-on-taskbar)
+- [Edit System File by CLI](#edit-system-file-by-cli)
+- [Markdown tips](#markdown-tips)
+- **IDE configs**
+  - [IntelliJ Settings](https://github.com/matheusicaro/private-helpers/blob/master/IDE-confgis/my-intellij-settings.zip)
+  - [VS Code](https://github.com/matheusicaro/private-helpers/blob/master/IDE-configs/vscode/keybindings-CURRENTLY.json)
 
 # AWS
 
@@ -19,66 +18,111 @@
 
 - [Install **AWS CLI** (aws-vault)](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#install-aws-cli-aws-vault)
 - [**AWS CLI Commands**](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#aws-cli-commands)
-   - [Valid Local Access](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#valid-local-access)
-   - [Get aws-vault](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#get-aws-vault)
-      - [SSO version](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#sso-version)
-      - [AWS old version](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#aws-old-version)
-      - [Config FILES](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#config-files)
+  - [Valid Local Access](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#valid-local-access)
+  - [Get aws-vault](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#get-aws-vault)
+    - [SSO version](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#sso-version)
+    - [AWS old version](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#aws-old-version)
+    - [Config FILES](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#config-files)
 - [CloudWatch insights logs](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#cloudwatch-analytic-insights-logs)
 - [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
 - [DynamoDB Java Integration](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#dynamodb-java-integration)
 - [Get **AWS CA** Private Certificate](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#get-aws-ca-private-certificate)
 - [How To Add **public CA** To Elastic Bean Aws](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#how-to-add-public-ca-to-elastic-bean-aws)
 - [**Kurbenets**](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#kurbenets)
-    - [Kubernetes Dashboard: Get Access Token](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#kubernetes-dashboard-get-access-token)
-    - [CLI: Get Pod Logs](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#cli-get-pod-logs)
+  - [Kubernetes Dashboard: Get Access Token](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#kubernetes-dashboard-get-access-token)
+  - [CLI: Get Pod Logs](https://github.com/matheusicaro/private-helpers/blob/master/aws/README.md#cli-get-pod-logs)
 
 # CODE
 
 - [Mongo](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mongo)
-    - [Queries](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#queries)
+  - [Queries](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#queries)
 - [JavaScript](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#JavaScript)
-    - [Add script GLOBALLY](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#add-script-globally)
-    - [Mocked Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-functions)
-    - [JEST - Tips](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#jest-tips)
+  - [Add script GLOBALLY](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#add-script-globally)
+  - [Mocked Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-functions)
+  - [JEST - Tips](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#jest-tips)
 - [React](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#react)
-    - Eslint start config
-    - [Stack React Apps](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#stack-react-apps)
+  - Eslint start config
+  - [Stack React Apps](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#stack-react-apps)
 - [Java](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#java)
-   - [Array Instances](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#array-instances)
-   - [Converter](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#converter)
-   - [Certificate CA SSL Importing JAVA Cacerts](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#certificate-ca-ssl-importing-java-cacerts)
-   - [Date](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#date)
-   - [Encryption](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#encryption)
-   - [Lambda Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#lambda-functions)
-   - [Map](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#map)
-   - [**MAVEN CLI Commands**](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#maven-cli-commands)
-   - [Mocked Static Method](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-static-method)
-   - [Regex](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#regex)
-   - [String](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#string) 
+  - [Array Instances](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#array-instances)
+  - [Converter](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#converter)
+  - [Certificate CA SSL Importing JAVA Cacerts](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#certificate-ca-ssl-importing-java-cacerts)
+  - [Date](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#date)
+  - [Encryption](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#encryption)
+  - [Lambda Functions](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#lambda-functions)
+  - [Map](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#map)
+  - [**MAVEN CLI Commands**](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#maven-cli-commands)
+  - [Mocked Static Method](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#mocked-static-method)
+  - [Regex](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#regex)
+  - [String](https://github.com/matheusicaro/private-helpers/blob/master/code/README.md#string)
 
 ---
 
 # LINUX ENV
 
-
 ## SETUP
 
-1. Install NVM and use it to setup Node
-<br>    a. `nvm install 16` set it as default
-<br>    b. `nvm install 14` and `nvm install 12`
+1. install curl: `sudo apt-get install curl`
 
-3. DOCKER
-<br>    a. [install](https://docs.docker.com/engine/install/ubuntu/)
-<br>    b. [Manage docker as a non-root user. Here are the steps](https://docs.docker.com/engine/install/linux-postinstall/)
-<br>    c. [Docker Compose](https://docs.docker.com/compose/install/)
-<br>    d. `sudo apt install docker-compose`
+```
+*** think about it:
 
-5. Install a MongoDB Client UI
-<br>    a. [Compass](https://www.mongodb.com/products/compass) or [Robo3T](https://robomongo.org/download)
+1. KDE Wallet service
+   <br> 1.1. install: `sudo apt-get install gnupg2 -y`
+   <br> 1.2. run `gpg2 --full-gen-key`
+   <br> 1.2.1. generate key default normally
+```
 
+2. VS CODE
+3. [Terminal ZSH](#terminal-install-zsh-pretty)
 
-----
+4. Install NVM and use it to setup Node
+   <br> 4.1. `nvm install 16` set it as default
+   <br> 4.2. `nvm install 14` and `nvm install 12`
+
+5. DOCKER
+   <br> 5.1. [install](https://docs.docker.com/engine/install/ubuntu/)
+   <br> 5.2. [Manage docker as a non-root user. Here are the steps](https://docs.docker.com/engine/install/linux-postinstall/)
+   <br> 5.3. [Docker Compose](https://docs.docker.com/compose/install/)
+   <br> 5.4. `sudo apt install docker-compose`
+
+6. MongoDB Client UI
+   <br> 6.1. [Compass](https://www.mongodb.com/products/compass) or [Robo3T](https://robomongo.org/download)
+
+7. [AWS cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+8. Signing Git Commings
+
+   <br> **GENERAYE KEY**
+   <br> 1. Install GPG: `sudo apt-get install gpg`
+   <br> 2 Run: `gpg --gen-key`
+   <br> 2.1. This will prompt you for your name and email--fill these out. **Make sure you use the same email that is set in your github as a primary email**
+   <br> 2.2. IMPORTANT: IT IS GOING TO ASK YOU 4 TIMES TO SET A SECRET PASSWORD. DOING THIS WILL BE A BAD TIME. Instead, just leave the fields blank and proceed without a password. **If you do set a password, you will need to enter it every time you commit.**
+   <br> 3. Run `gpg --list-secret-keys --keyid-format LONG` and copy the 16 character key identifier listed on the sSECOND line
+   <br> 4. Run `gpg --armor --export 0000000000000000000000000000000000000000 gpg-key.txt`
+   ![signing%20git%20commits.png](https://github.com/matheusicaro/private-helpers/blob/master/files/signing%20git%20commits.png)
+
+   <br> **CONFIGURE GIT**
+   <br> 1. Edit your git config in `~/.gitconfig`
+   <br> 2. Under `[user]` add `signingkey = <16 character key identifier>`
+   <br> 3. Under `[commit]` add `gpgsign = true`. _Note that if you do not add this configuration to `commit` then you must make commits with the `-S flag`, like `git commit -S -m “foo bar”`_
+
+   ```
+   [user]
+   	email = matheusicaro2@hotmail.com
+   	name = Matheus Icaro
+   	signingkey = 0000000000000000000000000000000000000000
+
+   [commit]
+   	gpgsign = true
+   ```
+
+   <br> **ADD KEY TO GITHUB**
+   <br> 1. Go to the [SSH & GPG Keys page](https://github.com/settings/keys) on GitHub
+   <br> 2. create new value and past the key generated at **GENERAYE KEY** > step 4
+
+---
+
 <Br>
 <Br>
 <Br>
@@ -159,7 +203,8 @@ export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
 #
 ```
 
-----
+---
+
 <Br>
 <Br>
 <Br>
@@ -175,14 +220,16 @@ export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
 ## TERMINAL install ZSH pretty
 
 #### 1) Install Zsh
-1. ```sudo apt-get install zsh```
+
+1. `sudo apt-get install zsh`
 2. Verify it’s installed — `zsh --version`, expects zsh `5.1.1` or more recent
-3. Make it your default shell: ```chsh -s $(which zsh)```
+3. Make it your default shell: `chsh -s $(which zsh)`
 4. **Restart the system**
 5. Test that it worked with `echo $SHELL`, Expects /bin/zsh
 6. Test with `$SHELL --version` expects zsh `5.1.1` or similar
 
 #### 2) Install Oh-My-Zsh
+
 Run this in your new terminal:
 
 ```
@@ -196,28 +243,31 @@ available in the **menu** at [TERMINAL CUSTOM CONFIGS LINUX ](#terminal-custom-c
 #### 4) Add important plugins
 
 1. install `highlighting` plugin
+
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
+
 2. install `auto suggestions` plugin
+
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
+
 3. add the configs at `.zshrc`
+
 ```sh
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+**** =>>>>> SEARCH FOR PLUGINS AND ADD THIS LINE
+
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)rr
 ```
 
 #### 5) Add themes to be pretty
 
 1. open `.zshrc` and search for `ZSH_THEME`
 
-sould have something like: 
+sould have something like:
+
 ```sh
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -225,12 +275,14 @@ sould have something like:
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 ```
+
 2. click in the link and select the best one
 
 <br>
 <br>
 
-----
+---
+
 <Br>
 <Br>
 <Br>
@@ -249,7 +301,8 @@ Just go to this link: https://example-company.slack.com/ssb/signin_redirect/fall
 
 and copy the key and past in the slack desktop app
 
-----
+---
+
 <Br>
 <Br>
 <Br>
@@ -275,11 +328,11 @@ and copy the key and past in the slack desktop app
 
                                                             --||--
 
-> * **Windows 11**: [Steps required before](#windows-11)
+> - **Windows 11**: [Steps required before](#windows-11)
 
 1. Dowload the **[Perfmonbar app](https://xhmikosr.github.io/perfmonbar/)**
-2. Enable taskbar: 
-   > Click with right mouse button  >  Tollbars  >  Performace Monitor Bar
+2. Enable taskbar:
+   > Click with right mouse button > Tollbars > Performace Monitor Bar
 3. set my xml config:
 
 > C:\Users\{User}\AppData\Roaming\PerfmonBar\config.xml
@@ -348,8 +401,7 @@ and copy the key and past in the slack desktop app
 
 ![image](https://user-images.githubusercontent.com/29001162/176318577-8dadfb0d-d572-4559-b24c-59fa1547e3ec.png)
 
-
-----
+---
 
 ## Edit System File by CLI
 
@@ -360,7 +412,7 @@ and copy the key and past in the slack desktop app
 sudo vim ~/<FILE>
 
 # exit file
-ctrl+c 
+ctrl+c
 
 # set command
 Digit ˜:˜
@@ -372,7 +424,9 @@ Digit “wq”
 Digit Enter
 
 ```
-----
+
+---
+
 <Br>
 <Br>
 <Br>
@@ -416,4 +470,3 @@ Digit Enter
 | Julia                           | julia , jl                                |
 | OCaml                           | ocaml , ml                                |
 | Perl                            | pl , perl                                 |
-
