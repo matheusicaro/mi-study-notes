@@ -2,11 +2,10 @@
   - [TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)
   - [TERMINAL custom configs](#terminal-custom-configs-linux)
   - [SIGNING GIT COMMITS](#signing-git-commits)
-
+  - [Edit System File by CLI](#edit-system-file-by-cli)
+  
 - [WINDOWS](#windows)
   - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
-
-- [Edit System File by CLI](#edit-system-file-by-cli)
 
 
 # LINUX
@@ -72,8 +71,11 @@ ZSH_THEME="robbyrussell"
 
 2. click [in the link](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) and select the best one
 
-<br>
-<br>
+
+
+
+
+
 
 <Br>
 <Br>
@@ -86,6 +88,11 @@ ________________________________________________________________________________
 <Br>
 <Br>
 <Br>
+
+
+
+
+
 
 ## TERMINAL CUSTOM CONFIGS LINUX
 
@@ -266,6 +273,11 @@ export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
 
 ```
 
+
+
+
+
+
 <Br>
 <Br>
 <Br>
@@ -277,6 +289,11 @@ ________________________________________________________________________________
 <Br>
 <Br>
 <Br>
+
+
+
+
+
 
 ## SIGNING GIT COMMITS
 
@@ -324,6 +341,11 @@ ________________________________________________________________________________
 
 ---
 
+
+
+
+
+
 <Br>
 <Br>
 <Br>
@@ -335,6 +357,55 @@ ________________________________________________________________________________
 <Br>
 <Br>
 <Br>
+
+
+
+
+
+
+## Edit System File by CLI
+
+##### Mac IOS / Linux
+
+```powershell
+# open file   -     <FILE> => [ .zshrc, .bash_profile ] => Example: sudo vim ~/.zshrc
+sudo vim ~/<FILE>
+
+# exit file
+ctrl+c
+
+# set command
+Digit ˜:˜
+
+# save and close file command
+Digit “wq”
+
+# confirm
+Digit Enter
+
+```
+
+
+
+
+
+
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+____________________________________________________________________________________
+<Br>
+<Br>
+<Br>
+<Br>
+<Br>
+
+
+
+
+
 
 # WINDOWS
 
@@ -424,26 +495,3 @@ ________________________________________________________________________________
 
 ![image](https://user-images.githubusercontent.com/29001162/176318577-8dadfb0d-d572-4559-b24c-59fa1547e3ec.png)
 
----
-
-## Edit System File by CLI
-
-##### Mac IOS / Linux
-
-```powershell
-# open file   -     <FILE> => [ .zshrc, .bash_profile ] => Example: sudo vim ~/.zshrc
-sudo vim ~/<FILE>
-
-# exit file
-ctrl+c
-
-# set command
-Digit ˜:˜
-
-# save and close file command
-Digit “wq”
-
-# confirm
-Digit Enter
-
-```
