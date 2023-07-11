@@ -7,6 +7,14 @@
 ### 2. TASK BAR
 ![image](https://github.com/matheusicaro/private-helpers/assets/29001162/203343cd-d22a-450b-949a-84fad94a0663)
 
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/26b4eaf9-bc97-4f60-9cf0-c35e3d88f960)
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/e1e02e3c-d533-4159-9d7a-e5f5162703f9)
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/c7c7e76d-8d7c-4b45-9f54-af379d075954)
+
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/0d83f051-6f34-4255-b9fb-57bdbb58605a)
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/d947db92-813b-4b1c-9bf5-fc71341c7f15)
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/671f1521-91a2-498b-85e6-00c16317a1e6)
+
 
 ### [ 1 ]
 ![Screenshot_20230628_194036](https://github.com/matheusicaro/private-helpers/assets/29001162/f36ed6a8-89a3-420e-8433-564437ca3d9f)
