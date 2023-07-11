@@ -1,11 +1,15 @@
-- LINUX ENV
-  - **[TERMINAL custom configs](#terminal-custom-configs-linux)**
-  - **[TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)**
-  - [SETUP](#setup)
-    - [KUBUNTU](https://github.com/matheusicaro/private-helpers/blob/master/KUBUNTU/README.md)
-  - **[SLACK Error on login](#slack-error-on-login)**
- 
-  
+- LINUX
+  - [TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)
+  - [TERMINAL custom configs](#terminal-custom-configs-linux)
+  - [SIGNING GIT COMMITS](#signing-git-commits)
+
+- [WINDOWS](#windows)
+  - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
+
+- [Edit System File by CLI](#edit-system-file-by-cli)
+
+
+# LINUX
 
 ## TERMINAL install ZSH pretty
 
@@ -71,19 +75,17 @@ ZSH_THEME="robbyrussell"
 <br>
 <br>
 
----
-
 <Br>
 <Br>
 <Br>
 <Br>
 <Br>
+____________________________________________________________________________________
 <Br>
 <Br>
 <Br>
 <Br>
 <Br>
-----
 
 ## TERMINAL CUSTOM CONFIGS LINUX
 
@@ -264,19 +266,17 @@ export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
 
 ```
 
----
-
 <Br>
 <Br>
 <Br>
 <Br>
 <Br>
+____________________________________________________________________________________
 <Br>
 <Br>
 <Br>
 <Br>
 <Br>
-----
 
 ## SIGNING GIT COMMITS
 
@@ -329,9 +329,121 @@ export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
 <Br>
 <Br>
 <Br>
+____________________________________________________________________________________
 <Br>
 <Br>
 <Br>
 <Br>
 <Br>
-----
+
+# WINDOWS
+
+## PC Performace on TASKBAR
+
+![image](https://user-images.githubusercontent.com/29001162/174864608-e2b2e42c-1cb0-4d5e-82a3-982e3b855553.png)
+
+<br>
+**with new update**
+<br>
+<br>
+
+![image](https://user-images.githubusercontent.com/29001162/182479311-622e28c2-63d8-4bde-87ac-61f6039a3b3b.png)
+
+                                                            --||--
+
+> - **Windows 11**: [Steps required before](#windows-11)
+
+1. Dowload the **[Perfmonbar app](https://xhmikosr.github.io/perfmonbar/)**
+2. Enable taskbar:
+   > Click with right mouse button > Tollbars > Performace Monitor Bar
+3. set my xml config:
+
+> C:\Users\{User}\AppData\Roaming\PerfmonBar\config.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ============================================================================================================= -->
+<!--     you can reload the configuration file with right click -> Performance Monitor - (Reload Configuration)    -->
+<!-- ============================================================================================================= -->
+
+<perfbar>
+    <counters>
+
+        <!-- ======================================================================================== -->
+        <!--   you can run `typeperf -q>counters.txt` to list all available counters on your system   -->
+        <!-- ======================================================================================== -->
+        <counter name="CPU_USAGE" value="\Processor Information(_Total)\% Processor Time"/>
+        <counter name="AVAILABLE_MEMORY" value="\Memory\Available MBytes"/>
+
+    </counters>
+    <pages>
+
+        <!-- ======================================================================== -->
+        <!-- use left button click on the performance bar to switch between the pages -->
+        <!-- ======================================================================== -->
+
+        <page offsetY="6">
+
+            <lines>
+
+                <line fontFamily="Segoe UI" fontSize="8" fontItalic="false" fontBold="true" fontColor="469fe3">
+
+        		        <!-- ======================================================================================== -->
+        		        <!-- you can use the "characters" attribute to ensure a minimum length of the displayed value -->
+        		        <!-- ======================================================================================== -->
+                    <display prefix=" CPU     " suffix="% " counter="CPU_USAGE"/>
+
+                </line>
+
+                <line fontFamily="Segoe UI" fontSize="7" fontItalic="false" fontBold="true" fontColor="3ded69">
+
+        		        <!-- ======================================================================================== -->
+        		        <!--       divide here means the total of the MEMORY                                          -->
+        		        <!--       so the calc is: TOTAL_AVAILABLE / TOTAL_MEMORY = AVAILABLE_PERCENT                 -->
+        		        <!-- ======================================================================================== -->
+                    <display prefix=" RAM  + " suffix="%" counter="AVAILABLE_MEMORY" decimals="0" divide="320" />
+
+                </line>
+
+            </lines>
+
+        </page>
+    </pages>
+    <settings minSizeX="10" minSizeY="10">
+    </settings>
+</perfbar>
+
+
+```
+
+#### Windows 11
+
+1. Install **ExplorerPatcher** according to [issue 46](https://github.com/XhmikosR/perfmonbar/issues/46)
+2. My default cofings:
+
+![image](https://user-images.githubusercontent.com/29001162/176318577-8dadfb0d-d572-4559-b24c-59fa1547e3ec.png)
+
+---
+
+## Edit System File by CLI
+
+##### Mac IOS / Linux
+
+```powershell
+# open file   -     <FILE> => [ .zshrc, .bash_profile ] => Example: sudo vim ~/.zshrc
+sudo vim ~/<FILE>
+
+# exit file
+ctrl+c
+
+# set command
+Digit ˜:˜
+
+# save and close file command
+Digit “wq”
+
+# confirm
+Digit Enter
+
+```
