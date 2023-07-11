@@ -63,9 +63,9 @@
 
 ## SETUP
 
-- [ ] 1. install curl: `sudo apt-get install curl`
+- [x] 1. install curl: `sudo apt-get install curl`
 
-- [ ] 2. Add sudo commands (shutdown and reboot)
+- [x] 2. Add sudo commands (shutdown and reboot)
   <br> 2.1. run: `sudo visudo`
   <br> 2.2. Past in the end
     ```sh
@@ -74,11 +74,11 @@
     <USER_NAME_HERE> ALL = NOPASSWD: /sbin/reboot
     ```
 
-- [ ] 3. VS CODE
+- [x] 3. VS CODE
 
-- [ ] 4. [Terminal ZSH](#terminal-install-zsh-pretty)
+- [x] 4. [Terminal ZSH](#terminal-install-zsh-pretty)
 
-- [ ] 5. Install NVM and use it to setup Node
+- [x] 5. Install NVM and use it to setup Node
      <br> 4.1. `nvm install 16` set it as default
      <br> 4.2. `nvm install 14` and `nvm install 12`
 
@@ -93,7 +93,7 @@
 
 - [ ] 8. [AWS cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-- [ ] 0. Signing Git Commings
+- [x] 0. Signing Git Commings
 
    <br> **GENERAYE KEY**
    
