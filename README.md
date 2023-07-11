@@ -117,6 +117,7 @@ ________________________________________________________________________________
   - [SIGNING GIT COMMITS](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
   - [Edit System File by CLI](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#edit-system-file-by-cli)
 
+
 ## SETUP
 
 - [x] 1. install curl: `sudo apt-get install curl`
