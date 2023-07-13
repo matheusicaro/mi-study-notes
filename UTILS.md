@@ -297,6 +297,28 @@ ________________________________________________________________________________
 
 ## SIGNING GIT COMMITS
 
+  
+#### >>> PRE GIT FIRST
+
+  1. install git: https://github.com/git-guides/install-git#install-git-on-linux
+  2. in the file `.gitconfig` add: 
+```sh
+[user]
+	email = matheusicaro2@hotmail.com
+	name = Matheus Icaro
+	signingkey = 0000000000000000000000000000000000000000 # key generated in the steps bellow**
+	
+[commit]
+	gpgsign = true
+[credential]
+	helper = store
+```
+  
+   3. Add git credentials to stop asking for the login and password. Create a file `.git-credentials` and add:
+```sh
+https://matheusicaro2%40hotmail.com:ghp_REDACTEDREDACTEDREDACTEDREDACTED@github.com #token comes from git token
+``` 
+
    <br> **GENERAYE KEY**
    
    <br> 1. Install GPG: `sudo apt-get install gpg`
