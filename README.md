@@ -122,8 +122,8 @@ ________________________________________________________________________________
 
 ## SETUP
 
-➔ ➜ **[1] Install** notebook drivers here: https://github.com/matheusicaro/private-helpers/blob/master/MY_NOTE.md#drivers-linux
-
+- [x] 1. ➔ ➜ **Install**  notebook drivers here: https://github.com/matheusicaro/private-helpers/blob/master/MY_NOTE.md#drivers-linux
+    
 - [x] 1. install curl: `sudo apt-get install curl`
 
 - [x] 2. Add sudo commands (shutdown and reboot)
