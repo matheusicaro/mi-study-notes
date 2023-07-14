@@ -1,9 +1,11 @@
+# NOTEBOOK [(here)](https://github.com/matheusicaro/private-helpers/blob/master/MY_NOTE.md)
+
 # UTILS
 
 - **[SLACK Error on login](#slack-error-on-login)**
 
 - DEV ENV
-  - LINUX
+  - LINUX  
     - [SETUP](#setup)
       - [KUBUNTU (screens)](https://github.com/matheusicaro/private-helpers/blob/master/KUBUNTU/README.md)
   - WINDOWS
@@ -119,6 +121,8 @@ ________________________________________________________________________________
 
 
 ## SETUP
+
+➔ ➜ **[1] Install** notebook drivers here: https://github.com/matheusicaro/private-helpers/blob/master/MY_NOTE.md#drivers-linux
 
 - [x] 1. install curl: `sudo apt-get install curl`
 
