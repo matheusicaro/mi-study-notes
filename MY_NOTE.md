@@ -14,3 +14,26 @@ https://www.razer.com/ca-en/gaming-laptops/Razer-Blade-17/RZ09-0423QED3-R3U1
 ### Description
 
 ![WhatsApp Image 2023-07-07 at 12 57 24 PM](https://github.com/matheusicaro/private-helpers/assets/29001162/4f8054aa-a3df-466a-903e-8ead7542930f)
+
+
+# DRIVERS LINUX
+
+
+1. show the drivers installed
+  ```
+  lspci | grep VGA
+  ```
+
+2. download the driver here: https://www.nvidia.com/Download/Find.aspx
+
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/82724969-0e6b-4b2f-bf36-da53a32219c0)
+
+
+3. add permission to the script
+   ```
+   sudo chmod +x NVIDIA<___tab-autocomplete___> 
+   ```
+4. Run the installer with:
+  ```
+  sudo ./NVIDIA<___tab-autocomplete___> 
+  ```
