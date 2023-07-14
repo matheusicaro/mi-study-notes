@@ -20,9 +20,11 @@ https://www.razer.com/ca-en/gaming-laptops/Razer-Blade-17/RZ09-0423QED3-R3U1
 
 
 1. show the drivers installed
-  ```
+  ```terminal
   lspci | grep VGA
   ```
+
+2. deinstall the previous driver if necessary:
 
 2. download the driver here: https://www.nvidia.com/Download/Find.aspx
 
@@ -30,10 +32,16 @@ https://www.razer.com/ca-en/gaming-laptops/Razer-Blade-17/RZ09-0423QED3-R3U1
 
 
 3. add permission to the script
-   ```
+   ```terminal
    sudo chmod +x NVIDIA<___tab-autocomplete___> 
    ```
-4. Run the installer with:
-  ```
-  sudo ./NVIDIA<___tab-autocomplete___> 
-  ```
+4. Run the installer with: `sudo ./NVIDIA<___tab-autocomplete___>`
+4.1. **How to disable** Nouveau kernel driver?*
+<br> 4.1.1. run: `sudo nano /etc/modprobe.d/blacklist-nouveau.conf`
+<br> 4.1.2. write in the file: 
+     ```
+      blacklist nouveau
+      options nouveau modeset=0
+     ```
+<br> 4.1.3. run the command: `sudo update-initramfs -u`
+<br> 4.1.4. reboot the system
