@@ -36,7 +36,7 @@ https://www.razer.com/ca-en/gaming-laptops/Razer-Blade-17/RZ09-0423QED3-R3U1
    sudo chmod +x NVIDIA<___tab-autocomplete___> 
    ```
 4. Run the installer with: `sudo ./NVIDIA<___tab-autocomplete___>`
-4.1. **How to disable** Nouveau kernel driver?*
+<br> 4.1. **How to disable** Nouveau kernel driver?*
 <br> 4.1.1. run: `sudo nano /etc/modprobe.d/blacklist-nouveau.conf`
 <br> 4.1.2. write in the file: 
      ```
