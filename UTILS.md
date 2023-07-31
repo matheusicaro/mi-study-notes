@@ -1,4 +1,5 @@
 - LINUX
+  - [BOOT ISO through Linux](#boot-iso-through-linux)
   - [TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)
   - [TERMINAL custom configs](#terminal-custom-configs-linux)
   - [SIGNING GIT COMMITS](#signing-git-commits)
@@ -9,6 +10,12 @@
 
 
 # LINUX
+
+## BOOT ISO through Linux
+**[Deeping Boot Maker](https://www.deepin.org/en/original/deepin-boot-maker/)**, best program! its like **[Rufus](https://rufus.ie/en/)** for Windows
+
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/4d8f01eb-87aa-4e95-8133-8567a0980778)
+
 
 ## TERMINAL install ZSH pretty
 
