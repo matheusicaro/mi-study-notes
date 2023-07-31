@@ -5,7 +5,8 @@
 - **[SLACK Error on login](#slack-error-on-login)**
 
 - DEV ENV
-  - LINUX  
+  - LINUX
+    - [Linux tips and software](#linux-env)  
     - [SETUP](#setup)
       - [KUBUNTU (screens)](https://github.com/matheusicaro/private-helpers/blob/master/KUBUNTU/README.md)
   - WINDOWS
@@ -114,6 +115,7 @@ ________________________________________________________________________________
 
 # LINUX ENV
 
+  - [BOOT ISO through Linux](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#boot-iso-through-linux)
   - [TERMINAL install ZSH pretty](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#terminal-install-zsh-pretty)
   - [TERMINAL custom configs](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#terminal-custom-configs-linux)
   - [SIGNING GIT COMMITS](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
