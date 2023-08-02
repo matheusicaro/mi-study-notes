@@ -19,6 +19,14 @@ https://www.razer.com/ca-en/gaming-laptops/Razer-Blade-17/RZ09-0423QED3-R3U1
 # DRIVERS LINUX
 
 
+#### UNISTALL NVIDIA DRIVER
+
+```
+sudo nvidia-uninstall
+```
+
+#### INSTALL NVIDIA DRIVER
+
 1. show the drivers installed
   ```terminal
   lspci | grep VGA
