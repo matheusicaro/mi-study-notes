@@ -16,13 +16,24 @@ https://www.razer.com/ca-en/gaming-laptops/Razer-Blade-17/RZ09-0423QED3-R3U1
 ![WhatsApp Image 2023-07-07 at 12 57 24 PM](https://github.com/matheusicaro/private-helpers/assets/29001162/4f8054aa-a3df-466a-903e-8ead7542930f)
 
 
+<br> 
+<br> 
+<br> 
+<br> 
+
 # DRIVERS LINUX
+
+<br> 
+<br> 
 
 ## UBUNTU
 
 1. install driver through `Ubuntu Software`
 ![image](https://github.com/matheusicaro/private-helpers/assets/29001162/ff968490-56a5-4c26-8f15-b4a743e8663f)
 
+<br> 
+<br> 
+<br> 
 
 ## KUBUNTU
 
