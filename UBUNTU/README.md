@@ -38,6 +38,11 @@
 
 ![my-settings-1](https://github.com/matheusicaro/private-helpers/blob/master/UBUNTU/imgs-my-settings/6.png)
 
+# [6 MONITOR TASK]
+
+![my-settings-1](https://github.com/matheusicaro/private-helpers/blob/master/UBUNTU/imgs-my-settings/6a.png)
+
+
 # [7]
 
 ![my-settings-1](https://github.com/matheusicaro/private-helpers/blob/master/UBUNTU/imgs-my-settings/7.png)
