@@ -235,25 +235,25 @@ alias awsx="source _awsx"
 alias awstest="aws sqs list-queues"
 
 alias cdenv="code \"/home/matheus/.zshrc\""
-alias cdneo="cd \"/home/matheus/repositories/NEO/\""
+alias cdneo="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/\""
 
-alias credit="cd \"/home/matheus/repositories/NEO/credit-onboarding-service\""
-alias cdcos="cd \"/home/matheus/repositories/NEO/credit-onboarding-service\""
-alias savings="cd \"/home/matheus/repositories/NEO/savings-onboarding-service\""
-alias cdsos="cd \"/home/matheus/repositories/NEO/savings-onboarding-service\""
-alias user="cd \"/home/matheus/repositories/NEO/user-service\""
-alias cdus="cd \"/home/matheus/repositories/NEO/user-service\""
-alias cduos="cd \"/home/matheus/repositories/NEO/unified-onboarding-service\""
-alias invest="cd \"/home/matheus/repositories/NEO/investiment-onboarding-service\""
-alias cdios="cd \"/home/matheus/repositories/NEO/investiment-onboarding-service\""
-alias identity="cd \"/home/matheus/repositories/NEO/identity-service\""
-alias cdis="cd \"/home/matheus/repositories/NEO/identity-service\""
+alias credit="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/credit-onboarding-service\""
+alias cdcos="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/credit-onboarding-service\""
+alias savings="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/savings-onboarding-service\""
+alias cdsos="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/savings-onboarding-service\""
+alias user="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/user-service\""
+alias cdus="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/user-service\""
+alias cduos="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/unified-onboarding-service\""
+alias invest="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/investiment-onboarding-service\""
+alias cdios="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/investiment-onboarding-service\""
+alias identity="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/identity-service\""
+alias cdis="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/identity-service\""
 
-alias cos="code \"/home/matheus/repositories/NEO/credit-onboarding-service\""
-alias sos="code \"/home/matheus/repositories/NEO/savings-onboarding-service\""
-alias us="code \"/home/matheus/repositories/NEO/user-service\""
-alias uos="code \"/home/matheus/repositories/NEO/unified-onboarding-service\""
-alias is="code \"/home/matheus/repositories/NEO/identity-service\""
+alias cos="code \"/home/matheus/DEVELOPMENT/repositories/NEO/credit-onboarding-service\""
+alias sos="code \"/home/matheus/DEVELOPMENT/repositories/NEO/savings-onboarding-service\""
+alias us="code \"/home/matheus/DEVELOPMENT/repositories/NEO/user-service\""
+alias uos="code \"/home/matheus/DEVELOPMENT/repositories/NEO/unified-onboarding-service\""
+alias is="code \"/home/matheus/DEVELOPMENT/repositories/NEO/identity-service\""
 
 alias disablenet="sudo kill $(pgrep -f /opt/netskope/stagent/stAgentSvc)"
 alias disablenet2="sudo kill $(pgrep -f /opt/netskope/stagent/stAgentApp)"
@@ -277,7 +277,6 @@ export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
 #
 #
 #
-
 ```
 
 
