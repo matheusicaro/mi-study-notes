@@ -18,6 +18,13 @@ https://www.razer.com/ca-en/gaming-laptops/Razer-Blade-17/RZ09-0423QED3-R3U1
 
 # DRIVERS LINUX
 
+## UBUNTU
+
+1. install driver through `Ubuntu Software`
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/ff968490-56a5-4c26-8f15-b4a743e8663f)
+
+
+## KUBUNTU
 
 #### UNISTALL NVIDIA DRIVER
 
