@@ -1,4 +1,8 @@
-## NVIDIA DRIVER VIDEO
+- [My custom scripts](https://github.com/matheusicaro/private-helpers/blob/master/UBUNTU/scripts/README.md)
+- [Driver Video](#nvidia-driver-video)
+- [My settings](#ubuntu-my-settings)
+
+# NVIDIA DRIVER VIDEO
 
 1. install driver through `Ubuntu Software`
 ![image](https://github.com/matheusicaro/private-helpers/assets/29001162/ff968490-56a5-4c26-8f15-b4a743e8663f)
