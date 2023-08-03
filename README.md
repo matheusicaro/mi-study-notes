@@ -141,7 +141,7 @@ ________________________________________________________________________________
 
 - [x] 4. [Terminal ZSH](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#terminal-install-zsh-pretty)
 
-- [x] 5. Install NVM and use it to setup Node
+- [ ] 5. Install NVM and use it to setup Node
      <br> 4.1. `nvm install 16` set it as default
      <br> 4.2. `nvm install 14` and `nvm install 12`
 
@@ -156,7 +156,7 @@ ________________________________________________________________________________
 
 - [ ] 8. [AWS cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-- [x] 0. [Signing Git Commings](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
+- [ ] 0. [Signing Git Commings](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
 
 
 
