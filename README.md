@@ -8,7 +8,8 @@
   - LINUX
     - [Linux tips and software](#linux-env)  
     - [SETUP](#setup)
-      - [KUBUNTU (screens)](https://github.com/matheusicaro/private-helpers/blob/master/KUBUNTU/README.md)
+      - [UBUNTU](https://github.com/matheusicaro/private-helpers/blob/master/UBUNTU/README.md)
+      - [KUBUNTU](https://github.com/matheusicaro/private-helpers/blob/master/KUBUNTU/README.md)
   - WINDOWS
     - [PC Performace on TASKBAR](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#pc-performace-on-taskbar)
 
