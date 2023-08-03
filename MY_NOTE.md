@@ -21,7 +21,7 @@ https://www.razer.com/ca-en/gaming-laptops/Razer-Blade-17/RZ09-0423QED3-R3U1
 <br> 
 <br> 
 
-# VIDEO => DRIVERS LINUX
+# VIDEO > DRIVERS LINUX
 
 
 ## UBUNTU
