@@ -308,7 +308,7 @@ ________________________________________________________________________________
 #### >>> PRE GIT FIRST
 
   1. install git: https://github.com/git-guides/install-git#install-git-on-linux
-  2. in the file `.gitconfig` add: 
+  2. in the file `user_folder/.gitconfig` add: 
 ```sh
 [user]
 	email = matheusicaro2@hotmail.com
