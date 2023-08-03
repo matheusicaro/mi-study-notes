@@ -1,4 +1,54 @@
-# KUBUMTU 23.04
+# KUBUNTU 23.04
+
+## NVIDIA DRIVER VIDEO
+
+#### UNINSTALL NVIDIA DRIVER
+
+```
+sudo nvidia-uninstall
+```
+<br>
+<br>
+
+#### INSTALL NVIDIA DRIVER
+
+1. show the drivers installed
+  ```terminal
+  lspci | grep VGA
+  ```
+
+2. UNINSTALL the previous driver if necessary:
+
+2. download the driver here: https://www.nvidia.com/Download/Find.aspx
+
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/82724969-0e6b-4b2f-bf36-da53a32219c0)
+
+
+3. add permission to the script
+   ```terminal
+   sudo chmod +x NVIDIA<___tab-autocomplete___> 
+   ```
+4. Run the installer with: `sudo ./NVIDIA<___tab-autocomplete___>`
+<br> 4.1. **How to disable** Nouveau kernel driver?*
+<br> 4.1.1. run: `sudo nano /etc/modprobe.d/blacklist-nouveau.conf`
+<br> 4.1.2. write in the file: 
+     ```
+      blacklist nouveau
+      options nouveau modeset=0
+     ```
+<br> 4.1.3. run the command: `sudo update-initramfs -u`
+<br> 4.1.4. reboot the system
+
+------------
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+------------
 
 ### 1. install a new task monitor
    
