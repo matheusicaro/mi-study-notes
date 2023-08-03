@@ -321,7 +321,7 @@ ________________________________________________________________________________
 	helper = store
 ```
   
-   3. Add git credentials to stop asking for the login and password. Create a file `.git-credentials` and add:
+   3. Add git credentials to stop asking for the login and password. Create a file `user_folder/.git-credentials` and add:
 ```sh
 https://matheusicaro2%40hotmail.com:ghp_REDACTEDREDACTEDREDACTEDREDACTED@github.com #token comes from git token
 ``` 
