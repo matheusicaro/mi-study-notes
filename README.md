@@ -156,7 +156,7 @@ ________________________________________________________________________________
 
 - [ ] 8. [AWS cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-- [ ] 0. [Signing Git Commings](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
+- [x] 0. [Signing Git Commings](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
 
 
 
