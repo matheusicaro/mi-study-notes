@@ -5,8 +5,8 @@
 - **[SLACK Error on login](#slack-error-on-login)**
 
 - DEV ENV
-  - LINUX
-    - [Linux tips and software](#linux-env)  
+  - LINUX 
+    - [Linux tips and software](#linux-env) 
     - [SETUP](#setup)
       - [UBUNTU](https://github.com/matheusicaro/private-helpers/blob/master/UBUNTU/README.md)
       - [KUBUNTU](https://github.com/matheusicaro/private-helpers/blob/master/KUBUNTU/README.md)
@@ -121,6 +121,26 @@ ________________________________________________________________________________
   - [TERMINAL custom configs](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#terminal-custom-configs-linux)
   - [SIGNING GIT COMMITS](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
   - [Edit System File by CLI](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#edit-system-file-by-cli)
+
+
+<Br>
+<Br>
+
+# Install >> libssl1
+
+#### UBUNTU 22.04
+```
+  wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+  sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+```
+Font: https://gist.github.com/joulgs/c8a85bb462f48ffc2044dd878ecaa786
+
+
+<Br>
+<Br>
+____________________________________________________________________________________
+<Br>
+<Br>
 
 
 ## SETUP
