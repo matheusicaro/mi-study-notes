@@ -9,4 +9,4 @@
 #
 #########################################################
 notify-send "SE LIGA MANO, PARTIU CASA!" "SHUTDOWN in 3 seconds"
-sudo shutdown -d now
+sudo shutdown -P now
