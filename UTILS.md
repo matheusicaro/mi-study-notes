@@ -229,7 +229,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # ALIAS
 alias force_restart="sudo shutdown -r now"
-alias force_shutdown="sudo shutdown -h now"
+alias force_shutdown="sudo shutdown -P now"
 
 alias awsx="source _awsx"
 alias awstest="aws sqs list-queues"
