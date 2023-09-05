@@ -229,13 +229,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # ALIAS
 alias force_restart="sudo shutdown -r now"
-alias force_shutdown="sudo shutdown -P now"
+alias force_shutdown="sudo shutdown -p now"
 
 alias awsx="source _awsx"
 alias awstest="aws sqs list-queues"
 
 alias cdenv="code \"/home/matheus/.zshrc\""
-alias cdneo="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/\""
 
 alias credit="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/credit-onboarding-service\""
 alias cdcos="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/credit-onboarding-service\""
@@ -247,7 +246,7 @@ alias cduos="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/unified-onboarding-
 alias invest="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/investiment-onboarding-service\""
 alias cdios="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/investiment-onboarding-service\""
 alias identity="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/identity-service\""
-alias cdis="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/identity-service\""
+alias cdis="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/identity-service\""git checkout -b ENGGROWTH-7242-add-user-type-into-application-metadata-during-creation
 
 alias cos="code \"/home/matheus/DEVELOPMENT/repositories/NEO/credit-onboarding-service\""
 alias sos="code \"/home/matheus/DEVELOPMENT/repositories/NEO/savings-onboarding-service\""
@@ -255,19 +254,50 @@ alias us="code \"/home/matheus/DEVELOPMENT/repositories/NEO/user-service\""
 alias uos="code \"/home/matheus/DEVELOPMENT/repositories/NEO/unified-onboarding-service\""
 alias is="code \"/home/matheus/DEVELOPMENT/repositories/NEO/identity-service\""
 
-alias disablenet="sudo kill $(pgrep -f /opt/netskope/stagent/stAgentSvc)"
-alias disablenet2="sudo kill $(pgrep -f /opt/netskope/stagent/stAgentApp)"
-
 alias processlist="sudo ps -aux"
 alias husky_reinstall="rm -rf .git/hooks & npm install"
+alias skip_git="git commit --no-verify -m"
+alias skip_husky="skip_git"
 
-alias integration_git="git checkout integration"
-alias integration_git_reset="git branch -d -f integration & git pull --all"
-alias reset_git_integration="integration_reset"
+alias checkout="git checkout"
+alias reset_integration="git branch -d -f integration & git pull --all"
+alias branch_delete="git branch -d -f"
+alias build="npm run build"
+alias types="npm run generate:types:force"
+alias test="npm run test"
 
 # ENVS
 export GIT_SSL_NO_VERIFY=1
 export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
+
+#########################################################
+# NEO Config setup
+#########################################################
+
+alias disablenet="sudo kill $(pgrep -f /opt/netskope/stagent/stAgentSvc)"
+alias disablenet2="sudo kill $(pgrep -f /opt/netskope/stagent/stAgentApp)"
+
+alias cdneo="cd \"/home/matheus/DEVELOPMENT/repositories/NEO/\""
+
+###-begin-neo-completions-###
+#
+# yargs command completion script
+#
+# Installation: neo completions >> ~/.zshrc
+#    or neo completions >> ~/.zsh_profile on OSX.
+#
+_neo_yargs_completions()
+{
+  local reply
+  local si=$IFS
+  IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" neo --get-yargs-completions "${words[@]}"))
+  IFS=$si
+  _describe 'values' reply
+}
+compdef _neo_yargs_completions neo
+###-end-neo-completions-###
+
 #
 #
 #
