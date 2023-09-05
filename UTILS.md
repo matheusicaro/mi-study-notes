@@ -229,13 +229,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # ALIAS
 alias force_restart="sudo shutdown -r now"
-alias force_shutdown="sudo shutdown -P now"
+alias force_shutdown="sudo shutdown -p now"
 
 alias awsx="source _awsx"
 alias awstest="aws sqs list-queues"
 
 alias cdenv="code \"/home/matheus/.zshrc\""
-alias cdneo="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 
 alias credit="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias cdcos="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
@@ -247,7 +246,7 @@ alias cduos="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-se
 alias invest="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias cdios="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias identity="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
-alias cdis="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+alias cdis="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""git checkout -b ENGGROWTH-7242-add-user-type-into-application-metadata-during-creation
 
 alias cos="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias sos="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
@@ -255,19 +254,50 @@ alias us="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-ser
 alias uos="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias is="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 
-alias disablenet="sudo kill $(pgrep -f /opt/EXAMPLE-DLP-AGENT/agent)"
-alias disablenet="sudo kill $(pgrep -f /opt/EXAMPLE-DLP-AGENT/agent)"
-
 alias processlist="sudo ps -aux"
 alias husky_reinstall="rm -rf .git/hooks & npm install"
+alias skip_git="git commit --no-verify -m"
+alias skip_husky="skip_git"
 
-alias integration_git="git checkout integration"
-alias integration_git_reset="git branch -d -f integration & git pull --all"
-alias reset_git_integration="integration_reset"
+alias checkout="git checkout"
+alias reset_integration="git branch -d -f integration & git pull --all"
+alias branch_delete="git branch -d -f"
+alias build="npm run build"
+alias types="npm run generate:types:force"
+alias test="npm run test"
 
 # ENVS
 export GIT_SSL_NO_VERIFY=1
 export AWS_CA_BUNDLE="~/.aws/ca_bundle.pem"
+
+#########################################################
+# NEO Config setup
+#########################################################
+
+alias disablenet="sudo kill $(pgrep -f /opt/EXAMPLE-DLP-AGENT/agent)"
+alias disablenet="sudo kill $(pgrep -f /opt/EXAMPLE-DLP-AGENT/agent)"
+
+alias cdneo="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
+
+###-begin-neo-completions-###
+#
+# yargs command completion script
+#
+# Installation: neo completions >> ~/.zshrc
+#    or neo completions >> ~/.zsh_profile on OSX.
+#
+_neo_yargs_completions()
+{
+  local reply
+  local si=$IFS
+  IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" neo --get-yargs-completions "${words[@]}"))
+  IFS=$si
+  _describe 'values' reply
+}
+compdef _neo_yargs_completions neo
+###-end-neo-completions-###
+
 #
 #
 #
