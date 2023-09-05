@@ -171,6 +171,8 @@ ________________________________________________________________________________
      <br> 5.2. [Manage docker as a non-root user. Here are the steps](https://docs.docker.com/engine/install/linux-postinstall/)
      <br> 5.3. [Docker Compose](https://docs.docker.com/compose/install/)
      <br> 5.4. `sudo apt install docker-compose`
+     <br> 5.5. install dev environment docker here: https://github.com/matheusicaro/private-helpers/tree/master/Docker
+
 
 - [ ] 7. MongoDB Client UI
      <br> 6.1. [Compass](https://www.mongodb.com/products/compass) or [Robo3T](https://robomongo.org/download)
