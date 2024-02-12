@@ -209,19 +209,33 @@ source $ZSH/oh-my-zsh.sh
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
+#
+#
+#
+##############
+#
+#   NVM
+#
+##############
+#
+############## LINUX ENV
+#
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+#
+#
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # ALIAS
 alias force_restart="sudo shutdown -r now"
 alias force_shutdown="sudo shutdown -p now"
 
-alias awsx="source _awsx"
 alias awstest="aws sqs list-queues"
 
-alias cdenv="code \"/home/matheus/.zshrc\""
+alias cdenv="code \"/Users/matheus/.zshrc\""
 
 alias credit="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias cdcos="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
@@ -233,7 +247,7 @@ alias cduos="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-se
 alias invest="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias cdios="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias identity="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
-alias cdis="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""git checkout -b ENGGROWTH-7242-add-user-type-into-application-metadata-during-creation
+alias cdis="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 
 alias cos="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
 alias sos="code \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-service\""
@@ -252,6 +266,7 @@ alias branch_delete="git branch -d -f"
 alias build="npm run build"
 alias types="npm run generate:types:force"
 alias test="npm run test"
+alias pipeline="npm run build && npm run lint && npm run generate:types && npm run test"
 
 # ENVS
 export GIT_SSL_NO_VERIFY=1
@@ -273,16 +288,46 @@ alias cdneo="cd \"/Users/example/DEVELOPMENT/repositories/EXAMPLE-ORG/example-se
 # Installation: neo completions >> ~/.zshrc
 #    or neo completions >> ~/.zsh_profile on OSX.
 #
-_neo_yargs_completions()
-{
-  local reply
-  local si=$IFS
-  IFS=$'
-' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" neo --get-yargs-completions "${words[@]}"))
-  IFS=$si
-  _describe 'values' reply
+_neo_yargs_completions() {
+    local reply
+    local si=$IFS
+    IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT - 1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" neo --get-yargs-completions "${words[@]}"))
+    IFS=$si
+    _describe 'values' reply
 }
 compdef _neo_yargs_completions neo
+
+### it should add following script to your bash profile =========>
+
+###-begin-neo-completions-###
+#
+# yargs command completion script
+#
+# Installation: neo autocomplete:script >> ~/.bashrc
+#    or neo autocomplete:script >> ~/.bash_profile on OSX.
+#
+_yargs_completions() {
+    local cur_word args type_list
+
+    cur_word="${COMP_WORDS[COMP_CWORD]}"
+    args=("${COMP_WORDS[@]}")
+
+    # ask yargs to generate completions.
+    type_list=$(neo --get-yargs-completions "${args[@]}")
+
+    COMPREPLY=($(compgen -W "${type_list}" -- ${cur_word}))
+
+    # if no match was found, fall back to filename completion
+    if [ ${#COMPREPLY[@]} -eq 0 ]; then
+        COMPREPLY=()
+    fi
+
+    return 0
+}
+complete -o default -F _yargs_completions neo
+###-end-neo-completions-###
+
 ###-end-neo-completions-###
 
 #
@@ -294,6 +339,10 @@ compdef _neo_yargs_completions neo
 #
 #
 #
+
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=$(which chromium)
+
 ```
 
 <Br>
@@ -319,11 +368,12 @@ macOS:
 - Install [GPG Tools](https://gpgtools.org/)
 
 - Generate a new key using **OPENING** GPG Keychain
-	- Make sure you use the same email address that your GitHub account uses (you can find this in your git config)
-	- do not need to set a password on your key
+
+  - Make sure you use the same email address that your GitHub account uses (you can find this in your git config)
+  - do not need to set a password on your key
 
 - Export the public key by right clicking on the key and clicking "Export..."
-	- COPY the key in the DIALOG for the next step.
+  - COPY the key in the DIALOG for the next step.
 
 LINUX
 
