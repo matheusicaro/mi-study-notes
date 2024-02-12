@@ -362,22 +362,15 @@ ________________________________________________________________________________
 #### >>> PRE GIT FIRST
 
 1. SET UP YOUR ENV FIRST
-
-macOS:
-
-- Install [GPG Tools](https://gpgtools.org/)
-
-- Generate a new key using **OPENING** GPG Keychain
-
-  - Make sure you use the same email address that your GitHub account uses (you can find this in your git config)
-  - do not need to set a password on your key
-
-- Export the public key by right clicking on the key and clicking "Export..."
-  - COPY the key in the DIALOG for the next step.
-
-LINUX
-
-- install git: https://github.com/git-guides/install-git#install-git-on-linux
+  - macOS:
+   	- Install [GPG Tools](https://gpgtools.org/)
+   	- Generate a new key using **OPENING** GPG Keychain
+   		- Make sure you use the same email address that your GitHub account uses (you can find this in your git config)
+   		- do not need to set a password on your key
+   	 - Export the public key by right clicking on the key and clicking "Export..."
+   	 	- COPY the key in the DIALOG for the next step.
+  - LINUX
+  	- install git: https://github.com/git-guides/install-git#install-git-on-linux
 
 2. in the file `user_folder/.gitconfig` add:
 
