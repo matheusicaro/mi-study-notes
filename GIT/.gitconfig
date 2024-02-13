@@ -1,0 +1,10 @@
+[user]
+	email = matheusicaro2@hotmail.com
+	name = Matheus Icaro
+	signingkey = 8CF951BBB6D4EE7D34EA28083B52B5B5954A6A92
+	
+[commit]
+	gpgsign = true
+[credential]
+	helper = store	
+ 
