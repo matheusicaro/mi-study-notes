@@ -3,25 +3,25 @@
 My reminders and notes about useful codes in the daily life of a Dev.
 
 - [Mongo](#mongo)
-    - [Queries](#queries)
+  - [Queries](#queries)
 - [React](#React)
 - [JavaScript](#javascript)
-    - [Add script GLOBALLY](#add-script-globally)
-    - [Mocked Functions](#mocked-functions)
-    - [JEST - Tips](#jest---tips)
+  - [Add script GLOBALLY](#add-script-globally)
+  - [Mocked Functions](#mocked-functions)
+  - [JEST - Tips](#jest---tips)
 - [Java](#Java)
-    - [Array Instances](#array-instances)
-    - [Converter](#converter)
-    - [Certificate CA SSL Importing JAVA Cacerts](#certificate-ca-ssl-importing-java-cacerts)
-    - [Date](#date)
-    - [Encryption](#encryption)
-    - [Kafka Implementation](#kafka-implementation)
-    - [Lambda Functions](#lambda-functions)
-    - [Map](#map)
-    - [**MAVEN CLI Commands**](#maven-cli-commands)
-    - [Mocked Static Method](#mocked-static-method)
-    - [Regex](#regex)
-    - [String](#string)
+  - [Array Instances](#array-instances)
+  - [Converter](#converter)
+  - [Certificate CA SSL Importing JAVA Cacerts](#certificate-ca-ssl-importing-java-cacerts)
+  - [Date](#date)
+  - [Encryption](#encryption)
+  - [Kafka Implementation](#kafka-implementation)
+  - [Lambda Functions](#lambda-functions)
+  - [Map](#map)
+  - [**MAVEN CLI Commands**](#maven-cli-commands)
+  - [Mocked Static Method](#mocked-static-method)
+  - [Regex](#regex)
+  - [String](#string)
 
 ---
 
@@ -34,9 +34,13 @@ My reminders and notes about useful codes in the daily life of a Dev.
 ```js
 const id = "d27c58065d058065f2d7d2df";
 const POSITIVE_BINARY_VALUE = 1;
-const attributesToBeReturned = {_id: POSITIVE_BINARY_VALUE, status: POSITIVE_BINARY_VALUE, createdAt: POSITIVE_BINARY_VALUE }
+const attributesToBeReturned = {
+  _id: POSITIVE_BINARY_VALUE,
+  status: POSITIVE_BINARY_VALUE,
+  createdAt: POSITIVE_BINARY_VALUE,
+};
 
-db.getCollection("my_collection").find({_id: ObjectId(id)}, attributesToBeReturned)
+db.getCollection("my_collection").find({ _id: ObjectId(id) }, attributesToBeReturned);
 ```
 
 - find object by ATTRIBUTE not NULL/UNDEFINED ID:
@@ -55,14 +59,13 @@ db.getCollection("my_collection").find($and: [ {first_attribute: {$exists: true}
 ## [React](#React)
 
 - Eslint start config
-    - [eslintrc.js](https://github.com/matheusicaro/private-helpers/master/code/react/eslintrc.js)
+  - [eslintrc.js](https://github.com/matheusicaro/private-helpers/master/code/react/eslintrc.js)
 - [Stack React Apps](#stack-react-apps)
-    - [Inter](#inter)
+  - [Inter](#inter)
 
 ---
 
 ## [JavaScript](#JavaScript)
-
 
 ### Add Script GLOBALLY
 
@@ -72,6 +75,7 @@ Just add the script globally in the environment:
 
 1. Install the package globally ==> `npm uninstall -g <package-name>`
 2. Add the npm global modules in the environment path.
+
 ```shell
 # common npm global modules path
 
@@ -80,12 +84,12 @@ C:\Users\Administrator\AppData\Roaming\npm
 
 ### JEST - Tips
 
-
 #### Run just one file using only JEST no script
 
 1. Use WSL
 2. install jest globaly
 3. run:
+
 ```powershell
 jest --runTestsByPath "path/my-file.test.ts"
 ```
@@ -100,7 +104,7 @@ jest --runTestsByPath "my_path/../my_file_here_.test.ts"
 npm test --runTestsByPath "my_path/../my_file_here_.test.ts"
 ```
 
-#### Assert for Date time now, new Date() 
+#### Assert for Date time now, new Date()
 
 ```js
 const input = new Date();
@@ -116,11 +120,10 @@ expect(input).toBe(
 #### Assert TO TROW EXEPTIONS
 
 ```js
-    test('should throw an error', async () => {
-        
-    await expect(funct.method(input)).rejects.toThrow(
-        'It should be the same as this message here from the thrown exception'
-    );
+test("should throw an error", async () => {
+  await expect(funct.method(input)).rejects.toThrow(
+    "It should be the same as this message here from the thrown exception"
+  );
 });
 ```
 
@@ -129,6 +132,7 @@ expect(input).toBe(
 ##### Mocked by JEST
 
 OP_1)
+
 ```js
 import * as NameModule from './module';
 
@@ -139,31 +143,29 @@ jest.mock('./module');
 jest.spyOn(NameModule, 'fuction-name').mockReturnValueOnce(null);
 ```
 
-
 OP_2)
-```js
-import Service from '../../services';
 
-jest.mock('some-npm-module');	// mock expected services dir file
-import ExternalService from 'some-npm-module';	// import expected services dir file
+```js
+import Service from "../../services";
+
+jest.mock("some-npm-module"); // mock expected services dir file
+import ExternalService from "some-npm-module"; // import expected services dir file
 
 describe("...", () => {
-	test("...", async () => {
+  test("...", async () => {
+    // when the method from the service is called, return what I want to.
+    // object, function, exception, etc...
+    ExternalService.method = jest.fn().mockImplementation(() => {
+      return myObject;
+    });
 
-		// when the method from the service is called, return what I want to.
-		// object, function, exception, etc...
-		ExternalService.method = jest.fn().mockImplementation(() => {
-			return myObject;
-		});
+    const returned = Service.run();
 
-		const returned = Service.run();
-
-		expect(Service.method).toHaveBeenCalledTimes(1);
-		expect(Service.method).toHaveBeenCalledWith("params_1", "params_2");
-		expect(returned).toBe(expected);
-	});
+    expect(Service.method).toHaveBeenCalledTimes(1);
+    expect(Service.method).toHaveBeenCalledWith("params_1", "params_2");
+    expect(returned).toBe(expected);
+  });
 });
-
 ```
 
 ##### Mocked by VITEST
@@ -180,7 +182,6 @@ vi.mock('./module');
 vi.spyOn(NameModule, 'fuction-name').mockReturnValueOnce(null);
 
 ```
-
 
 ---
 
@@ -212,7 +213,7 @@ var array = new ArrayList<>(Collections.singletonList("string")
 
 ```java
 // Java 8
-Map<String, String> doubleBraceMap = new HashMap<String, String>() {{ 
+Map<String, String> doubleBraceMap = new HashMap<String, String>() {{
 	put("key1", "value1")
 	...
 }};
@@ -223,22 +224,21 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 
 ### String
 
-- String utils class [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/string)
+- String utils class [here](/code/java/string/)
 
 [_# sumario_](#sumario)
 
-| METODO                                                 | INPUT                                                 | OUTPUT                                       | OBSERVAÇÃO                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|--------------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| StringUtil.getOnlyNumbers                              | "string 1123 with 3123 numbers "                      | "11233123"                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| StringUtil.removeBeautifulFormatting                   | "string with \n break lines \p and \n\n\n spaces."    | "string with break lines and spaces."        | Method to return string without formatting for line breaks and unnecessary spaces, such as JSON beautiful                                                                                                                                                                                                                                                                                                                                                   |
-| StringUtil.formatValueToBrazilianRealCurrencyNoCents   | "19999" <br/>"1.55" <br/>"1.55555"                    | "R$ 19.999,00" <br/>"R$ 1,00" <br/>"R$ 1,00" | Method to return value formatted to Brazilian Real Currency considering no CENTS between values. (unit-tests)[https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/string/StringUtilTest.java#L25]                                                                                                                                                                                           |
-| StringUtil.formatValueToBrazilianRealCurrencyWithCents | "19999" <br/>"1.55" <br/>"1.55555"                    | "R$ 19.999,00" <br/>"R$ 1,55" <br/>"R$ 1,56" | Method to return value formatted to Brazilian Real Currency considering CENTS between values throuth the last 2 decimal places when the input is a integer number, for the inputs which have decimal cases will be convert to only 2 decimal places. <br> More examples can be found here: (unit-tests)[https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/string/StringUtilTest.java#L52] |
-| StringUtil.extractJsonKeyAndValuesFromPrimitiveTypes   | Object as String: "{\"key_1\":\"value\",\"key_2\":2}" | [ "\"key_1\":\"value\"" , "\"key_2\":2" ]    | Method to return only key and values from primitive values of OBJECT                                                                                                                                                                                                                                                                                                                                                                                         |
-
+| METODO                                                 | INPUT                                                 | OUTPUT                                       | OBSERVAÇÃO                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| StringUtil.getOnlyNumbers                              | "string 1123 with 3123 numbers "                      | "11233123"                                   |                                                                                                                                                                                                                                                                                                                                                    |
+| StringUtil.removeBeautifulFormatting                   | "string with \n break lines \p and \n\n\n spaces."    | "string with break lines and spaces."        | Method to return string without formatting for line breaks and unnecessary spaces, such as JSON beautiful                                                                                                                                                                                                                                          |
+| StringUtil.formatValueToBrazilianRealCurrencyNoCents   | "19999" <br/>"1.55" <br/>"1.55555"                    | "R$ 19.999,00" <br/>"R$ 1,00" <br/>"R$ 1,00" | Method to return value formatted to Brazilian Real Currency considering no CENTS between values. (unit-tests)[/code/java/string/StringUtilTest.java#L25]                                                                                                                                                                                           |
+| StringUtil.formatValueToBrazilianRealCurrencyWithCents | "19999" <br/>"1.55" <br/>"1.55555"                    | "R$ 19.999,00" <br/>"R$ 1,55" <br/>"R$ 1,56" | Method to return value formatted to Brazilian Real Currency considering CENTS between values throuth the last 2 decimal places when the input is a integer number, for the inputs which have decimal cases will be convert to only 2 decimal places. <br> More examples can be found here: (unit-tests)[/code/java/string/StringUtilTest.java#L52] |
+| StringUtil.extractJsonKeyAndValuesFromPrimitiveTypes   | Object as String: "{\"key_1\":\"value\",\"key_2\":2}" | [ "\"key_1\":\"value\"" , "\"key_2\":2" ]    | Method to return only key and values from primitive values of OBJECT                                                                                                                                                                                                                                                                               |
 
 ### Regex
 
-- String utils class [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/regex)
+- String utils class [here](/code/java/regex)
 
 | REGEX                         | STRING                                                                                          | MATCH                                                | OBSERVAÇÃO                                                    |
 | ----------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
@@ -262,29 +262,26 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 | MATCH_ALL_URL_NUMERIC_PARAMS  | "https://www.url.com/my-account/55580/send/email-id/00000150/changing-password"                 | [ /55580/, /00000150/]                               | Regex to identify all URL numeric params.                     |
 | MATCH_JSON_KEY_AND_VALUE      | "this is a simple string with {'key':'value', 'key_2':'value', "key":"value"} to test on regex" | [ 'key':'value', 'key_2':'value', "key":"value" ]    | Regex to identify key and values                              |
 
-
 ### Date
 
-- Files [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/date)
+- Files [here](/code/java/date)
 
 | METHOD                                  | INPUT                            | OUTPUT         | OBSERVATION |
-| --------------------------------------- | -------------------------------- | -------------- | ---------- |
-| DateUtil.**isDateBeforeCurrentDateNow** | "22/04/1500"                     | true           |            |
-| DateUtil.**isDateBeforeCurrentDateNow** | new OffsetDateTime("22/04/1500") | true           |            |
-| DateUtil.**isDateAfterCurrentDateNow**  | new OffsetDateTime("22/04/1500") | false          |            |
-| DateUtil.**buildDateTimeFrom**          | ( new Date(), DateFormat )       | OffsetDateTime |            |
-| DateUtil.**buildDateTimeFrom**          | ( timestamp )                    | OffsetDateTime |            |
-| DateUtil.**buildDateTimeFrom**          | ( new Date() )                   | OffsetDateTime |            |
-| DateUtil.**convertToDateTime**          | "10/02/2000"                     | OffsetDateTime |            |
-
+| --------------------------------------- | -------------------------------- | -------------- | ----------- |
+| DateUtil.**isDateBeforeCurrentDateNow** | "22/04/1500"                     | true           |             |
+| DateUtil.**isDateBeforeCurrentDateNow** | new OffsetDateTime("22/04/1500") | true           |             |
+| DateUtil.**isDateAfterCurrentDateNow**  | new OffsetDateTime("22/04/1500") | false          |             |
+| DateUtil.**buildDateTimeFrom**          | ( new Date(), DateFormat )       | OffsetDateTime |             |
+| DateUtil.**buildDateTimeFrom**          | ( timestamp )                    | OffsetDateTime |             |
+| DateUtil.**buildDateTimeFrom**          | ( new Date() )                   | OffsetDateTime |             |
+| DateUtil.**convertToDateTime**          | "10/02/2000"                     | OffsetDateTime |             |
 
 ### Encryption
 
-- Files [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/encryption)
-
+- Files [here](/code/java/encryption)
 
 | METHOD                          | INPUT                        | OUTPUT                                                                                            |
-|---------------------------------|------------------------------| ------------------------------------------------------------------------------------------------- |
+| ------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------- |
 | Encryption.INSTANCE.encrypt()   | "valueHere"                  | "enc_W1RoGd7Fqv0AlbKc4orUUA=="                                                                    |
 | Encryption.INSTANCE.decrypt()   | "enc_W1RoGd7Fqv0AlbKc4orUUA" | "valueHere"                                                                                       |
 | Encryption.INSTANCE.decrypt()   | "valueHere"                  | @throws EncryptionException("Encryption error (Operation: 'value is unknown or is not encrypted") |
@@ -292,24 +289,19 @@ Map<String, String> map = Map.of("key1","value1", "key2", "value2");
 | Encryption.INSTANCE.isEncrypt() | "W1RoGd7Fqv0AlbKc4orUUA"     | false                                                                                             |
 | Encryption.INSTANCE.isEncrypt() | "enc_W1RoGd7Fqv0AlbKc4orUUA" | true                                                                                              |
 
-
 ### Kafka Implementation
 
-- Files [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/kafka)
-
-
+- Files [here](/code/java/kafka)
 
 ### Converter
 
-- Files [here](https://raw.githubusercontent.com/matheusicaro/private-helpers/master/code/java/converter)
+- Files [here](/code/java/converter)
 
-
-| METHOD                                 | INPUT                                                  | OUTPUT                              | OBSERVATION |
-|----------------------------------------| ------------------------------------------------------ | ----------------------------------- | ---------- |
-| ConverterUtil.toJsonStringNoBeautiful  | new Map("key", "value \t with \n \n\ \n format chars") | "{'key':'value with format chars'}" |            |
-| ConverterUtil.toJsonStringNoBeautiful  | new Map("key", "value")                                | "{'key':'value'}"                   |            |
-| ConverterUtil.from**                   | ( "{'key':'value'}", Map.class )                       | new Map("key", "value")             |            |
-
+| METHOD                                | INPUT                                                  | OUTPUT                              | OBSERVATION |
+| ------------------------------------- | ------------------------------------------------------ | ----------------------------------- | ----------- |
+| ConverterUtil.toJsonStringNoBeautiful | new Map("key", "value \t with \n \n\ \n format chars") | "{'key':'value with format chars'}" |             |
+| ConverterUtil.toJsonStringNoBeautiful | new Map("key", "value")                                | "{'key':'value'}"                   |             |
+| ConverterUtil.from\*\*                | ( "{'key':'value'}", Map.class )                       | new Map("key", "value")             |             |
 
 ### Certificate CA SSL Importing JAVA Cacerts
 
@@ -358,7 +350,6 @@ done
 rm -rf certificates
 ```
 
-
 ### Mocked Static Method
 
 - Install [Mockito Core dependency](https://mvnrepository.com/artifact/org.mockito/mockito-core) from 3.8 version.
@@ -405,7 +396,7 @@ class StaticClassTest {
         classMockedStatic.when(StaticClasse::method).thenThrow(new Exception());			        // mock void method
 
         ArgumentCaptor<String> captorInput = ArgumentCaptor.forClass(String.class);
- 
+
         classMockedStatic.verify(() -> StaticClasse.method(captorInput.capture());
 
         Assertions.assertEquals("expected", captorInput.getValue());
@@ -433,18 +424,17 @@ mvn clean install > log-file.log
 ![i-app-stack-2](https://github.com/matheusicaro/private-helpers/blob/master/code/data/i-app-stack-2.png?raw=true)
 
 - A funcao lambda pode atuar em 4 pontos diferentes
-    1 - no VIEWER-REQUEST quando a solicitação esta chegando antes de ser bater no cloud-front
-    2 - no ORIGIN-REQUEST quando já passou do cloud-front e antes de buscar no bucker S3
-    3 - no ORIGIN-RESPONSE após ser retornado os dado do bucket S3
-    4 - no VIEWER-RESPONSE após passar pelo cloud-front e antes de ser retornado para o user
+  1 - no VIEWER-REQUEST quando a solicitação esta chegando antes de ser bater no cloud-front
+  2 - no ORIGIN-REQUEST quando já passou do cloud-front e antes de buscar no bucker S3
+  3 - no ORIGIN-RESPONSE após ser retornado os dado do bucket S3
+  4 - no VIEWER-RESPONSE após passar pelo cloud-front e antes de ser retornado para o user
 
- ![i-app-stack-3](https://github.com/matheusicaro/private-helpers/blob/master/code/data/i-app-stack-3.png?raw=true)
+![i-app-stack-3](https://github.com/matheusicaro/private-helpers/blob/master/code/data/i-app-stack-3.png?raw=true)
 
 - Processo de deploy por feature para cada branch, onde que o nome da branch gera o hash do qual fica como nome da pasta no S3 e tambem no prefixo de endereço do host:
 
- ![i-app-stack-4](https://github.com/matheusicaro/private-helpers/blob/master/code/data/i-app-stack-4.png?raw=true)
-
+![i-app-stack-4](https://github.com/matheusicaro/private-helpers/blob/master/code/data/i-app-stack-4.png?raw=true)
 
 - A manipulaçao para buscar diferentes versoes de site em pastas no bucker é feito por uma LAMBDA:
 
- ![i-app-stack-5](https://github.com/matheusicaro/private-helpers/blob/master/code/data/i-app-stack-5.png?raw=true)
+![i-app-stack-5](https://github.com/matheusicaro/private-helpers/blob/master/code/data/i-app-stack-5.png?raw=true)
