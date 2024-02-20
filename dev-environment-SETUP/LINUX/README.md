@@ -12,7 +12,7 @@
 
 **[Deeping Boot Maker](https://www.deepin.org/en/original/deepin-boot-maker/)**, best program! its like **[Rufus](https://rufus.ie/en/)** for Windows
 
-![image](https://github.com/matheusicaro/private-helpers/assets/29001162/4d8f01eb-87aa-4e95-8133-8567a0980778)
+![image](/dev-environment-SETUP/LINUX/pictures/BOOT-ISO-through-Linux.png)
 
 1. `sudo apt-get install zsh`
 2. Verify it’s installed — `zsh --version`, expects zsh `5.1.1` or more recent
