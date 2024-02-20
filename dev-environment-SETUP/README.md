@@ -1,19 +1,7 @@
-- LINUX
-  - [BOOT ISO through Linux](#boot-iso-through-linux)
-  - [TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)
-  - [TERMINAL custom configs](#terminal-custom-configs-linux)
-  - [SIGNING GIT COMMITS](#signing-git-commits)
-  - [Edit System File by CLI](#edit-system-file-by-cli)
-- [WINDOWS](#windows)
-  - [PC Performace on TASKBAR](#pc-performace-on-taskbar)
-
-# LINUX
-
-## BOOT ISO through Linux
-
-**[Deeping Boot Maker](https://www.deepin.org/en/original/deepin-boot-maker/)**, best program! its like **[Rufus](https://rufus.ie/en/)** for Windows
-
-![image](https://github.com/matheusicaro/private-helpers/assets/29001162/4d8f01eb-87aa-4e95-8133-8567a0980778)
+1. [TERMINAL install ZSH pretty](#terminal-install-zsh-pretty)
+2. [TERMINAL custom configs](#terminal-custom-configs-linux)
+3. [SIGNING GIT COMMITS](#signing-git-commits)
+4. [Edit System File by CLI](#edit-system-file-by-cli)
 
 ## TERMINAL install ZSH pretty
 
@@ -344,97 +332,6 @@ export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=$(which chromium)
 
 ```
-
-<Br>
-<Br>
-<Br>
-<Br>
-<Br>
-____________________________________________________________________________________
-<Br>
-<Br>
-<Br>
-<Br>
-<Br>
-
-## SIGNING GIT COMMITS
-
-#### >>> PRE GIT FIRST
-
-1. SET UP YOUR ENV FIRST
-  - macOS:
-   	- Install [GPG Tools](https://gpgtools.org/)
-   	- Generate a new key using **OPENING** GPG Keychain
-   		- Make sure you use the same email address that your GitHub account uses (you can find this in your git config)
-   		- do not need to set a password on your key
-   	 - Export the public key by right clicking on the key and clicking "Export..."
-   	 	- COPY the key in the DIALOG for the next step.
-  - LINUX
-  	- install git: https://github.com/git-guides/install-git#install-git-on-linux
-
-2. in the file `user_folder/.gitconfig` add:
-
-```sh
-[user]
-	email = matheusicaro2@hotmail.com
-	name = Matheus Icaro
-	signingkey = 13F87C2F94D439C7088011F65A34889CE57E2FC2 # key generated in the steps bellow**
-
-[commit]
-	gpgsign = true
-[credential]
-	helper = store
-```
-
-3.  Add git credentials to stop asking for the login and password. Create a file `user_folder/.git-credentials` and add:
-
-```sh
-https://matheusicaro2%40hotmail.com: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@github.com #token comes from git token
-```
-
-#### **GENERAYE KEY** By terminal (NOT NECESSARY FOR macOS)
-
-<br> 1. Install GPG: `sudo apt-get install gpg`
-
-<br> 2 Run: `gpg --gen-key`
-
-<br> 2.1. This will prompt you for your name and email--fill these out. **Make sure you use the same email that is set in your github as a primary email**
-
-<br> 2.2. IMPORTANT: IT IS GOING TO ASK YOU 4 TIMES TO SET A SECRET PASSWORD. DOING THIS WILL BE A BAD TIME. Instead, just leave the fields blank and proceed without a password. **If you do set a password, you will need to enter it every time you commit.**
-
-<br> 3. Run `gpg --list-secret-keys --keyid-format LONG` and copy the 16 character key identifier listed on the SECOND line
-
-<br> 4. Run `gpg --armor --export 13F87C2F94D439C7088011F65A34889CE57E2FC2 gpg-key.txt`
-
-![signing%20git%20commits.png](https://github.com/matheusicaro/private-helpers/blob/master/files/signing%20git%20commits.png)
-
-<br> **CONFIGURE GIT**
-
-<br> 1. Edit your git config in `~/.gitconfig`
-
-<br> 2. Under `[user]` add `signingkey = <16 character key identifier>`
-
-<br> 3. Under `[commit]` add `gpgsign = true`. _Note that if you do not add this configuration to `commit` then you must make commits with the `-S flag`, like `git commit -S -m “foo bar”`_
-
-```
-[user]
-	email = matheusicaro2@hotmail.com
-	name = Matheus Icaro
-	signingkey = 13F87C2F94D439C7088011F65A34889CE57E2FC2
-
-[commit]
-	gpgsign = true
-```
-
-<br> **ADD KEY TO GITHUB**
-
-<br> 1. Go to the [SSH & GPG Keys page](https://github.com/settings/keys) on GitHub
-
-<br> 2. create new value and past the key generated at **GENERAYE KEY** > step 4
-
-<br> 3. **Save the login and password for the next commits, run:** `git config --global credential.helper store`
-
----
 
 <Br>
 <Br>

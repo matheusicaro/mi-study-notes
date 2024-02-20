@@ -95,7 +95,7 @@ https://matheusicaro2%40hotmail.com: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@git
 
 <br> 4. Run `gpg --armor --export 13F87C2F94D439C7088011F65A34889CE57E2FC2 gpg-key.txt`
 
-![signing%20git%20commits.png](https://github.com/matheusicaro/private-helpers/blob/master/files/signing%20git%20commits.png)
+![signing%20git%20commits.png](pictures/signing-git-commits.png)
 
 <br>
 <br>
