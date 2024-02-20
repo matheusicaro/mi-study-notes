@@ -6,19 +6,19 @@
 
 - [Install **AWS CLI** (aws-vault)](#install-aws-cli-aws-vault)
 - [**AWS CLI Commands**](#aws-cli-commands)
-   - [Valid Local Access](#valid-local-access)
-   - [Get aws-vault](#get-aws-vault)
-      - [SSO version](#sso-version)
-      - [AWS old version](#aws-old-version)
-      - [Config FILES](#config-files)
+  - [Valid Local Access](#valid-local-access)
+  - [Get aws-vault](#get-aws-vault)
+    - [SSO version](#sso-version)
+    - [AWS old version](#aws-old-version)
+    - [Config FILES](#config-files)
 - [CloudWatch insights logs](#cloudwatch-analytic-insights-logs)
 - [Configuring Website Redirecting To External Domains: TO WIX, GODADDY, WORDPRESS](#configuring-website-redirecting-to-external-domains-to-wix-godaddy-wordpress)
 - [DynamoDB Java Integration](#dynamodb-java-integration)
 - [Get **AWS CA** Private Certificate](#get-aws-ca-private-certificate)
 - [How To Add **public CA** To Elastic Bean Aws](#how-to-add-public-ca-to-elastic-bean-aws)
 - [**Kurbenets**](#kurbenets)
-    - [Kubernetes Dashboard: Get Access Token](#kubernetes-dashboard-get-access-token)
-    - [CLI: Get Pod Logs](#cli-get-pod-logs)
+  - [Kubernetes Dashboard: Get Access Token](#kubernetes-dashboard-get-access-token)
+  - [CLI: Get Pod Logs](#cli-get-pod-logs)
 
 ---
 
@@ -66,20 +66,19 @@
 
 ## AWS CLI Commands
 
-
 #### VALID LOCAL ACCESS
 
 ```powershell
-aws-vault exec <profile> 
+aws-vault exec <profile>
 
 # Check which role/account it gotten
-aws sts get-caller-identity                     
+aws sts get-caller-identity
 
 # Test access in a service
-aws dynamodb list-tables                        
+aws dynamodb list-tables
 
 #Check environments values (Windows - use cmder)
-aws-vault exec <profile> -- env | grep AWS     
+aws-vault exec <profile> -- env | grep AWS
 
 #Get values of access and set in your app =>
 AWS_ACCESS_KEY_ID=
@@ -104,15 +103,16 @@ aws-vault exec <profile> -- perl ~/.aws/setprofile.pl
 
 ```powershell
  aws-vault exec --duration 1h -- uat ~/.aws/setprofile.pl
- 
+
  aws-vault exec --assume-role-ttl=60m [config-profile] -- ~/scripts/setprofile.pl
- 
+
  aws-vault exec --session-ttl=1h --assume-role-ttl=1h -- <profile> ~/.aws/setprofile.pl
 ```
 
 ##### Config Files
 
 - setprofile.pl
+
 ```
 #!/usr/bin/env perl
 open( CF, '>',"$ENV{HOME}/.aws/credentials");
@@ -132,6 +132,7 @@ system "aws configure set default.region $ENV{AWS_REGION}";
 ```
 
 - credentials _(without an type: .extension)_
+
 ```
 [default]
 aws_session_token=FwoGZXIvYXdzEI[...]kwYyLdA5Nagfwyhs6a4JAg1xs3X72RSj7/ZGmPDR0vmI2Wtvmf29YHH9GIHMCBRzMg==
@@ -140,7 +141,8 @@ aws_access_key_id=ASIA4T[...]OHIJBU
 
 ```
 
-- config    _(without an type: .extension)_
+- config _(without an type: .extension)_
+
 ```
 [profile sso]
 sso_start_url=<https://SERVER.awsapps.com/start/>
@@ -186,22 +188,22 @@ aws eks get-token --cluster-name <CLUSTER_NAME> | awk -F '\"token\":' '{print $2
 
 ```powershell
 # GET AWS ACCESS TOKEN
-aws-vault exec <PROFILE> -- perl ~/.aws/setprofile.pl                       
+aws-vault exec <PROFILE> -- perl ~/.aws/setprofile.pl
 
 # CONNECT INTO THE CLUSTER
-aws eks --region sa-east-1 update-kubeconfig --name <CLUSTER_NAME>          
+aws eks --region sa-east-1 update-kubeconfig --name <CLUSTER_NAME>
 
 # DO LIST PODS	- <OPTIONAL_CONTEXT> => NAME_SPACE: [ default, prd, uat, ... ]
-kubectl get pods -n <OPTIONAL_CONTEXT>		                          
+kubectl get pods -n <OPTIONAL_CONTEXT>
 
 # SET THE CONTEXT IF IT IS NECESSARY
-kubectl config set-context --current --namespace=<NAME_SPACE>               
+kubectl config set-context --current --namespace=<NAME_SPACE>
 
 # PRINT LOG
-kubectl logs <POD_NAME>                                                     
+kubectl logs <POD_NAME>
 
 # BUILD LOG FILE
-kubectl logs <POD_NAME> > file.txt                                         
+kubectl logs <POD_NAME> > file.txt
 
 ```
 
@@ -210,19 +212,19 @@ kubectl logs <POD_NAME> > file.txt
 ## CloudWatch Analytic insights logs
 
 ```sql
-FILTER (@message like “<some-text-part-from-log>“) 
-AND (@message like “<some-text-part-from-log>”) 
+FILTER (@message like “<some-text-part-from-log>“)
+AND (@message like “<some-text-part-from-log>”)
 OR (@message like "<some-text-part-from-log>")
 | stats count(*) as exceptionCount by @message
 | limit 20
 ```
-
 
 ---
 
 ## GET AWS CA PRIVATE CERTIFICATE
 
 1. list the certificates by cli:
+
 ```powershell
 aws acm list-certificates
 
@@ -236,6 +238,7 @@ aws acm list-certificates
     ]
 }
 ```
+
 2. get your certificate by arn:
 
 ```powershell
@@ -327,15 +330,15 @@ public class DataSourceImpl implements DataSource {
 
 1. Request the public certificate
 
-![add-public-ca-1](https://github.com/matheusicaro/helpers/blob/master/aws/data/add-public-ca-1.png)
+![add-public-ca-1](/aws/data/add-public-ca-1.png)
 
 2. copy your **CNAME name** and **CNAME value**
 
-![add-public-ca-1](https://github.com/matheusicaro/helpers/blob/master/aws/data/add-public-ca-2.png)
+![add-public-ca-1](/aws/data/add-public-ca-2.png)
 
 3. In **ANOTHER ACCOUNT**, add your **CNAME name** and **CNAME value**
 
-![add-public-ca-1](https://github.com/matheusicaro/helpers/blob/master/aws/data/add-public-ca-3.png)
+![add-public-ca-1](/aws/data/add-public-ca-3.png)
 
 ---
 
@@ -343,24 +346,24 @@ public class DataSourceImpl implements DataSource {
 
 1.  Create domain authority certificates
 
-![step_1](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-1.png)
-![step_2](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-2.png)
+![step_1](/aws/data/redirect%20another%20domain-1.png)
+![step_2](/aws/data/redirect%20another%20domain-2.png)
 
 2.  Configuring CloudFront for a bucket with domain CNAMEs + previously generated certificate.
 
-![step_3](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-3.png)
-![step_4](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-4.png)
-![step_5](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-5.png)
-![step_6](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-6.png)
+![step_3](/aws/data/redirect%20another%20domain-3.png)
+![step_4](/aws/data/redirect%20another%20domain-4.png)
+![step_5](/aws/data/redirect%20another%20domain-5.png)
+![step_6](/aws/data/redirect%20another%20domain-6.png)
 
 3.  WIX domain control
 
-![step_7](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-7.png)
+![step_7](/aws/data/redirect%20another%20domain-7.png)
 
 4.  GoDaddy
 
-![step_8](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-8.png)
+![step_8](/aws/data/redirect%20another%20domain-8.png)
 
 4.  WordPress
 
-![step_9](https://github.com/matheusicaro/helpers/blob/master/aws/data/redirect%20another%20domain-9.png)
+![step_9](/aws/data/redirect%20another%20domain-9.png)
