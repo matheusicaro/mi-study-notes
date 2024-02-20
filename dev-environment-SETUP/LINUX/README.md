@@ -8,6 +8,23 @@
 <br>
 <br>
 
+# Install.....: `libssl1`
+
+#### UBUNTU 22.04
+
+```
+  wget http://archive.ubuntu.com/LINUX/UBUNTU/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+  sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+```
+
+Font: https://gist.github.com/joulgs/c8a85bb462f48ffc2044dd878ecaa786
+
+<Br>
+<Br>
+____________________________________________________________________________________
+<Br>
+<Br>
+
 ## BOOT ISO through Linux
 
 **[Deeping Boot Maker](https://www.deepin.org/en/original/deepin-boot-maker/)**, best program! its like **[Rufus](https://rufus.ie/en/)** for Windows
