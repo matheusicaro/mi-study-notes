@@ -1,15 +1,11 @@
-# NOTEBOOK [(here)](https://github.com/matheusicaro/private-helpers/blob/master/MY_NOTE.md)
-
 # UTILS
 
 - **[SLACK Error on login](#slack-error-on-login)**
 
-- DEV ENV
-  - LINUX 
-    - [Linux tips and software](#linux-env) 
-    - [SETUP](#setup)
-      - [UBUNTU](https://github.com/matheusicaro/private-helpers/blob/master/UBUNTU/README.md)
-      - [KUBUNTU](https://github.com/matheusicaro/private-helpers/blob/master/KUBUNTU/README.md)
+- [DEV ENVIRONMENT SETUP](/dev-environment-SETUP/README.md)
+
+  - [LINUX](/dev-environment-SETUP/LINUX/README.md)
+
   - WINDOWS
     - [PC Performace on TASKBAR](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#pc-performace-on-taskbar)
 
@@ -65,11 +61,6 @@
 
 ---
 
-
-
-
-
-
 <Br>
 <Br>
 <Br>
@@ -81,10 +72,6 @@ ________________________________________________________________________________
 <Br>
 <Br>
 <Br>
-
-
-
-
 
 ## SLACK Error on login
 
@@ -92,11 +79,6 @@ Just go to this link: https://example-company.slack.com/ssb/signin_redirect/fall
 
 and copy the key and past in the slack desktop app
 
-
-
-
-
-
 <Br>
 <Br>
 <Br>
@@ -109,19 +91,13 @@ ________________________________________________________________________________
 <Br>
 <Br>
 
-
-
-
-
-
 # LINUX ENV
 
-  - [BOOT ISO through Linux](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#boot-iso-through-linux)
-  - [TERMINAL install ZSH pretty](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#terminal-install-zsh-pretty)
-  - [TERMINAL custom configs](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#terminal-custom-configs-linux)
-  - [SIGNING GIT COMMITS](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
-  - [Edit System File by CLI](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#edit-system-file-by-cli)
-
+- [BOOT ISO through Linux](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#boot-iso-through-linux)
+- [TERMINAL install ZSH pretty](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#terminal-install-zsh-pretty)
+- [TERMINAL custom configs](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#terminal-custom-configs-linux)
+- [SIGNING GIT COMMITS](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
+- [Edit System File by CLI](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#edit-system-file-by-cli)
 
 <Br>
 <Br>
@@ -129,12 +105,13 @@ ________________________________________________________________________________
 # Install >> libssl1
 
 #### UBUNTU 22.04
+
 ```
-  wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+  wget http://archive.ubuntu.com/LINUX/UBUNTU/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
   sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 ```
-Font: https://gist.github.com/joulgs/c8a85bb462f48ffc2044dd878ecaa786
 
+Font: https://gist.github.com/joulgs/c8a85bb462f48ffc2044dd878ecaa786
 
 <Br>
 <Br>
@@ -142,21 +119,20 @@ ________________________________________________________________________________
 <Br>
 <Br>
 
-
 ## SETUP
 
-- [x] 1. ➔ ➜ **Install**  notebook drivers here: https://github.com/matheusicaro/private-helpers/blob/master/MY_NOTE.md#drivers-linux
-    
+- [x] 1. ➔ ➜ **Install** notebook drivers here: https://github.com/matheusicaro/private-helpers/blob/master/MY_NOTE.md#drivers-linux
 - [x] 1. install curl: `sudo apt-get install curl`
 
 - [x] 2. Add sudo commands (shutdown and reboot)
-  <br> 2.1. run: `sudo visudo`
-  <br> 2.2. Past in the end
-    ```sh
-    # DISABLED SUDO PASSWORD WHEN REBOOT OR RESTART
-    <USER_NAME_HERE> ALL = NOPASSWD: /sbin/shutdown
-    <USER_NAME_HERE> ALL = NOPASSWD: /sbin/reboot
-    ```
+     <br> 2.1. run: `sudo visudo`
+     <br> 2.2. Past in the end
+
+  ```sh
+  # DISABLED SUDO PASSWORD WHEN REBOOT OR RESTART
+  <USER_NAME_HERE> ALL = NOPASSWD: /sbin/shutdown
+  <USER_NAME_HERE> ALL = NOPASSWD: /sbin/reboot
+  ```
 
 - [x] 3. VS CODE
 
@@ -167,12 +143,11 @@ ________________________________________________________________________________
      <br> 4.2. `nvm install 14` and `nvm install 12`
 
 - [ ] 6. DOCKER
-     <br> 5.1. [install](https://docs.docker.com/engine/install/ubuntu/)
+     <br> 5.1. [install](https://docs.docker.com/engine/install/LINUX/UBUNTU/)
      <br> 5.2. [Manage docker as a non-root user. Here are the steps](https://docs.docker.com/engine/install/linux-postinstall/)
      <br> 5.3. [Docker Compose](https://docs.docker.com/compose/install/)
      <br> 5.4. `sudo apt install docker-compose`
      <br> 5.5. install dev environment docker here: https://github.com/matheusicaro/private-helpers/tree/master/Docker
-
 
 - [ ] 7. MongoDB Client UI
      <br> 6.1. [Compass](https://www.mongodb.com/products/compass) or [Robo3T](https://robomongo.org/download)
@@ -180,12 +155,6 @@ ________________________________________________________________________________
 - [ ] 8. [AWS cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 - [x] 0. [Signing Git Commings](https://github.com/matheusicaro/private-helpers/blob/master/UTILS.md#signing-git-commits)
-
-
-
-
-
-
 
 <Br>
 <Br>
