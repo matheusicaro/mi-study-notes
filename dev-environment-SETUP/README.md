@@ -26,3 +26,9 @@
      - 6.1. [Compass](https://www.mongodb.com/products/compass) or [Robo3T](https://robomongo.org/download)
 
 - [ ] 8. [AWS cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+# MAC
+
+1. install `bluesnooze` (disconnect Bluetooth) when it is not using: https://github.com/odlp/bluesnooze
+
+![image](https://github.com/matheusicaro/private-helpers/assets/29001162/2251d318-2379-4d38-899d-f42e1e889fbf)
