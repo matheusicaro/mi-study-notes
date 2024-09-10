@@ -5,8 +5,10 @@ Links:
 
 # JUL/2024
 
+### (1) WEEK 1-6th
+
 <details>
-<summary> (1)  WEEK 1-6th </summary>
+<summary>content: </summary>
 
 #### PROJECTS
 
@@ -53,8 +55,10 @@ Links:
 
 # JUN/2024
 
+### (4) WEEK 24-30th
+
 <details>
-<summary> (4)  WEEK 24-30th </summary>
+<summary>content: </summary>
 
 #### PROJECTS
 
@@ -96,8 +100,10 @@ Links:
 
 </details>
 
+### (3) WEEK 17-23th
+
 <details>
-<summary> (3)  WEEK 17-23th </summary>
+<summary>content: </summary>
 
 #### PROJECTS
 
@@ -139,5 +145,75 @@ Links:
 4. https://neofinancial.atlassian.net/browse/ENGCPL-1542
 5. https://neofinancial.atlassian.net/browse/ENGCPL-1660
 6. https://neofinancial.atlassian.net/browse/ENGCPL-1703
+
+</details>
+
+### (2) WEEK 10-16th
+
+<details>
+<summary>content: </summary>
+
+#### PROJECTS
+
+-
+
+#### DESCRIPTIONS
+
+- STARTING TEAM DISCUSSIONS FOR TASKS, TICKETS, ETC
+
+  ```
+
+  ```
+
+- TAKING RESPONSIBILITY, SUPPORTING and UNBLOCKING the team or others
+
+  ```
+
+  ```
+
+- ALERTS
+
+  ```
+
+  ```
+
+#### TICKETS
+
+1.
+
+</details>
+
+### (1) WEEK 1-9th
+
+<details>
+<summary>content: </summary>
+
+#### PROJECTS
+
+-
+
+#### DESCRIPTIONS
+
+- STARTING TEAM DISCUSSIONS FOR TASKS, TICKETS, ETC
+
+  ```
+
+  ```
+
+- TAKING RESPONSIBILITY, SUPPORTING and UNBLOCKING the team or others
+
+  ```
+
+  ```
+
+- ALERTS
+
+  ```
+
+  ```
+
+#### TICKETS
+
+1.
 
 </details>
