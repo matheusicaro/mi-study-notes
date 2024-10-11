@@ -3,7 +3,49 @@ Links:
 - [Jira filter](https://neofinancial.atlassian.net/issues/?jql=reporter%20%3D%20currentUser%28%29%20ORDER%20BY%20updated%20DESC)
 - [Slack search](https://app.slack.com/client/E05MZQL4RSM/search): `after:2024-06-30 before:2024-07-06 from:@Matheus Arruda Martins`
 
+# OCT/2024
+
+### \* (5) WEEK 28-31th
+
+### \* (4) WEEK 21-27th
+
+### \* (3) WEEK 14-20th
+
+### \* (2) WEEK 7-13th
+
+### \* (1) WEEK 16th
+
+# SET/2024
+
+### \* (4) WEEK 23-30th
+
+### \* (3) WEEK 16-22th
+
+### \* (2) WEEK 9-15th
+
+### \* (1) WEEK 1-8th
+
+# AUG/2024
+
+### \* (5) WEEK 26-31th
+
+### \* (4) WEEK 19-25th
+
+### \* (3) WEEK 12-18th
+
+### \* (2) WEEK 5-11th
+
+### \* (1) WEEK 1-4th
+
 # JUL/2024
+
+### \* (5) WEEK 29-31th
+
+### \* (4) WEEK 22-28th
+
+### \* (3) WEEK 15-21th
+
+### \* (2) WEEK 7-14th
 
 ### (1) WEEK 1-6th
 
@@ -148,7 +190,7 @@ Links:
 
 </details>
 
-### (2) WEEK 10-16th
+### \* (2) WEEK 10-16th
 
 <details>
 <summary>content: </summary>
@@ -183,7 +225,7 @@ Links:
 
 </details>
 
-### (1) WEEK 1-9th
+### \* (1) WEEK 1-9th
 
 <details>
 <summary>content: </summary>
@@ -217,3 +259,57 @@ Links:
 1.
 
 </details>
+
+# MAY/2024
+
+### \* (5) WEEK 27-31th
+
+### \* (4) WEEK 20-26th
+
+### \* (3) WEEK 13-19th
+
+### \* (2) WEEK 06-12th
+
+### \* (1) WEEK 1-5th
+
+# APR/2024
+
+### \* (4) WEEK 22-30th
+
+### \* (3) WEEK 15-21th
+
+### \* (2) WEEK 8-14th
+
+### \* (1) WEEK 1-7th
+
+# MAR/2024
+
+### \* (4) WEEK 24-31th
+
+### \* (3) WEEK 18-24th
+
+### \* (2) WEEK 11-17th
+
+### \* (1) WEEK 1-10th
+
+# FEV/2024
+
+### \* (5) WEEK 26-29th
+
+### \* (4) WEEK 19-25th
+
+### \* (3) WEEK 12-18th
+
+### \* (2) WEEK 5-11th
+
+### \* (1) WEEK 1-5th
+
+# JAN/2024
+
+### \* (5) WEEK 22-31th
+
+### \* (4) WEEK 15-21th
+
+### \* (3) WEEK 8-14th
+
+### \* (2) WEEK 1-7th
