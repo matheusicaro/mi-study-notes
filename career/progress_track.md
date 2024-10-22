@@ -308,8 +308,170 @@ Links:
 
 ### \* (5) WEEK 22-31th
 
+<details>
+<summary>content: </summary>
+
+#### PROJECTS
+
+- Bank split
+
+#### DESCRIPTIONS
+
+- STARTING TEAM DISCUSSIONS FOR TASKS, TICKETS, ETC
+
+  ```
+  1. https://neofinancial.slack.com/archives/C03ULDRL6BX/p1705947242822459
+  2. https://neofinancial.slack.com/archives/C01PCB1LCG7/p1705964098977799
+  ```
+
+- TAKING RESPONSIBILITY, SUPPORTING and UNBLOCKING the team or others
+
+  ```
+  1. https://neofinancial.slack.com/archives/C01PCB1LCG7/p1706054010051749?thread_ts=1705964098.977799&cid=C01PCB1LCG7
+  2. https://neofinancial.slack.com/archives/C01PCB1LCG7/p1706306704103129
+  3. + https://neofinancial.slack.com/archives/C04E4S2GYF9/p1706732898203519
+  ```
+
+- ALERTS
+
+  ```
+  1. https://neofinancial.slack.com/archives/C05L7HUNVR7/p1706116325163649
+  2. https://neofinancial.slack.com/archives/C05L7HUNVR7/p1706563889130709
+  ```
+
+#### TICKETS
+
+1. https://neofinancial.atlassian.net/browse/ENGCPL-732
+2. https://neofinancial.atlassian.net/browse/ENGCPL-741
+3. https://neofinancial.atlassian.net/browse/ENGCPL-743
+4. https://neofinancial.atlassian.net/browse/ENGCPL-742
+5. https://neofinancial.atlassian.net/browse/ENGCPL-798
+
+</details>
+
 ### \* (4) WEEK 15-21th
+
+<details>
+<summary>content: </summary>
+
+#### PROJECTS
+
+- Bank split
+
+#### DESCRIPTIONS
+
+- STARTING TEAM DISCUSSIONS FOR TASKS, TICKETS, ETC
+
+  ```
+  1. https://neofinancial.slack.com/archives/C01PCB1LCG7/p1705343584872739
+  2. https://neofinancial.slack.com/archives/C0409JTMNAZ/p1705624030845689
+  ```
+
+- TAKING RESPONSIBILITY, SUPPORTING and UNBLOCKING the team or others
+
+  ```
+  1. https://neofinancial.slack.com/archives/C03ULDRL6BX/p1705524726931209
+  2. https://neofinancial.slack.com/archives/C01PCB1LCG7/p1705944006396999?thread_ts=1705690383.339759&cid=C01PCB1LCG7
+  ```
+
+- ALERTS
+
+  ```
+  1. https://neofinancial.slack.com/archives/C0409JTMNAZ/p1705600115593789
+  ```
+
+#### TICKETS
+
+1. https://neofinancial.atlassian.net/browse/ENGCPL-739
+2. https://neofinancial.atlassian.net/browse/ENGCPL-740
+3. https://neofinancial.atlassian.net/browse/ENGCPL-811
+4. https://neofinancial.atlassian.net/browse/ENGCPL-734
+
+</details>
 
 ### \* (3) WEEK 8-14th
 
+<details>
+<summary>content: </summary>
+
+#### PROJECTS
+
+- Bank split
+
+#### DESCRIPTIONS
+
+- STARTING TEAM DISCUSSIONS FOR TASKS, TICKETS, ETC
+
+  ```
+  1. https://neofinancial.slack.com/archives/C01PCB1LCG7/p1704840760018189
+  2. https://neofinancial.slack.com/archives/C03ULDRL6BX/p1705011367075739
+  ```
+
+- TAKING RESPONSIBILITY, SUPPORTING and UNBLOCKING the team or others
+
+  ```
+  1. https://neofinancial.slack.com/archives/C01FTLGLF1S/p1704911927693849
+  ```
+
+- ALERTS
+
+  ```
+  1. https://neofinancial.slack.com/archives/C05L7HUNVR7/p1718746400532239?thread_ts=1718745790.336919&cid=C05L7HUNVR7
+
+  ```
+
+#### TICKETS
+
+1. https://neofinancial.atlassian.net/browse/ENGCPL-712
+2. https://neofinancial.atlassian.net/browse/ENGCPL-733
+
+</details>
+
 ### \* (2) WEEK 1-7th
+
+<details>
+<summary>content: </summary>
+
+#### PROJECTS
+
+- Alerts and supporting projects
+
+#### DESCRIPTIONS
+
+- STARTING TEAM DISCUSSIONS FOR TASKS, TICKETS, ETC
+
+  ```
+  1. https://neofinancial.slack.com/archives/D03HLSGJ6CU/p1704476291771549
+  2. https://neofinancial.slack.com/archives/C01FRQQ18D6/p1704479441412079
+
+  ```
+
+- TAKING RESPONSIBILITY, SUPPORTING and UNBLOCKING the team or others
+
+  ```
+  1. https://neofinancial.slack.com/archives/C01PCB1LCG7/p1704747186996859?thread_ts=1702502066.620699&cid=C01PCB1LCG7
+  ```
+
+- ALERTS
+
+  ```
+  1. https://neofinancial.slack.com/archives/C05LJKPQTR6/p1704211471315059
+  2. https://neofinancial.slack.com/archives/C05LJKPQTR6/p1704326960758809
+  3. https://neofinancial.slack.com/archives/C05LJKPQTR6/p1704364199197279
+  4. https://neofinancial.slack.com/archives/C05LJKPQTR6/p1704378601659789
+  5. https://neofinancial.slack.com/archives/C01GQ6GK5A4/p1704385975611769
+     - supporting other teams
+  6. https://neofinancial.slack.com/archives/CPRAB4QTT/p1704389406953339
+  7. https://neofinancial.slack.com/archives/C05LJKPQTR6/p1704387806906209
+     - alone
+  8. https://neofinancial.slack.com/archives/C05LJKPQTR6/p1703527751570279
+  9. https://neofinancial.slack.com/archives/C05L7HUNVR7/p1703108058478229
+  10. https://neofinancial.slack.com/archives/C05LJKPQTR6/p1704580459622869
+  11. https://neofinancial.slack.com/archives/C05LJKPQTR6/p1704733427528249
+     - alone
+
+  ```
+
+#### TICKETS
+
+</details>
