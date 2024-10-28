@@ -1,5 +1,166 @@
 # SIGNING GIT COMMITS
 
+
+1. [signing by new tutorial](#signing-by-new-tutorial)
+2. [signing by old tutorial](#signing-by-old-tutorial)
+
+<br>
+<br>
+<br>
+
+# SIGNING BY NEW TUTORIAL
+
+## Set up your .gitconfig file(image: Terminal on mac)
+
+In your terminal from your user root directory run
+
+```terminal
+cat ~/.gitconfig
+```
+to create your global git configuration file. This command will display the contents of your .gitconfig file if it already exists.
+
+if you get an error that the file does not exist run
+
+```terminal
+touch ~/.gitconfig
+```
+
+to create the file 
+
+> the . prefix means this is a hidden file and wont be displayed in your finder unless you hit shift + cmd + . (period) or provide explicit folder path in Go > Go to Folder or hit shift + cmd + G
+
+
+## Configure git settings
+
+configure your user settings by running the following
+
+```terminal
+git config --global user.name "John Doe"
+git config --global user.email johndoe@neofinancial.com # Should match your Github email
+```
+
+> If you make a mistake no worries! You can always run the same command again with corrected info. Check the contents of the file at any time by running cat ~/.gitconfig or navigating to the file in finder
+
+## Create a new ed25519 SSH key
+
+in your terminal run 
+
+```terminal
+ssh-keygen -t ed25519 -C "johndoe@neofinancial.com"
+```
+
+Hit enter to accept the default file location (`~/.ssh`), otherwise provide a path to store your new ssh key 
+
+> Providing a custom path may be desirable if you’re managing multiple ssh keys, for general use of neo git repos usually only one ssh is necessary and the default location should suffice.
+
+Enter a passphrase if desired (you will have to provide this passphrase every time you `git commit`) otherwise hit enter twice to not set a passcode.
+
+This process will create a new file within the hidden `~/.ssh` folder that contains your new ssh key and public key.
+
+## Add your SSH key to the ssh-agent
+
+
+start ssh-agent by running
+
+```terminal
+eval "$(ssh-agent -s)"
+```
+
+check if your ~/.ssh/config file exists in the default location by running
+
+```terminal
+open ~/.ssh/config
+```
+
+If you get an error run
+
+```terminal
+touch ~/.ssh/config
+```
+to create the file.
+
+Open the file by running open `~/.ssh/config` and add the following lines
+
+```
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+save your changes (cmd +S) and exit.
+
+> If you chose to store your SSH key on a custom path change line 4 to reflect your chosen path 
+
+> If you chose to add a passphrase to your key, you can add a UseKeychain line to use your mac’s built in password storage. For more info on configuring keychain see GitHub docs here
+
+
+## Add your SSH key to your .gitconfig file
+
+Add your SSH key to your .gitconfig file
+
+We need to tell git to use the SSH key that was generated in the previous step. In your terminal run 
+
+```terminal
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+```
+
+to add the path to your public key to your git configuration file. This tells git where to look for your SSH key. If you chose to store your key not on the default path then provide your custom path.
+
+
+## Tell git to use your SSH key to sign commits
+
+> In the past you may have used a gpg key to sign your commits. However SSH signature verification is available in Git 2.34 or later. No gpg key needed! 
+
+Run the following to add a gpg format to your `~/.gitconfig` file that we created earlier.
+
+```terminal
+git config --global gpg.format ssh
+```
+
+your `~/.gitconfig` file should now look something like this (run `cat ~/.gitconfig` to display file content)
+
+```
+[user]
+	name = John Doe
+	email = john.doe@neofinancial.com
+	signingkey = /Users/john.doe/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh
+```
+
+Auto sign your commits
+
+
+## Add SSH key to GitHub
+
+> You’ll need to add 2 keys to github.com, one to sign and one to authenticate. You can use the same SSH key for both use cases.
+
+In your terminal run
+
+```
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+This copies the contents of the id_ed25519.pub file (your public SSH key) to your clipboard
+
+You can also navigate to the hidden folder (see above) and copy the content directly
+
+In your github account navigate to Settings > SSH and GPG keys > New SSH key 
+
+Or log into your account and click this link → https://github.com/settings/ssh/new
+
+Create a title for your SSH key, select Key type `Authentication Key`, paste your public key and click `Add SSH key`
+
+Repeat this process this time selecting Key type `Signing Key`.
+
+
+<br>
+<br>
+<br>
+<br>
+
+# SIGNING BY OLD TUTORIAL
+
 ## with...: `SSH`
 
 1. I used the same SSH key I used for authentication.
