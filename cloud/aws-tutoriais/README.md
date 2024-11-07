@@ -1,6 +1,8 @@
 # AWS TUTORIAIS
 
 
+- [Full web application release](full-web-application-release/README.md)
+- [How to Redirect My Domain To External Domains: TO WIX, GODADDY, WORDPRESS](redirect-domain-in-aws-to-external-servers/README.md)
 - [How To Add **public CA** To Elastic Bean](#how-to-add-public-ca-to-elastic-bean)
 - [How To Install **AWS CLI**/aws-vault](#how-to-install-aws-cliaws-vault)
 - [ERRORS](#errors)
@@ -15,15 +17,15 @@
 
 1. Request the public certificate
 
-![add-public-ca-1](/aws/data/add-public-ca-1.png)
+![add-public-ca-1](data/add-public-ca-1.png)
 
 2. copy your **CNAME name** and **CNAME value**
 
-![add-public-ca-1](/aws/data/add-public-ca-2.png)
+![add-public-ca-1](data/add-public-ca-2.png)
 
 3. In **ANOTHER ACCOUNT**, add your **CNAME name** and **CNAME value**
 
-![add-public-ca-1](/aws/data/add-public-ca-3.png)
+![add-public-ca-1](data/add-public-ca-3.png)
 
 <br>
 </details>
