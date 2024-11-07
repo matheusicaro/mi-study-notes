@@ -7,19 +7,14 @@
 
 #### 1. Create a new E-MAIL account
 
-#### 2. Create AWS DEFAULT application in Elastic Beanstalk 
+#### 2. Create AWS DEFAULT application in Elastic Beanstalk [HERE](data/beanstalk/default-app/README.md)
 
 
+#### 3. Create CodePipeline - - > [HERE](data//codepipeline/README.md)
 
-[HERE](https://github.com/matheusicaro/mysite-backend/blob/master/docs/cloud/beanstalk/default-app/README.md)
+#### 4. Setup my CUSTOM APP in Elastic Beanstalk - - > [HERE](data//beanstalk/my-custom-app/README.md)
 
-
-
-#### 3. Create CodePipeline - - > [HERE](https://github.com/matheusicaro/mysite-backend/blob/master/docs/cloud/codepipeline/README.md)
-
-#### 4. Setup my CUSTOM APP in Elastic Beanstalk - - > [HERE](https://github.com/matheusicaro/mysite-backend/blob/master/docs/cloud/beanstalk/my-custom-app/README.md)
-
-#### 5. Setup SSL CERTIFICATE - - > [HERE](https://github.com/matheusicaro/mysite-backend/blob/master/docs/cloud/ssl-certificate/README.md)
+#### 5. Setup SSL CERTIFICATE - - > [HERE](data//ssl-certificate/README.md)
 
 #### 6. Setup ROUTE from `service...` to new ELASTIC BEING STALK
 
