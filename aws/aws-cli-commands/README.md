@@ -3,15 +3,19 @@
 # AWS
 
 - [Valid Local Access](#valid-local-access)
+- [Get **AWS CA** Private Certificate](#get-aws-ca-private-certificate)
 - [Get aws-vault](#get-aws-vault)
     - [SSO version](#sso-version)
     - [AWS old version](#aws-old-version)
     - [Config FILES](#config-files)
+- [**Kubernetes**](#kubernetes)
+    - [Dashboard: Get Access Token](#kubernetes-dashboard-get-access-token)
+    - [Dashboard: Get Pod Logs](#kubernetes-get-pod-logs)
 
 ---
 
 
-#### VALID LOCAL ACCESS
+# VALID LOCAL ACCESS
 
 <details>
 <summary>Open here</summary>
@@ -39,10 +43,51 @@ AWS_SECRET_ACCESS_KEY=
 </details>
 ---
 
-#### Get AWS-VAULT
+# Get AWS CA Private Certificate
 
+<details>
+<summary>Open here</summary>
 
-##### SSO version
+1. list the certificates by cli:
+
+```powershell
+aws acm list-certificates
+
+# output
+{
+    "CertificateSummaryList": [
+{
+    "CertificateArn": "arn:aws:acm:us-east-1:XXXXXXX:certificate/XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX",
+    "DomainName": "mydomain.com"
+}
+    ]
+}
+```
+
+2. get your certificate by arn:
+
+```powershell
+aws acm get-certificate --certificate-arn arn:aws:acm:us-east-1:XXXXXXX:certificate/XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX
+
+# output
+   {
+   	"Certificate": "-----BEGIN CERTIFICATE-----\nM .... mN9ti3m+9oqPIA==\n-----END CERTIFICATE-----\n",
+   	"CertificateChain": "-----BEGIN CERTIFICATE-----\nMII8mYtWDTANBgkqhkiG9w0BAQsF\nADA5MQswCQYDVQQGEwJSlQOYiypok1JR4U\
+   			     nakcjMS9cmvqtmg5iUaQqqcT5NJ0hGA==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEdTCCA12gAwDAwMDBaFw0zNDA2
+   			     MjgxNzM5MZ3/VyVOEVqQdZe4O/Ui5GjLIAZHYcSNPYeehu\nVsyuLAOQ1xk4meTKCRlb/weWsKh/NEnfVqn3sF/tM+2MR7cwA130A4w=\n-----END CERTIFICATE-----"
+   }
+```
+
+---
+
+<br>
+<br>
+</details>
+---
+
+# Get AWS-VAULT
+
+## SSO version
 
 <details>
 <summary>Open here</summary>
@@ -60,7 +105,7 @@ aws-vault exec <profile> -- perl ~/.aws/setprofile.pl
 </details>
 ---
 
-##### AWS old version
+## AWS old version
 
 <details>
 <summary>Open here</summary>
@@ -78,7 +123,7 @@ aws-vault exec <profile> -- perl ~/.aws/setprofile.pl
 </details>
 ---
 
-##### Config Files
+## Config Files
 
 <details>
 <summary>Open here</summary>
@@ -149,3 +194,59 @@ region=us-east-1
 <br>
 </details>
 ---
+
+
+
+
+
+# Kubernetes
+## Kubernetes Dashboard Get Access Token
+
+<details>
+<summary>Open here</summary>
+
+```powershell
+# TOKEN WILL BE SAVE AT YOUR CLIPBOARD
+aws eks get-token --cluster-name <CLUSTER_NAME> | awk -F '\"token\":' '{print $2}' | awk -F '}' '{print $1}' | sed 's/\"//g;s/^\ //g' | pbcopy
+  
+```
+<br>
+<br>
+</details>
+---
+
+## Kubernetes Get Pod Logs
+
+<details>
+<summary>Open here</summary>
+
+```powershell
+# GET AWS ACCESS TOKEN
+aws-vault exec <PROFILE> -- perl ~/.aws/setprofile.pl
+
+# CONNECT INTO THE CLUSTER
+aws eks --region sa-east-1 update-kubeconfig --name <CLUSTER_NAME>
+
+# DO LIST PODS	- <OPTIONAL_CONTEXT> => NAME_SPACE: [ default, prd, uat, ... ]
+kubectl get pods -n <OPTIONAL_CONTEXT>
+
+# SET THE CONTEXT IF IT IS NECESSARY
+kubectl config set-context --current --namespace=<NAME_SPACE>
+
+# PRINT LOG
+kubectl logs <POD_NAME>
+
+# BUILD LOG FILE
+kubectl logs <POD_NAME> > file.txt
+
+```
+
+<br>
+<br>
+</details>
+---
+
+#### CLI: Get Pod Logs
+
+
+# END
