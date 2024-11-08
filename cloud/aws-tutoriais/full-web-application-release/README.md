@@ -20,6 +20,8 @@ I normally create with like: `cloud_<year>@gmail.com`
 
 ## 2. Create AWS DEFAULT application in Elastic Beanstalk
 
+> < ! > for any error, check the **[documentation HERE](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-autoscaling-launch-templates.html#environments-cfg-autoscaling-launch-templates-options)**
+
 <details>
 <summary>Open it here: </summary>
 
@@ -58,84 +60,48 @@ I normally create with like: `cloud_<year>@gmail.com`
 
 <br>
 
+<br>
+
+- 2.2.1 create and use new service role
+- 2.2.2 check the roles names and roles to be created in IAM
+
+![Alt text](data/beanstalk/default-app/image-3.png)
+
 ---
 
 <details>
-<summary>| 2.2.1. | - If there is no `EC2 instance profile`, **WE SHOULD [CREATE IT HERE]</summary>
-
-
-##### IAM Role
-
-    2.2.1. Go to Identity and Access Management (IAM)
-
-- [Identity and Access Management (IAM)](https://us-east-1.console.aws.amazon.com/iam/home?region=ca-central-1#/roles)
-
-![Alt text1](data/IAM-Role/image.png)
-
-<br>
-<br>
-<br>
-
-    2.2.2. ROLE NAME: `aws-elasticbeanstalk-ec2-role`
+<summary>````| 2.2.3. | - Create the IAM Roles here</summary>
 
 <br>
 
-        2.2.2.1. STEP: Select trusted entity
+- Create the role `aws-elasticbeanstalk-ec2-role`
+  - AWSElasticBeanstalkMulticontainerDocker
+  - AWSElasticBeanstalkWebTier
+  - AWSElasticBeanstalkWorkerTier
 
 ![Alt text](data/IAM-Role/image-1.png)
-
-<br>
-<br>
-
-        2.2.2.2. STEP: Add permissions
-
-According to this [AWS Doc here](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.CreateApp.html), we should add this roles:
-
-1. `AWSElasticBeanstalkWebTier`
-2. `AWSElasticBeanstalkWorkerTier`
-3. `AWSElasticBeanstalkMulticontainerDocker`
-
-
 ![Alt text](data/IAM-Role/image-2.png)
-
-<br>
-
-        2.2.2.3. Name, review, and create
-
-THE NAME OF THE ROLE NEEDS TO BE: `aws-elasticbeanstalk-ec2-role`
-
-Review it and add the role name, that's all!!!
-
 ![Alt text](data/IAM-Role/image-3.png)
+![Alt text](data/IAM-Role/image-4.png)
 
 <br>
 <br>
-<br>
 
-    2.2.3. ROLE NAME: `aws-elasticbeanstalk-service-role`
+- Create the role `aws-elasticbeanstalk-service-role`
+  - AWSElasticBeanstalkEnhancedHealth
+  - AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy
 
-<br>
+![Alt text](data/IAM-Role/image-5.png)
 
-> CHECK IF THE ROLE IS ALREADY CREATED, IF NOT, THEN YOU CAN CREATE IT
 
-Repeat the same PROCESS IN STEP 2: 
-
-1. `AWSElasticBeanstalkEnhancedHealth`
-2. `AWSElasticBeanstalkService`
-
-<br>
-
-![alt text](data/IAM-Role/image-4.png)
-
----
+        ````| 2.2.3. | - END
 
 </details>
 
 ---
-
 <br>
 
-![Alt text](data/beanstalk/default-app/image-3.png)
+- select the roles after being created ( _step 2.2.3. above_ ^ )
 ![Alt text](data/beanstalk/default-app/image-4.png)
 
 <br>
@@ -152,7 +118,9 @@ N/A => Next
 
         2.4. STEP: Configure instance traffic and scaling
 
-N/A => Next
+- select the disk ( THIS WAS MY MISTAKE IN 2024 with the new updates )
+
+![alt text](image.png)
 
 <br>
 <br>
