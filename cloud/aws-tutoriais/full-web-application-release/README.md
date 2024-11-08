@@ -1,9 +1,16 @@
 # FULL WEB APPLICATION RELEASE IN AWS
 
+<br>
+
 - [How to Redirect My Domain To External Domains: TO WIX, GODADDY, WORDPRESS](/cloud/aws-tutoriais/redirect-domain-in-aws-to-external-servers/README.md)
 
 
---
+<br>
+
+---
+
+<br>
+<br>
 
 ## 1. Create a new E-MAIL account
 
@@ -158,6 +165,68 @@ N/A => Next
 
 
 ## 3. Create CodePipeline - - > [HERE](data//codepipeline/README.md)
+
+<details>
+<summary>Open it here: </summary>
+
+#### Create CodePipeline here
+
+- [CodePipeline here](https://ca-central-1.console.aws.amazon.com/codesuite/codepipeline/start?region=ca-central-1)
+
+<br>
+
+![Alt text](data/codepipeline/image-1.png)
+
+<br>
+<br>
+
+    1. STEP 1:
+
+![Alt text](data/codepipeline/image-2.png)
+
+<br>
+<br>
+<br>
+
+    2. STEP 2:
+
+Connect to Github by `@matheusicaro`
+
+![Alt text](data/codepipeline/image-3.png)
+
+![Alt text](data/codepipeline/image-4.png)
+
+<br>
+<br>
+<br>
+
+    3. STEP 3:
+
+![Alt text](data/codepipeline/image-5.png)
+
+<br>
+<br>
+<br>
+
+    4. STEP 4:
+
+![Alt text](data/codepipeline/image-6.png)
+
+<br>
+<br>
+<br>
+
+    5. STEP 5:
+
+The application should be created successfully!!!
+
+![Alt text](data/codepipeline/image-7.png)
+
+</details>
+
+<br>
+<br>
+<br>
 
 #### 4. Setup my CUSTOM APP in Elastic Beanstalk - - > [HERE](data//beanstalk/my-custom-app/README.md)
 
