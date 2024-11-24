@@ -3,12 +3,50 @@
 
 - [Full web application release](full-web-application-release/README.md)
 - [How to Redirect My Domain To External Domains: TO WIX, GODADDY, WORDPRESS](redirect-domain-in-aws-to-external-servers/README.md)
+- [How to add Alias from my domain to another url/service/etc](./alias-from-domain-to-another-url/README.md)
+
 - [How To Add **public CA** To Elastic Bean](#how-to-add-public-ca-to-elastic-bean)
 - [How To Install **AWS CLI**/aws-vault](#how-to-install-aws-cliaws-vault)
 - [ERRORS](#errors)
   - [ERROR: SSL AWS CLI CERTIFICATE](#error-ssl-aws-cli-certificate)
 
 ---
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # How To Add public CA To Elastic Bean
 
