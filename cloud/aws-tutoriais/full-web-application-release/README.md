@@ -128,8 +128,11 @@ N/A => Next
 
         2.5. STEP: Configure updates, monitoring, and logging
 
-N/A => Next
+- Configure updates, monitoring, and logging - optional
 
+![alt text](image-1.png)
+
+![alt text](image-2.png)
 <br>
 <br>
 <br>
