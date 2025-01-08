@@ -23,3 +23,32 @@ Software as a Service (SaaS)
 - [SYNC and ASYNC in SaaS](./section-2/README.md#sync-and-async-in-saas)
 - [CACHE in SaaS](./section-2/README.md#cache-in-saas)
 
+<br>
+<br>
+
+## SECTION-3 -> Tenant resilience and isolation
+
+TODO: https://www.udemy.com/course/fundamentos-de-arquitetura-saas/learn/lecture/45469641#notes
+
+- Identification, Authentication and Authorization (SaaS Identity)
+
+- Tenant Isolation and Control Plane vs Data Plane
+- Rate Limit / Throttling Patterns / Quot
+- Load Shedding and Neighbor Noise Management
+- Optional: About Upcoming LecturesPlay
+- Optional: Circuit Breaker
+- Optional: Retry Pattern and DLQ
+- Optional: Netflix Case Study: Priority Retry
+
+<br>
+<br>
+
+## SECTION-4 -> Management and operations
+
+- About the Module
+- Tenant Onboarding
+- Tenant Tiers
+- Tier Upgrade/Downgrade
+- Tenant Observability (Metrics, Logs, and Traces)
+- Continuous Improvement: Capacity and Cost Planning
+- Tenant Billing
