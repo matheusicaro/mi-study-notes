@@ -26,6 +26,42 @@
 
 ## Bridge
 
+Allows you to separate a big class or set of related classes into two different domains: abstraction (also called interface) and implementation (also called platform).
+
+The abstraction layer is the one that the client will use to interact with our application. This layer is not going to contain the business logic of our application. Instead, it will delegate the work to the implementation layer.
+
+<details><summary>Scenario: </summary>
+
+Imagine that you have a class that represents a vehicle. The vehicles can have different engines. You could start with a Mercedes and a BMW vehicles with V6 and V8 as possible engines. Initially you would have 4 combinations of vehicles (each one being a class in your application):
+
+- Mercedes V6
+- Mercedes V8
+- BMW V6
+- BMW V8
+
+Imagine now that you want to add a new engine type: V12. You would have to create 2 new classes:
+
+- Mercedes V6
+- Mercedes V8
+- Mercedes V12
+- BMW V6
+- BMW V8
+- BMW V12
+
+If now you add a new vehicle, you would have to create 3 new classes. This is not a big deal if you have only 2 or 3 vehicles, but what if you have 100 vehicles? You would have to create 100 new classes for each different engine.
+
+As you can see, this problem grows exponentially. The Bridge pattern allows you to solve this in an easy way separating both domains and being able to develop them independently.
+
+</details>
+<Br>
+
+**Applicability**
+
+Use the Bridge pattern when:
+
+you want to split a big class that has several variants of some functionality into two different layers.
+you need to switch between different variants at runtime.
+
 ## Composite
 
 Allows you to create tree structures of objects and treat them as a single object.
