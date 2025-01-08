@@ -2,33 +2,51 @@
 
 - [Summary](#summary)
 - [CREATIONAL patterns](#creational-patterns)
-    - [Singleton](#singleton)
+  - [Singleton](#singleton)
 - [STRUCTURAL patterns](#structural-patterns)
-    - [Adapter](#adapter)
-    - [Bridge](#bridge)
-    - [Composite](#composite)
-    - [Facade](#facade)
-    - [Decorator](#decorator)
+  - [Adapter](#adapter)
+  - [Bridge](#bridge)
+  - [Composite](#composite)
+  - [Facade](#facade)
+  - [Decorator](#decorator)
 - [BEHAVIORAL patterns](#behavioral-patterns)
-    - [Strategy](#strategy)
-    - [Observer](#observer)
-    - [Template Method](#template-method)
+  - [Strategy](#strategy)
+  - [Observer](#observer)
+  - [Template Method](#template-method)
 
 # CREATIONAL patterns
 
-### Singleton
+## Singleton
 
 <Br>
 
 # STRUCTURAL patterns
 
-### Adapter
+## Adapter
 
-### Bridge
+## Bridge
 
-### Composite
+## Composite
 
-### Facade
+Allows you to create tree structures of objects and treat them as a single object.
+The tree can contain individual or groups of objects which can be treated in the exact same way.
+This pattern is useful to represent a hierarchy of objects.
+
+**Applicability**
+
+- your model can be represented as a tree structure
+- you want to simplify the interaction of the client code with your model
+
+**Advantages**
+
+- Work with complex object structures in a simpler way, making it easier to manipulate and interact with the tree of objects.
+- Open/Closed Principle. You can introduce new types of objects to the application without modifying the existing code.
+
+> [**I M P L E M E N T A T I O N > HERE**](./structure-patterns/composite/README.md)
+
+<br>
+
+## Facade
 
 It is used to create a simplified interface to a complex system, like a library or framework in a simpler way.
 
@@ -41,7 +59,7 @@ Applicability:
 
 <br>
 
-### Decorator
+## Decorator
 
 **The Decorator pattern is useful** when you want to add behavior to individual objects, rather than to an entire class of objects.
 It is also useful when you want to add behavior without affecting the existing hierarchy, or when you want to add behavior that can be changed dynamically at runtime.
@@ -61,9 +79,9 @@ It is also useful when you want to add behavior without affecting the existing h
 
 # BEHAVIORAL patterns
 
-### Strategy
+## Strategy
 
-### Observer
+## Observer
 
-### Template Method
+## Template Method
 
