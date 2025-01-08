@@ -17,3 +17,9 @@ Software as a Service (SaaS)
 
 ## [SECTION-2 -> Architecture and Increment Data](./section-2/README.md#section-2)
 
+- [Traffic Sharding (Fragment traffic/requests)](./section-2/README.md#traffic-sharding-fragment-trafficrequests)
+- [Database Sharding (Fragment traffic/requests)](./section-2/README.md#database-sharding-fragment-trafficrequests)
+- [Consistent Hashing](./section-2/README.md#consistent-hashing)
+- [SYNC and ASYNC in SaaS](./section-2/README.md#sync-and-async-in-saas)
+- [CACHE in SaaS](./section-2/README.md#cache-in-saas)
+
