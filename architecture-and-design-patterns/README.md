@@ -1,8 +1,6 @@
 # Summary
 
 - [Summary](#summary)
-- [CREATIONAL patterns](#creational-patterns)
-  - [Singleton](#singleton)
 - [STRUCTURAL patterns](#structural-patterns)
   - [Adapter](#adapter)
   - [Bridge](#bridge)
@@ -13,16 +11,26 @@
   - [Strategy](#strategy)
   - [Observer](#observer)
   - [Template Method](#template-method)
-
-# CREATIONAL patterns
-
-## Singleton
+- [CREATIONAL patterns](#creational-patterns)
+  - [Abstract-factory](#abstract-factory)
+  - [Builder](#builder)
+  - [Factory-method](#factory-method)
+  - [Singleton](#singleton)
 
 <Br>
+<br>
+<br>
 
 # STRUCTURAL patterns
 
 ## Adapter
+
+Allows your code to communicate with other interfaces that are initially incompatible.
+
+This pattern is great to use when you need to integrate third-party libraries that you can't change, or when you need to integrate legacy code that you can't change.
+
+**Advantages**
+Another advantage of this pattern is that your code is decoupled from external libraries. This means that you can replace the library that you are using or add new ones without having to change your code.
 
 ## Bridge
 
@@ -61,6 +69,10 @@ Use the Bridge pattern when:
 
 you want to split a big class that has several variants of some functionality into two different layers.
 you need to switch between different variants at runtime.
+
+> [**I M P L E M E N T A T I O N > HERE**](./structure-patterns/adapter/README.md)
+
+<br>
 
 ## Composite
 
@@ -120,4 +132,28 @@ It is also useful when you want to add behavior without affecting the existing h
 ## Observer
 
 ## Template Method
+
+<Br>
+<br>
+<br>
+
+# CREATIONAL patterns
+
+https://github.com/josemiguel-alvarez/design-patterns-typescript/tree/main/creational-patterns
+
+## Abstract-factory
+
+https://www.jmalvarez.dev/posts/abstract-factory-typescript
+
+## Builder
+
+https://www.jmalvarez.dev/posts/builder-pattern-typescript
+
+## Factory-method
+
+https://www.jmalvarez.dev/posts/factory-method-typescript
+
+## Singleton
+
+https://www.jmalvarez.dev/posts/singleton-typescript
 
