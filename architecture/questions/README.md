@@ -4,14 +4,22 @@ SUMMARY
 - [When receives lots requests, how to avoid it fall?](#when-receives-lots-requests-how-to-avoid-it-fall)
 - [How to build a onboarding Tenants Architecture?](#how-to-build-a-onboarding-tenants-architecture)
 - [How to monitory/trace your Tenants?](#how-to-monitorytrace-your-tenants)
+- [How to prevent a huge access VOLUME coming up?](#how-to-prevent-a-huge-access-volume-coming-up)
 
 <br>
 <br>
 
 ## Horizontal x Vertical SCALE:
 
-- `Horizontal SCALE`: when you have increase the number of instances
-- `Vertical SCALE`: when you increase the resources of a UNIQUE instance (memory, cpu, etc.)
+- `Horizontal SCALE`: when you have increase the number of instances.
+- `Vertical SCALE`: when you increase the resources for the UNIQUE instance (memory, cpu, etc.) you have.
+- `Diagonal SCALE`: when is a hybrid of horizontal and vertical scaling.
+
+<details><summary>Picture: </summary>
+
+![alt text](image-3.png)
+
+</details>
 
 <br>
 <br>
@@ -50,4 +58,8 @@ class: https://www.udemy.com/course/fundamentos-de-arquitetura-saas/learn/lectur
 class: https://www.udemy.com/course/fundamentos-de-arquitetura-saas/learn/lecture/45469663#notes
 
 ![alt text](image-2.png)
+
+## How to prevent a huge access VOLUME coming up?
+
+1. `Load testing`: Load testing is the process of measuring the performance of the system under the anticipated load. Basically you volume right now is supporting 100 requests per second, lest test on double it with 200? and 300? and 400?_** this is load testing, how you services/application supports with artificial production traffic and DNS configuration changes for load testing**_
 
