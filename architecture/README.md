@@ -8,13 +8,13 @@ SUMMARY
   - [Container Architecture or Architecture by containers](#container-architecture-or-architecture-by-containers)
   - [Serverless Architecture](#serverless-architecture)
   - [Architecture based in events (SYNC x ASYNC)](#architecture-based-in-events-sync-x-async)
+    - [SNS (x) SQS (x) KAFKA](#sns-x-sqs-x-kafka)
 - [System Patterns](#system-patterns)
   - [API Gateway Pattern](#api-gateway-pattern)
   - [Load Balancing Pattern](#load-balancing-pattern)
-  - [Caching and CDN (data more close to the user by location)](#caching-and-cdn-data-more-close-to-the-user-by-location)
-  - [Stateless (vs) Stateful](#stateless-vs-stateful)
-  - [Monolith (vs) Modular Monolith](#monolith-vs-modular-monolith)
-  - [Monolith (vs) Microservices](#monolith-vs-microservices)
+  - [Caching and `CDN (data more close to the user by location)`](#caching-and-cdn-data-more-close-to-the-user-by-location)
+  - [Stateless (x) Stateful](#stateless-x-stateful)
+  - [Monolith (x) Modular Monolith (x) Microservices](#monolith-x-modular-monolith-x-microservices)
 
 <br>
 <br>
@@ -28,7 +28,7 @@ link here: [Interview Questions](./questions/README.md)
 - [How to build a onboarding Tenants Architecture?](#how-to-build-a-onboarding-tenants-architecture)
 - [How to monitory/trace your Tenants?](#how-to-monitorytrace-your-tenants)
 - [How to test/prevent a huge access VOLUME coming up?](#how-to-testprevent-a-huge-access-volume-coming-up)
-- [Function (vs) No-functional requirements?](#function-vs-no-functional-requirements)
+- [Function (x) No-functional requirements?](#function-vs-no-functional-requirements)
   <br>
   <br>
 
@@ -159,6 +159,43 @@ ASYNC:
 ![alt text](./pictures/image-16.png)
 
 </details>
+
+### SNS (x) SQS (x) KAFKA
+
+- `SNS`: its a topic that receive messages from producers and distributes to the listenings
+- `SQS`: its a a queue that receive messages from SNS or services that publish in the queue as a publishers.
+  - the queue should only delivery the message 1 only, to avoid duplicate data or process
+- `apache KAFKA`: Very large volumes of data, flexible scalability, and basic routing needs.
+  - you can audit the message cause kafka as a log that you can audit it in case needs (replicate a bug? gov auditor?)
+  - lots power but lots complexity to implement and manager
+  - runs in a cluster and you are responsible for this infrastructure
+  - indicate to process real time data
+
+<details><summary>SNS x SQS</summary>
+
+reference: https://blog.awsfundamentals.com/aws-sns-vs-sqs-what-are-the-main-differences
+
+SNS is simply forwarding all messages to your subscribed consumers and SQS saves the messages in a queue and waits till they get picked up
+
+![alt text](./pictures/image-21.png)
+
+![alt text](./pictures/image-22.png)
+![alt text](./pictures/image-23.png)
+
+SQS can add a Redrive Policy. This policy defines how many times a failed message should be retried before it will be moved to a Dead Letter Queue (DLQ). The DLQ handles failed messages. For example, you could save failed messages in a bucket and inform the developer about them.
+
+SNS doesn't offer retries when the client fails. In case a consumer is not available or the consumer fails to work on the message (e.g. push notification won't come through) the message can't be repeated. This is due to the asynchronous nature of SNS.
+
+![alt text](./pictures/image-24.png)
+
+</details>
+
+<details><summary>Kafka </summary>
+
+![alt text](./pictures/image-25.png)
+![alt text](./pictures/image-26.png)
+</details>
+
 <br>
 <br>
 
@@ -212,7 +249,7 @@ Algorithms that also do Load Balance:
 <br>
 <br>
 
-## Caching and CDN (data more close to the user by location)
+## Caching and `CDN (data more close to the user by location)`
 
 CDN is a service/strategy that for the first request of the user, they load a picture/video and save in the database more close to the user location. Then, for the next users, that data will be requested easier. It is a kind of caching strategies.
 
@@ -240,7 +277,7 @@ CDN is a service/strategy that for the first request of the user, they load a pi
 <br>
 <br>
 
-## Stateless (vs) Stateful
+## Stateless (x) Stateful
 
 - `Stateless`: we need the server, so I cant lose this server
 - `Stateless`: we have some isolated, I can lose my server that I wont lose my database, etc...
@@ -255,27 +292,19 @@ CDN is a service/strategy that for the first request of the user, they load a pi
 <br>
 <br>
 
-## Monolith (vs) Modular Monolith
+## Monolith (x) Modular Monolith (x) Microservices
 
 - `Monolith`: everything is in the same port
-- `Stateless`: the modules are in different ports, so I can add in different servers but they can use the same database
-
-<details><summary>picture: </summary>
-
-![alt text](./pictures/image-4.png)
-
-</details>
-
-<br>
-<br>
-
-## Monolith (vs) Microservices
-
+- `Modular Monolith`: the modules are in different ports, so I can add in different servers but they can use the same database
 - `Microservices`: Everything is independent of each other. DATABASES NEED TO BE INDEPENDENT FOR EACH SERVICES, they can have references like in the database X in table Y we have a field.ID that refer to another service > database.
 
 <details><summary>picture: </summary>
 
+![alt text](./pictures/image-4.png)
 ![alt text](./pictures/image-5.png)
 ![alt text](./pictures/image-6.png)
 
 </details>
+<br>
+<br>
+
