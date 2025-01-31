@@ -6,6 +6,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
   - [Queries](#queries)
 - [React](#React)
 - [JavaScript](#javascript)
+  - [_Update dependencies with Vulnerability_](#update-dependencies-with-vulnerability)
   - [Add script GLOBALLY](#add-script-globally)
   - [Mocked Functions](#mocked-functions)
   - [JEST - Tips](#jest---tips)
@@ -66,6 +67,41 @@ db.getCollection("my_collection").find($and: [ {first_attribute: {$exists: true}
 ---
 
 ## [JavaScript](#JavaScript)
+
+### Update dependencies with Vulnerability
+
+1. run `npm ls +lib` to show what package its has been used:
+```js
+➜  $: npm ls serve-static  
+installments-service@1.0.0 /Users/matheus.icaro/DEVELOPMENT/repositories/NEO/installments-service
+└─┬ @apollo/server@4.9.4
+  └─┬ express@4.18.2
+    └── serve-static@1.15.0
+```
+2. run `npm upgrade socks` to fix it automatically, otherwise you need to fix manul :(
+```
+➜  $: npm upgrade socks 
+
+├─┬ @neofinancial/neo-framework@6.1.10
+│ ├─┬ @neofinancial/neo-graphql-tools@17.2.2
+│ │ └─┬ @apollo/gateway@2.9.2
+│ │   └─┬ make-fetch-happen@11.1.1
+│ │     └─┬ socks-proxy-agent@7.0.0
+│ │       └── socks@2.7.1 deduped <===============
+│ ├─┬ @neofinancial/neo-job@3.2.0
+│ │ └─┬ mongodb@5.9.2
+│ │   └── socks@2.7.1 deduped <===============
+│ └─┬ @neofinancial/neo-mongo@13.2.2
+│   └─┬ mongoose@7.8.1
+│     └─┬ mongodb@5.9.2
+│       └── socks@2.7.1 deduped <===============
+├─┬ @neofinancial/neo-migration@5.0.0-rc.2
+│ └─┬ mongodb@5.7.0
+│   └── socks@2.7.1
+└─┬ mongodb-memory-server-core@8.15.1
+  └─┬ mongodb@4.17.2
+    └── socks@2.7.1 deduped <===============
+```
 
 ### Add Script GLOBALLY
 
