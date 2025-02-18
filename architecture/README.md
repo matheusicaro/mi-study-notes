@@ -3,6 +3,7 @@ SUMMARY
 - [Interview Questions](#interview-questions)
 - [System Design](#system-design)
 - [System Architecture](#system-architecture)
+  - [Front-end architectures](#front-end-architectures)
   - [SaaS: Software as a service](#saas-software-as-a-service)
   - [Three-Tier Architecture](#three-tier-architecture)
   - [Container Architecture or Architecture by containers](#container-architecture-or-architecture-by-containers)
@@ -74,6 +75,13 @@ link here: [Interview Questions](./questions/README.md)
 ![alt text](./pictures/image.png)
 <br>
 <br>
+
+## Front-end architectures
+
+- [Link here](./front-end/README.md)
+
+  <br>
+  <br>
 
 ## SaaS: Software as a service
 
