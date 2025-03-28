@@ -29,7 +29,11 @@ My reminders and notes about useful codes in the daily life of a Dev.
 Its a search engine to handle with large volumes of data
 and its really fast real-time text search and grab analytics from it
 
+<details><summary>More: </summary>
+
 ![alt text](./pictures/image-3.png)
+</details>
+
 <br>
 <br>
 
@@ -54,17 +58,6 @@ and its really fast real-time text search and grab analytics from it
 - Disadvantages: make some operations to be slow like INSERT and UPDATEs
 
 </details>
-<br>
-<details><summary>What is normalization? 1NF, 2NF, 3NF, BCNF?</summary>
-
-- Normalization: is basically the process of organizing data in a way that reduces redundancy and dependency.
-
-For example: `let me think...`, a table with ORDERS
-
-![alt text](./pictures/image.png)
-
-</details>
-<br>
 <details><summary>What is normalization? 1NF, 2NF, 3NF, BCNF?</summary>
 
 - Normalization: is basically the process of organizing data in a way that reduces redundancy and dependency.
@@ -72,10 +65,12 @@ For example: `let me think...`, a table with ORDERS
 For example:
 
 > from:
-> ![alt text](./pictures/image.png)
+
+![alt text](./pictures/image.png)
 
 > to:
-> ![alt text](./pictures/image-1.png)
+
+![alt text](./pictures/image-1.png)
 
 </details>
 <br>
