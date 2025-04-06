@@ -19,7 +19,7 @@ My reminders and notes about useful codes in the daily life of a Dev.
 **Use SQL when** you need structured data with clear relationships, consistency, and complex queries (e.g., banking systems, inventory management).
 Examples: MongoDB, Redis, Cassandra
 
-**Use NoSQL databases when **you need a flexible schema change or you don't know if your relashionships are consistent
+**Use NoSQL databases when** you need a flexible schema change or you don't know if your relashionships are consistent
 (e.g., social media, big data, real-time applications).
 PostgreSQL, MySQL
 
