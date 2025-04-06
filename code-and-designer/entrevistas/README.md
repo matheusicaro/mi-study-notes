@@ -16,9 +16,12 @@ My reminders and notes about useful codes in the daily life of a Dev.
 
 <details><summary>answer: </summary>
 
-- SQL: store data in tables structure by rows and column, and you use keys to define relationships between tables. PostgreSQL, MySQL
+**Use SQL when** you need structured data with clear relationships, consistency, and complex queries (e.g., banking systems, inventory management).
+Examples: MongoDB, Redis, Cassandra
 
-- Non-SQL: store data in documents formats, by key and value, which is more flexible in terms of schema design: Examples: MongoDB, Redis, Cassandra
+**Use NoSQL databases when **you need a flexible schema change or you don't know if your relashionships are consistent
+(e.g., social media, big data, real-time applications).
+PostgreSQL, MySQL
 
 </details>
 <br>
