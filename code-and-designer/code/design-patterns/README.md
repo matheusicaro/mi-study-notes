@@ -1,6 +1,8 @@
 # Summary
 
 - [Summary](#summary)
+- [PROGRAMMING ORIENTATED BY OBJECTS](#programming-orientated-by-objects)
+  - [SOLID](#solid)
 - [STRUCTURAL patterns](#structural-patterns)
   - [Adapter](#adapter)
   - [Bridge](#bridge)
@@ -18,6 +20,337 @@
   - [Singleton](#singleton)
 
 <Br>
+<br>
+<br>
+
+# PROGRAMMING ORIENTATED BY OBJECTS
+
+## SOLID
+
+A class should:
+
+1. [S] **SINGLE RESPONSIBILITY**: Do or manage only one THING! Doesn't mean that we should have only one method, but means that everything should be strongly linked
+
+<details><summary>Example: </summary>
+
+```typescript
+/******  BAD  *************************************************
+ *
+ * The UserService class is responsible for managing user data as well as handling email functionality.
+ * These two tasks are unrelated and should be separated.
+ * If the email service changes, it would affect the UserService class, violating SRP.
+ *
+ */
+class UserService {
+  private users: string[] = [];
+
+  // Manages user data
+  addUser(user: string): void {
+    this.users.push(user);
+  }
+
+  // Sends email (This is an unrelated responsibility)
+  sendEmail(user: string): void {
+    console.log(`Sending email to ${user}`);
+  }
+
+  // More methods to handle both user and email concerns...
+}
+
+/******  GOD  *************************************************
+ *
+ * The UserService class is solely responsible for user management.
+ * The EmailService class is responsible only for sending emails.
+ *
+ */
+// Handles user data management
+class UserService {
+  private users: string[] = [];
+
+  addUser(user: string): void {
+    this.users.push(user);
+  }
+
+  // Additional methods for managing users...
+}
+
+// Handles email functionality separately
+class EmailService {
+  sendEmail(user: string): void {
+    console.log(`Sending email to ${user}`);
+  }
+}
+
+// Usage
+const userService = new UserService();
+const emailService = new EmailService();
+
+userService.addUser("John Doe");
+emailService.sendEmail("John Doe");
+```
+
+</details>
+
+2. [O] **OPEN / CLOSE**: A class should be open for extensions but closed for modifications.
+
+<details><summary>Example: </summary>
+
+```typescript
+/******  BAD  *************************************************
+ *
+ * The class AreaCalculator is closed for modification.
+ * When a new shape (e.g., a triangle) is added, you have to modify the calculateArea method.
+ * This approach violates the Open/Closed Principle, which states that classes should be open for extension but closed for modification.
+ *
+ */
+class AreaCalculator {
+  calculateArea(shape: string): number {
+    if (shape === "circle") {
+      return; // Circle area calculation
+    } else if (shape === "square") {
+      return; // Square area calculation
+    } else if (shape === "rectangle") {
+      return; // Rectangle area calculation
+    }
+    throw new Error("Unknown shape");
+  }
+}
+
+/******  GOD  *************************************************
+ *
+ * Open for Extension: We can add new shapes (like Triangle, Polygon, etc.) without modifying existing code.
+ * Closed for Modification: The AreaCalculator class doesn’t need to be modified when new shapes are introduced.
+ *
+ */
+//
+// Base class Shape - it defines the contract for all shapes
+abstract class Shape {
+  abstract calculateArea(): number;
+}
+
+// Circle class - extends Shape and provides implementation
+class Circle extends Shape {
+  private radius: number;
+
+  constructor(radius: number) {
+    super();
+    this.radius = radius;
+  }
+
+  calculateArea(): number {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+
+// Square class - extends Shape and provides implementation
+class Square extends Shape {
+  private side: number;
+
+  constructor(side: number) {
+    super();
+    this.side = side;
+  }
+
+  calculateArea(): number {
+    return this.side * this.side;
+  }
+}
+
+// AreaCalculator doesn't need to be modified if a new shape is added
+class AreaCalculator {
+  calculateArea(shape: Shape): number {
+    return shape.calculateArea();
+  }
+}
+
+const circle = new Circle(10);
+const square = new Square(10);
+const calculator = new AreaCalculator();
+console.log(calculator.calculateArea(circle)); // 314.159...
+console.log(calculator.calculateArea(square)); // 100
+```
+
+</details>
+
+3. [S] **LISKOV SUBSTITUTION**: Is about ensuring that subclasses (or implementations) can be used interchangeably with their parent classes or interfaces without altering the expected behavior.
+
+<details><summary>Example: </summary>
+
+```typescript
+/******  BAD  *************************************************
+ *
+ * The text explains that both Rectangle and Square now implement a common Shape interface
+ * with a getArea() method, allowing them to be used interchangeably.
+ * Rectangle has independent width and height, while Square uses a single side length.
+ * Both classes adhere to the Liskov Substitution Principle by implementing getArea() for consistent behavior.
+ *
+ */
+class Rectangle {
+  protected width: number;
+  protected height: number;
+
+  setWidth(width: number) { this.width = width }
+
+  setHeight(height: number) { this.height = height }
+
+  getArea(): number { return this.width * this.height}
+}
+
+class Square extends >>Rectangle<< {
+  constructor(sideLength: number) {
+    super(sideLength, sideLength);
+  }
+
+  // Overriding the behavior to maintain square's constraint (width and height should be equal)
+  setWidth(width: number) {
+    this.width = width;
+    this.height = width;  // In a square, width and height must always be the same
+  }
+
+  setHeight(height: number) {
+    this.height = height;
+    this.width = height;  // In a square, width and height must always be the same
+  }
+}
+function calculateArea(rectangle: Rectangle): number {
+  rectangle.setWidth(5);
+  rectangle.setHeight(10);
+  return rectangle.getArea();
+}
+const rect = new Rectangle(5, 10);
+const square = new Square(5);
+console.log(calculateArea(rect));    // 50
+console.log(calculateArea(square));  // 25
+//
+//
+/******  GOD  *************************************************
+ *
+ * Instead of having Square extend Rectangle, both classes now implement a common Shape interface with a getArea() method.
+ * This allows any Shape (like Rectangle or Square) to be used interchangeably without breaking functionality.
+ * Rectangle allows independent width and height, while Square uses a single side length.
+ * Both classes implement getArea(), ensuring consistent behavior and adhering to the Liskov Substitution Principle.
+ *
+ */
+
+// Base class or interface for all shapes
+interface Shape {
+  getArea(): number;
+}
+
+class Rectangle implements >>Shape<< {
+  protected width: number;
+  protected height: number;
+
+  setWidth(width: number) { this.width = width; }
+
+  setHeight(height: number) { this.height = height }
+
+  getArea() { return this.width * this.height }
+}
+
+class Square implements >>Shape<< {
+  private sideLength: number;
+
+  setSideLength(sideLength: number) { this.sideLength = sideLength; }
+
+  getArea() { return this.sideLength * this.sideLength }
+}
+
+// A function to calculate area that accepts any Shape
+function calculateArea(shape: Shape): number {
+  return shape.getArea();
+}
+const rect = new Rectangle(5, 10);
+const square = new Square(5);
+console.log(calculateArea(rect));    // 50
+console.log(calculateArea(square));  // 25
+
+```
+
+</details>
+
+4. [I] **INTERFACE SEGREGATION**: The principle suggests that no client should be forced to depend on methods it does not use. In other words, you should create smaller, more specific interfaces rather than one large, general interface.
+
+<details><summary>Example: </summary>
+
+```typescript
+/******  BAD  *************************************************
+ *
+ *
+ */
+interface RepositoryInterface {
+  save();
+
+  delete();
+
+  findAll();
+}
+
+class Repository implements RepositoryInterface {
+  save() { do something }
+  delete() { do something }
+
+  findAll() { throw } // You can't TRUST on this
+}
+
+/******  GOD  *************************************************
+ *
+ *
+ */
+//
+interface RepositoryWriter {
+  save();
+  //...
+}
+interface RepositoryRemover {
+  delete();
+  //...
+}
+interface RepositoryReader {
+  findAll();
+  //...
+}
+
+class Repository implements RepositoryWriter, RepositoryRemover {
+  save() { do something }
+
+  delete() { do something }
+}
+```
+
+5. [D] **DEPENDENCY INJECTION**: User injection of dependencies instead of instance a new class
+
+<details><summary>Example: </summary>
+
+```typescript
+/******  BAD  ************************************************
+ * 
+*/
+class Repository {
+  //...
+}
+
+class Service {
+  something() { new Repository() }
+}
+
+/******  GOD  ************************************************
+ * 
+*/
+class Repository {
+  //...
+}
+
+class Service {
+  constructor(repository: Repository_INTERFACE){}
+
+  something() { this.repository }
+}
+//
+```
+</details>
+
+<br>
 <br>
 <br>
 
