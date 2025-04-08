@@ -3,16 +3,19 @@
 - [Summary](#summary)
 - [PROGRAMMING ORIENTATED BY OBJECTS](#programming-orientated-by-objects)
   - [SOLID](#solid)
+          - [-](#-)
 - [STRUCTURAL patterns](#structural-patterns)
   - [Adapter](#adapter)
   - [Bridge](#bridge)
   - [Composite](#composite)
   - [Facade](#facade)
   - [Decorator](#decorator)
+          - [-](#--1)
 - [BEHAVIORAL patterns](#behavioral-patterns)
   - [Strategy](#strategy)
   - [Observer](#observer)
   - [Template Method](#template-method)
+          - [-](#--2)
 - [CREATIONAL patterns](#creational-patterns)
   - [Abstract-factory](#abstract-factory)
   - [Builder](#builder)
@@ -45,14 +48,10 @@ class UserService {
   private users: string[] = [];
 
   // Manages user data
-  addUser(user: string): void {
-    this.users.push(user);
-  }
+  addUser();
 
   // Sends email (This is an unrelated responsibility)
-  sendEmail(user: string): void {
-    console.log(`Sending email to ${user}`);
-  }
+  sendEmail();
 
   // More methods to handle both user and email concerns...
 }
@@ -67,26 +66,16 @@ class UserService {
 class UserService {
   private users: string[] = [];
 
-  addUser(user: string): void {
-    this.users.push(user);
-  }
-
-  // Additional methods for managing users...
+  addUser();
+  // ...Additional methods for managing users...
 }
 
 // Handles email functionality separately
 class EmailService {
-  sendEmail(user: string): void {
-    console.log(`Sending email to ${user}`);
-  }
+  sendEmail();
 }
 
 // Usage
-const userService = new UserService();
-const emailService = new EmailService();
-
-userService.addUser("John Doe");
-emailService.sendEmail("John Doe");
 ```
 
 </details>
@@ -125,42 +114,27 @@ class AreaCalculator {
 //
 // Base class Shape - it defines the contract for all shapes
 abstract class Shape {
-  abstract calculateArea(): number;
+  // calculate the area
+  abstract calculateArea();
 }
 
 // Circle class - extends Shape and provides implementation
 class Circle extends Shape {
   private radius: number;
 
-  constructor(radius: number) {
-    super();
-    this.radius = radius;
-  }
-
-  calculateArea(): number {
-    return Math.PI * this.radius * this.radius;
-  }
+  calculateArea();
 }
 
 // Square class - extends Shape and provides implementation
 class Square extends Shape {
   private side: number;
 
-  constructor(side: number) {
-    super();
-    this.side = side;
-  }
-
-  calculateArea(): number {
-    return this.side * this.side;
-  }
+  calculateArea();
 }
 
 // AreaCalculator doesn't need to be modified if a new shape is added
 class AreaCalculator {
-  calculateArea(shape: Shape): number {
-    return shape.calculateArea();
-  }
+  calculateArea();
 }
 
 const circle = new Circle(10);
@@ -189,14 +163,14 @@ class Rectangle {
   protected width: number;
   protected height: number;
 
-  setWidth(width: number) { this.width = width }
+  setWidth()
 
-  setHeight(height: number) { this.height = height }
+  setHeight()
 
-  getArea(): number { return this.width * this.height}
+  getArea() { return this.width * this.height }
 }
 
-class Square extends >>Rectangle<< {
+class Square extends Rectangle {
   constructor(sideLength: number) {
     super(sideLength, sideLength);
   }
@@ -212,11 +186,13 @@ class Square extends >>Rectangle<< {
     this.width = height;  // In a square, width and height must always be the same
   }
 }
-function calculateArea(rectangle: Rectangle): number {
+
+const calculateArea = (rectangle: Rectangle) => {
   rectangle.setWidth(5);
   rectangle.setHeight(10);
   return rectangle.getArea();
 }
+
 const rect = new Rectangle(5, 10);
 const square = new Square(5);
 console.log(calculateArea(rect));    // 50
@@ -234,24 +210,24 @@ console.log(calculateArea(square));  // 25
 
 // Base class or interface for all shapes
 interface Shape {
-  getArea(): number;
+  getArea()
 }
 
-class Rectangle implements >>Shape<< {
+class Rectangle implements Shape {
   protected width: number;
   protected height: number;
 
-  setWidth(width: number) { this.width = width; }
+  setWidth(width) 
 
-  setHeight(height: number) { this.height = height }
+  setHeight(height) 
 
   getArea() { return this.width * this.height }
 }
 
-class Square implements >>Shape<< {
+class Square implements Shape {
   private sideLength: number;
 
-  setSideLength(sideLength: number) { this.sideLength = sideLength; }
+  setSideLength(sideLength: number)
 
   getArea() { return this.sideLength * this.sideLength }
 }
@@ -260,6 +236,7 @@ class Square implements >>Shape<< {
 function calculateArea(shape: Shape): number {
   return shape.getArea();
 }
+
 const rect = new Rectangle(5, 10);
 const square = new Square(5);
 console.log(calculateArea(rect));    // 50
@@ -324,35 +301,42 @@ class Repository implements RepositoryWriter, RepositoryRemover {
 
 ```typescript
 /******  BAD  ************************************************
- * 
-*/
+ *
+ */
 class Repository {
   //...
 }
 
 class Service {
-  something() { new Repository() }
+  something() {
+    new Repository();
+  }
 }
 
 /******  GOD  ************************************************
- * 
-*/
+ *
+ */
 class Repository {
   //...
 }
 
 class Service {
-  constructor(repository: Repository_INTERFACE){}
+  constructor(repository: Repository_INTERFACE) {}
 
-  something() { this.repository }
+  something() {
+    this.repository;
+  }
 }
 //
 ```
+
 </details>
 
 <br>
 <br>
 <br>
+
+###### -
 
 # STRUCTURAL patterns
 
@@ -458,6 +442,8 @@ It is also useful when you want to add behavior without affecting the existing h
 <Br>
 <Br>
 
+###### -
+
 # BEHAVIORAL patterns
 
 ## Strategy
@@ -469,6 +455,8 @@ It is also useful when you want to add behavior without affecting the existing h
 <Br>
 <br>
 <br>
+
+###### -
 
 # CREATIONAL patterns
 
