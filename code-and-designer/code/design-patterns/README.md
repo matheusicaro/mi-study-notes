@@ -1,22 +1,22 @@
-# Summary
+Summary
 
-- [Summary](#summary)
-- [PROGRAMMING ORIENTATED BY OBJECTS](#programming-orientated-by-objects)
+- [**PROGRAMMING ORIENTATED BY OBJECTS**](#programming-orientated-by-objects)
   - [SOLID](#solid)
-          - [-](#-)
-- [STRUCTURAL patterns](#structural-patterns)
+  - [Chain of Responsibility](#chain-of-responsibility)
+      - [](#)
+- [**STRUCTURAL patterns**](#structural-patterns)
   - [Adapter](#adapter)
   - [Bridge](#bridge)
   - [Composite](#composite)
   - [Facade](#facade)
   - [Decorator](#decorator)
-          - [-](#--1)
-- [BEHAVIORAL patterns](#behavioral-patterns)
+      - [](#-1)
+- [**BEHAVIORAL patterns**](#behavioral-patterns)
   - [Strategy](#strategy)
   - [Observer](#observer)
   - [Template Method](#template-method)
-          - [-](#--2)
-- [CREATIONAL patterns](#creational-patterns)
+      - [](#-2)
+- [**CREATIONAL patterns**](#creational-patterns)
   - [Abstract-factory](#abstract-factory)
   - [Builder](#builder)
   - [Factory-method](#factory-method)
@@ -26,7 +26,7 @@
 <br>
 <br>
 
-# PROGRAMMING ORIENTATED BY OBJECTS
+# **PROGRAMMING ORIENTATED BY OBJECTS**
 
 ## SOLID
 
@@ -56,7 +56,7 @@ class UserService {
   // More methods to handle both user and email concerns...
 }
 
-/******  GOD  *************************************************
+/******  GOOD  *************************************************
  *
  * The UserService class is solely responsible for user management.
  * The EmailService class is responsible only for sending emails.
@@ -105,7 +105,7 @@ class AreaCalculator {
   }
 }
 
-/******  GOD  *************************************************
+/******  GOOD  *************************************************
  *
  * Open for Extension: We can add new shapes (like Triangle, Polygon, etc.) without modifying existing code.
  * Closed for Modification: The AreaCalculator class doesn’t need to be modified when new shapes are introduced.
@@ -163,11 +163,13 @@ class Rectangle {
   protected width: number;
   protected height: number;
 
-  setWidth()
+  setWidth();
 
-  setHeight()
+  setHeight();
 
-  getArea() { return this.width * this.height }
+  getArea() {
+    return this.width * this.height;
+  }
 }
 
 class Square extends Rectangle {
@@ -178,12 +180,12 @@ class Square extends Rectangle {
   // Overriding the behavior to maintain square's constraint (width and height should be equal)
   setWidth(width: number) {
     this.width = width;
-    this.height = width;  // In a square, width and height must always be the same
+    this.height = width; // In a square, width and height must always be the same
   }
 
   setHeight(height: number) {
     this.height = height;
-    this.width = height;  // In a square, width and height must always be the same
+    this.width = height; // In a square, width and height must always be the same
   }
 }
 
@@ -191,15 +193,15 @@ const calculateArea = (rectangle: Rectangle) => {
   rectangle.setWidth(5);
   rectangle.setHeight(10);
   return rectangle.getArea();
-}
+};
 
 const rect = new Rectangle(5, 10);
 const square = new Square(5);
-console.log(calculateArea(rect));    // 50
-console.log(calculateArea(square));  // 25
+console.log(calculateArea(rect)); // 50
+console.log(calculateArea(square)); // 25
 //
 //
-/******  GOD  *************************************************
+/******  GOOD  *************************************************
  *
  * Instead of having Square extend Rectangle, both classes now implement a common Shape interface with a getArea() method.
  * This allows any Shape (like Rectangle or Square) to be used interchangeably without breaking functionality.
@@ -210,26 +212,30 @@ console.log(calculateArea(square));  // 25
 
 // Base class or interface for all shapes
 interface Shape {
-  getArea()
+  getArea();
 }
 
 class Rectangle implements Shape {
   protected width: number;
   protected height: number;
 
-  setWidth(width) 
+  setWidth(width);
 
-  setHeight(height) 
+  setHeight(height);
 
-  getArea() { return this.width * this.height }
+  getArea() {
+    return this.width * this.height;
+  }
 }
 
 class Square implements Shape {
   private sideLength: number;
 
-  setSideLength(sideLength: number)
+  setSideLength(sideLength: number);
 
-  getArea() { return this.sideLength * this.sideLength }
+  getArea() {
+    return this.sideLength * this.sideLength;
+  }
 }
 
 // A function to calculate area that accepts any Shape
@@ -239,9 +245,8 @@ function calculateArea(shape: Shape): number {
 
 const rect = new Rectangle(5, 10);
 const square = new Square(5);
-console.log(calculateArea(rect));    // 50
-console.log(calculateArea(square));  // 25
-
+console.log(calculateArea(rect)); // 50
+console.log(calculateArea(square)); // 25
 ```
 
 </details>
@@ -270,7 +275,7 @@ class Repository implements RepositoryInterface {
   findAll() { throw } // You can't TRUST on this
 }
 
-/******  GOD  *************************************************
+/******  GOOD  *************************************************
  *
  *
  */
@@ -313,7 +318,7 @@ class Service {
   }
 }
 
-/******  GOD  ************************************************
+/******  GOOD  ************************************************
  *
  */
 class Repository {
@@ -336,9 +341,124 @@ class Service {
 <br>
 <br>
 
-###### -
+## Chain of Responsibility
 
-# STRUCTURAL patterns
+The Chain of Responsibility is a behavioral design pattern where a request is passed along a chain of handlers, with each handler either processing it or forwarding it to the next, allowing flexible handling of requests by different objects.
+
+Key Concepts:
+
+- `Handler`: The objects that process requests. Each handler in the chain is responsible for either handling a request or passing it on to the next handler in the chain.
+- `Request`: The message or operation that needs to be processed, which can be passed through the chain of handlers.
+- `Chain`: A sequence of handlers, where each handler is linked to the next one. If a handler can't process the request, it passes the request along the chain.
+
+Benefits of Chain of Responsibility:
+
+`Loose Coupling:` The client doesn't need to know which handler will process the request, just that it will be handled somewhere in the chain.
+`Flexible`: You can dynamically change the chain by adding or removing handlers.
+`Scalability`: It can scale well when the number of handlers increases, without having to modify the clients or the handling process.
+
+<details><summary>BAD EXAMPLE: </summary>
+
+Problems with the Bad Example:
+
+1. Tightly Coupled: _The Handler class directly checks for specific requests (A, B, etc.) and processes them. This is not flexible as it ties request handling directly to the Handler class._
+
+2. Lack of Extensibility: _If we wanted to add a new request type (e.g., 'C'), we would need to modify the Handler class, which violates the open/closed principle._
+
+3. No Chain of Handlers: _There is no actual chain of responsibility here. The request is directly handled by one object without passing through a chain of handlers_
+
+```typescript
+// Bad Example - Chain of Responsibility Pattern
+
+class Handler {
+  handle(request: string): string {
+    if (request === "A") return "Handler A";
+
+    if (request === "B") return "Handler B";
+
+    return "not handled";
+  }
+}
+
+// Client code
+const handler = new Handler();
+
+console.log(handler.handle("A")); // Handler A
+console.log(handler.handle("B")); // Handler B
+console.log(handler.handle("C")); // not handled
+```
+
+</details>
+
+<details><summary>GOOD EXAMPLE: </summary>
+
+Problems with the Bad Example:
+
+1. Flexible and Decoupled: *Handlers are separate, and each is only responsible for handling specific requests. The chain is flexible, and new handlers can be easily added or removed without changing the existing handlers or client code.*
+
+2. Extensible: *If a new request type (e.g., 'C') needs to be handled, we can simply add another handler, without modifying the existing ones. This respects the Open/Closed Principle.*
+
+3. True Chain of Responsibility: *Each handler in the chain either processes the request or passes it to the next handler, creating a true chain of responsibility.*
+  
+```typescript
+interface Handler {
+  setNext(handler);
+  handle(request);
+}
+
+class Handler_A implements Handler {
+  private nextHandler
+
+  setNext(handler): {
+    this.nextHandler = handler;
+    return handler;
+  }
+
+  handle(request) {
+    if (request === 'A') return `Handler A processed request: ${request}`;
+
+    if (this.nextHandler) return this.nextHandler.handle(request);
+
+    return 'Request not handled';
+  }
+}
+
+class Handler_B implements Handler {
+  private nextHandler: Handler | null = null;
+
+  setNext(handler) {
+    this.nextHandler = handler;
+    return handler;
+  }
+
+  handle(request) {
+    if (request === 'B') return `Handler B processed request: ${request}`
+
+    if (this.nextHandler) return this.nextHandler.handle(request);
+
+    return 'Request not handled';
+  }
+}
+
+// Client code
+const handlerA = new ConcreteHandlerA();
+const handlerB = new ConcreteHandlerB();
+handlerA.setNext(handlerB);
+
+console.log(handlerA.handle('A')); // Output: Handler A processed request: A
+console.log(handlerA.handle('B')); // Output: Handler B processed request: B
+console.log(handlerA.handle('C')); // Output: Request not handled
+```
+
+</details>
+
+<br>
+<br>
+<br>
+
+####
+
+# **STRUCTURAL patterns**
 
 ## Adapter
 
@@ -442,9 +562,9 @@ It is also useful when you want to add behavior without affecting the existing h
 <Br>
 <Br>
 
-###### -
+####
 
-# BEHAVIORAL patterns
+# **BEHAVIORAL patterns**
 
 ## Strategy
 
@@ -456,9 +576,9 @@ It is also useful when you want to add behavior without affecting the existing h
 <br>
 <br>
 
-###### -
+####
 
-# CREATIONAL patterns
+# **CREATIONAL patterns**
 
 https://github.com/josemiguel-alvarez/design-patterns-typescript/tree/main/creational-patterns
 
