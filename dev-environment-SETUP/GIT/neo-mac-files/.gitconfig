@@ -1,0 +1,10 @@
+[user]
+	name = Matheus Icaro
+	email = matheusicaro2@hotmail.com
+	signingkey = /Users/matheus.icaro/.ssh/id_ed25519.pub
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[http]
+	postBuffer = 157286400
