@@ -17,7 +17,11 @@
   - NEO World card
   - NEO Wolrd Elite card
   - NEO Swap Credit Account
-
+  - BANK-SPLIT - part 2
+- 2025
+  - Neo Mortages
+  - Credit Card Participant Authorized
+    
 --- 
 
 I started at Neo in May 2022 on the Growth team and remained until the team closed in November 2023. I was able to acquire the entire growth and application onboarding domain. The biggest projects I worked on were:
