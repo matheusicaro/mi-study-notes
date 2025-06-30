@@ -6,7 +6,14 @@
 
 # Install ZSH pretty
 
-#### 1) Install Zsh
+#### 1
+
+Install iTerminal 2: [🚀 Instant iTerm2 Setup from Terminal
+](https://github.com/herryshu12/menewcom?gad_source=1&gad_campaignid=22716277839&gbraid=0AAAAA_0Hb46OXTSOa46_b1kRcKijrAvif&gclid=Cj0KCQjwyIPDBhDBARIsAHJyyVg3Cb5TEa-CzkfHkT6OSHJ17VCiDYjrDu45kjdONYXuDRaIgLHgL94aApc7EALw_wcB)
+
+<br><br>
+
+#### 1.2) Install Zsh
 
 1. `sudo apt-get install zsh`
 2. Verify it’s installed — `zsh --version`, expects zsh `5.1.1` or more recent
